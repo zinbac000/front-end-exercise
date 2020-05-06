@@ -44,7 +44,7 @@ a {
 #header {
   background-color: #1d232b;
 
-  height: 60px;
+  min-height: 60px;
   padding: 0 30px 0 10px;
 }
 
@@ -219,12 +219,17 @@ a {
 .blog-item img {
   width: 100%;
   display: block;
+  border-top: 5px solid #04cacb;
 }
 
 .blog-content {
   padding: 10px;
 
   background-color: #efefef;
+}
+
+.blog-content h4 {
+  color: #04cacb;
 }
 
 .blog-content p {
@@ -294,7 +299,7 @@ a {
 }
 /* PORTFOLIO */
 #portfolio {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .portfolio-list {
@@ -314,5 +319,99 @@ a {
   display: block;
 }
 /* NEWSLETTER */
+#newsletter {
+  background-color: #04cacb;
 
+  padding: 30px 0;
+
+  text-align: center;
+}
+
+#newsletter .container {
+  padding: 0 100px;
+}
+#newsletter h2 {
+  margin-bottom: 30px;
+}
+
+#newsletter p {
+  margin: 20px 0;
+
+  color: #ffffff;
+}
+
+#newsletter form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#newsletter form input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+
+  border: none;
+}
+
+#newsletter .btn {
+  padding: 7px 30px !important;
+}
 /* TEAM */
+#team {
+  padding: 30px 0;
+}
+
+#team .section-title {
+  margin-bottom: 30px;
+}
+
+.team-list {
+  margin: 0 -10px;
+}
+
+.team-item {
+  float: left;
+
+  width: 25%;
+  padding: 0 10px;
+}
+
+.team-item img {
+  width: 100%;
+  display: block;
+}
+
+.team-content {
+  background-color: #363636;
+  color: #ffffff;
+
+  padding: 10px;
+
+  text-align: center;
+}
+
+.team-content h3 {
+  color: #04cacb;
+}
+
+.team-content p {
+  margin: 10px 0;
+}
+
+.social-item {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding-top: 6px;
+
+  border: 2px solid currentColor;
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 20px;
+}
