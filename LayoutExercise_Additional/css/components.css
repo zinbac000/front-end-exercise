@@ -1,0 +1,110 @@
+/* BUTTON */
+.button {
+  text-decoration: none;
+
+  background-color: #fff;
+  color: #000;
+
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.button--primary {
+  background-color: var(--button-color);
+  color: var(--secondary-text-color);
+}
+
+.button--outline-primary {
+  border: 3px solid var(--button-color);
+}
+
+/* CART */
+.cart {
+  width: 150px;
+
+  text-align: right;
+}
+
+/* PRODUCT */
+.product {
+  width: 200px;
+  border: 3px solid #dddddd;
+  overflow: hidden;
+
+  background-color: var(--gray-bg-color);
+  color: #000;
+}
+
+.product__info {
+  padding: 1rem;
+
+  text-align: center;
+}
+
+.product__title,
+.product__size,
+.product__price {
+  margin-bottom: 0.5rem;
+}
+
+.product__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  color: var(--primary-color);
+}
+
+.product__size {
+  font-weight: bold;
+}
+
+.product__price {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.product__old-price {
+  color: var(--gray-text-color);
+}
+
+/* TREND */
+.trend {
+  width: 300px;
+  height: 200px;
+
+  position: relative;
+}
+
+.trend__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 0.5rem 0;
+
+  text-align: center;
+
+  color: #fff;
+  background-color: #0d59afa1;
+}
+
+.trend__discount {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  color: #fff;
+  background-color: var(--primary-color);
+}

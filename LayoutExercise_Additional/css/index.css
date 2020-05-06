@@ -1,0 +1,143 @@
+/* CAROUSEL */
+.carousel {
+  height: 500px;
+
+  background: url(../img/b1.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* INTRO */
+.intro {
+  background-color: var(--white-bg-color);
+  padding: 50px 0;
+}
+
+.intro-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  height: 600px;
+}
+
+.intro-items figure {
+  overflow: hidden;
+}
+
+.intro-items figure:nth-child(1) {
+  grid-area: 1/1 / span 2 / span 2;
+}
+
+.intro-items figure:nth-child(2) {
+  grid-column: 3 / 5;
+  grid-row: 1;
+}
+
+.intro-items figure:nth-child(3) {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.intro-items figure:nth-child(4) {
+  grid-column: 4 / 5;
+  grid-row: 2;
+}
+
+/* NEW PRODUCTS */
+.new-products {
+  background-color: var(--gray-bg-color);
+
+  padding: 50px 0;
+}
+
+.new-products h2 {
+  color: var(--primary-text-color);
+
+  text-align: center;
+  font-size: 2rem;
+
+  margin-bottom: 50px;
+}
+
+.product-items {
+  display: flex;
+}
+
+.product {
+  flex-grow: 1;
+}
+
+.product:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* DISCOUNT */
+.discount {
+  padding: 50px 0;
+  height: 550px;
+
+  background: url(../img/ban1.jpg) no-repeat;
+  background-size: cover;
+
+  color: var(--secondary-text-color);
+}
+
+.discount .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.discount h3,
+.discount h1 {
+  margin-bottom: 20px;
+}
+
+.discount h3 {
+  font-size: 3rem;
+}
+
+.discount h1 {
+  font-size: 4rem;
+}
+
+/* NEW ARRIVALS */
+.new-arrivals {
+  padding: 50px 0;
+}
+.new-arrivals h2 {
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  color: var(--primary-text-color);
+}
+
+/* LAST FASHION TREND */
+.last-trend {
+  background-color: var(--gray-bg-color);
+
+  padding: 50px 0;
+}
+
+.last-trend h2 {
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  color: var(--primary-text-color);
+}
+
+.trend-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.trend {
+  width: 390px;
+  height: 250px;
+  margin-bottom: 20px;
+}
