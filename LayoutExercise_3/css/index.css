@@ -11,7 +11,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
 }
 
 a {
@@ -383,4 +382,124 @@ p.stat-title {
 
 .circle.active {
   opacity: 1;
+}
+
+/* MORE INFO */
+.more-info {
+  padding: 30px 0 60px;
+  margin: 0 -20px;
+
+  background-color: #0b0c11;
+  color: #a4a4a4;
+
+  font-size: 20px;
+}
+
+.more-info h2 {
+  font-size: 40px;
+  font-weight: 400;
+
+  color: var(--primary-color);
+
+  margin-bottom: 50px;
+}
+
+.newsletter,
+.links,
+.contact-us {
+  float: left;
+
+  padding: 0 20px;
+}
+
+.newsletter {
+  width: 50%;
+
+  padding-right: 40px;
+}
+
+.links {
+  width: 20%;
+}
+
+.contact-us {
+  width: 30%;
+}
+
+.input-control {
+  position: relative;
+}
+
+.input-control input {
+  background-color: inherit;
+  color: #ffffff;
+
+  font-size: 16px;
+
+  border: 2px solid #a4a4a4;
+
+  height: 60px;
+  width: 100%;
+  padding: 0 16px;
+
+  margin-top: 20px;
+}
+
+.input-control a {
+  position: absolute;
+  top: 22px;
+  right: 2px;
+
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  padding-top: 15px;
+
+  background-color: var(--secondary-color);
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #ffffff;
+}
+
+.contact-content {
+  margin-top: -10px;
+}
+
+.contact-content i,
+.contact-content p {
+  float: left;
+}
+
+.contact-content i {
+  width: 20%;
+  padding-top: 10px;
+
+  color: var(--primary-color);
+}
+
+.contact-content p {
+  width: 80%;
+}
+
+/* FOOTER */
+.footer {
+  padding: 15px 0;
+
+  background-color: #252525;
+  color: #ffffff;
+
+  text-align: center;
+  font-size: 20px;
 }
