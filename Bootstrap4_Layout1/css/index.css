@@ -1,0 +1,299 @@
+/* HEADER */
+#header {
+  background-color: #ff4f81;
+  color: #ffffff;
+}
+
+.header__left i {
+  margin-right: 4px;
+}
+
+.header__right i {
+  margin-left: 5px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+
+  background-color: #333333;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: all 0.4s;
+}
+
+.header__right i:hover {
+  background-color: #ff4f81;
+
+  border: 1px solid #ffffff;
+}
+
+.navbar-brand--logo p {
+  color: #ff4f81;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  margin-top: -5px;
+}
+
+.navbar-nav--menu .nav-item {
+  position: relative;
+
+  margin-left: 20px;
+}
+
+.navbar-nav--menu .nav-item .nav-link {
+  font-weight: bold;
+
+  color: #282828;
+
+  transition: all 0.3s;
+}
+
+.navbar-nav--menu .nav-item .nav-link::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 0;
+  height: 3px;
+
+  background-color: #ff4f81;
+
+  transition: all 0.3s;
+}
+
+.navbar-nav--menu .nav-item:hover .nav-link,
+.navbar-nav--menu .nav-item.active .nav-link {
+  color: #ff4f81;
+}
+
+.navbar-nav--menu .nav-item:hover .nav-link::after,
+.navbar-nav--menu .nav-item.active .nav-link::after {
+  width: 100%;
+}
+
+.navbar-toggler--custom {
+  border: none;
+}
+
+.navbar-toggler--custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* CAROUSEL */
+.carousel-caption--config {
+  top: 50%;
+  bottom: unset;
+  transform: translateY(-50%);
+}
+
+.carousel-caption--config h1 {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.carousel-caption--config p {
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.carousel-indicators--config li {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  opacity: 1;
+  background-color: transparent;
+
+  background-clip: unset;
+}
+
+.carousel-indicators--config li.active {
+  background-color: #ffffff;
+}
+
+.btn--read-more {
+  border-radius: 0;
+  margin-top: -20px;
+  font-size: 0.5rem;
+
+  transition: all 0.5s;
+}
+
+.btn--read-more:hover {
+  background-color: #ff4f81;
+  border-color: #ff4f81;
+  color: #ffffff;
+}
+
+.carousel-indicators--config {
+  bottom: 0;
+}
+
+.modal-header--carousel h1 {
+  color: #ff4f81;
+}
+
+/* EDUCATION */
+.education__title {
+  color: #ff4f81;
+}
+
+.education__title h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.education__title span {
+  color: #000000;
+
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.education__title__line {
+  width: 70px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.education__title p {
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+
+  color: #999999;
+
+  padding: 0 5%;
+}
+
+.education__item {
+  padding: 20px;
+}
+.education__item i {
+  font-size: 25px;
+}
+
+.education__item h2 {
+  font-size: 1.3rem;
+
+  color: #ff4f81;
+
+  margin: 15px 0;
+}
+
+.education__item h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.education__item p {
+  color: #999999;
+
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 575px) {
+  .header__left {
+    font-size: 0.8rem;
+  }
+
+  .header__right i {
+    font-size: 0.6rem;
+  }
+
+  .navbar-brand--logo h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand--logo h1 {
+    font-size: 30px;
+  }
+
+  .navbar-nav--menu .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .navbar-nav--menu .nav-item {
+    margin-left: 10px;
+  }
+
+  .navbar-nav--menu {
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-caption--config h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption--config p {
+    font-size: 0.7rem;
+    line-height: 1.8rem;
+  }
+  .btn--read-more {
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel-caption--config h1 {
+    font-size: 3.3rem;
+  }
+
+  .carousel-caption--config p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .btn--read-more {
+    font-size: 1rem;
+  }
+
+  .education__title h1 {
+    font-size: 2.5rem;
+  }
+
+  .education__title span {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .education__title__line {
+    width: 100px;
+  }
+
+  .education__title p {
+    padding: 0 10%;
+  }
+
+  .education__item i {
+    font-size: 40px;
+  }
+
+  .education__item h2 {
+    font-size: 1.7rem;
+  }
+
+  .education__item h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel-indicators--config {
+    bottom: 15%;
+  }
+}
