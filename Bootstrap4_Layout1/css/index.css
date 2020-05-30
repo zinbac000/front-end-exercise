@@ -21,6 +21,14 @@
   background-color: #000000;
 }
 
+.section-title--light .section-title__line {
+  background-color: #ff4f81;
+}
+
+.section-title--light span {
+  color: #ffffff;
+}
+
 /* HEADER */
 #header {
   background-color: #ff4f81;
@@ -165,7 +173,7 @@
 
 /* EDUCATION */
 
-.education__title p {
+.section-title--education p {
   font-size: 0.9rem;
   line-height: 1.8rem;
 
@@ -208,14 +216,6 @@
   background-attachment: fixed;
 }
 
-.stat__title span {
-  color: #ffffff;
-}
-
-.stat__title .section-title__line {
-  background-color: #ff4f81;
-}
-
 .stat__item i {
   font-size: 25px;
 
@@ -235,7 +235,120 @@
   color: #ffffff;
 
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+/* OFFER */
+.offer__item {
+  padding: 20px 10px 15px 10px;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 3px 2px #dddddd;
+
+  background-color: #ffffff;
+
+  transition: all 0.5s;
+}
+
+.offer__item:hover {
+  box-shadow: 0 0 3px 2px #74eef5;
+
+  background-color: #04bac4;
+}
+
+.offer__item i {
+  color: #ff4f81;
+
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.offer__item h2 {
+  font-size: 1rem;
+
+  margin: 10px 0;
+}
+
+.offer__item p {
+  font-size: 0.9rem;
+
+  color: #999999;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  min-height: 600px;
+
+  background: url(../images/banner3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.testimonials__slider {
+  background-color: rgba(0, 0, 0, 0.47);
+
+  box-shadow: 0 0 5px #8e8e8e;
+
+  padding-top: 1rem;
+}
+
+.testimonials__feedback {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  margin-bottom: 1.5rem;
+
+  position: relative;
+}
+
+.testimonials__feedback::after {
+  content: "";
+  border-top: 9px solid rgba(0, 0, 0, 0.5);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+
+  position: absolute;
+  bottom: -9px;
+  left: 27%;
+}
+
+.testimonials__user.media img {
+  width: 64px;
+}
+
+.testimonials__user.media {
+  margin-left: 15%;
+}
+
+.testimonials__user.media .media-body h5 {
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.testimonials__user.media .media-body span {
+  color: #ff4f81;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.testimonials__feedback p {
+  color: #ffffff;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  margin: 0;
+}
+
+.owl-carousel--config .owl-dots .owl-dot span {
+  background-color: #ff4f816b;
+}
+
+.owl-carousel--config .owl-dots .owl-dot.active span {
+  background-color: #ff4f81;
 }
 
 /* MEDIA QUERIES */
@@ -312,7 +425,7 @@
     width: 100px;
   }
 
-  .education__title p {
+  .section-title--education p {
     padding: 0 10%;
   }
 
@@ -338,6 +451,41 @@
 
   .stat__item span {
     font-size: 2.5rem;
+  }
+
+  .offer__item {
+    padding: 20px;
+  }
+  .offer__item i {
+    font-size: 2rem;
+  }
+
+  .offer__item h2 {
+    font-size: 1.2rem;
+  }
+
+  .offer__item p {
+    font-size: 1rem;
+  }
+
+  .testimonials__user.media img {
+    width: 80px;
+  }
+
+  .testimonials__user.media {
+    margin-left: 15%;
+  }
+
+  .testimonials__user.media .media-body h5 {
+    font-size: 1.5rem;
+  }
+
+  .testimonials__user.media .media-body span {
+    font-size: 1rem;
+  }
+
+  .testimonials__feedback p {
+    font-size: 1rem;
   }
 }
 

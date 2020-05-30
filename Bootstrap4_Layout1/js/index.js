@@ -11,6 +11,7 @@ function isOnScreen(el) {
 }
 
 $(function () {
+  // Count up animation for stat section
   const countUpList = [];
   $(".stat__item [data-stat]").each((index, element) => {
     const countUp = new CountUp(element, +$(element).data("stat"));
@@ -32,5 +33,27 @@ $(function () {
         counter.start();
       });
     }
+  });
+
+  // Initialize owl carousel
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
   });
 });
