@@ -328,7 +328,7 @@
 }
 
 .testimonials__user.media .media-body span {
-  color: #ff4f81;
+  color: #ff4f818a;
 
   font-size: 0.9rem;
   font-weight: bold;
@@ -344,7 +344,7 @@
 }
 
 .owl-carousel--config .owl-dots .owl-dot span {
-  background-color: #ff4f816b;
+  background-color: #ff4f818a;
 }
 
 .owl-carousel--config .owl-dots .owl-dot.active span {
