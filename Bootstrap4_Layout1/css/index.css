@@ -1,3 +1,26 @@
+/* GLOBAL STYLES */
+.section-title h1 {
+  color: #ff4f81;
+
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.section-title span {
+  color: #000000;
+
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.section-title__line {
+  width: 70px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
 /* HEADER */
 #header {
   background-color: #ff4f81;
@@ -141,29 +164,6 @@
 }
 
 /* EDUCATION */
-.education__title {
-  color: #ff4f81;
-}
-
-.education__title h1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.education__title span {
-  color: #000000;
-
-  font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-}
-
-.education__title__line {
-  width: 70px;
-  height: 2px;
-
-  background-color: #000000;
-}
 
 .education__title p {
   font-size: 0.9rem;
@@ -199,6 +199,43 @@
 
   font-size: 0.9rem;
   line-height: 1.8rem;
+}
+
+/* STAT */
+.stat {
+  background: url(../images/banner2.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.stat__title span {
+  color: #ffffff;
+}
+
+.stat__title .section-title__line {
+  background-color: #ff4f81;
+}
+
+.stat__item i {
+  font-size: 25px;
+
+  color: #ffffff;
+
+  margin-bottom: 10px;
+}
+
+.stat__item h2 {
+  color: #ff4f81;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.stat__item span {
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 /* MEDIA QUERIES */
@@ -262,16 +299,16 @@
     font-size: 1rem;
   }
 
-  .education__title h1 {
+  .section-title h1 {
     font-size: 2.5rem;
   }
 
-  .education__title span {
+  .section-title span {
     font-size: 1rem;
     letter-spacing: 4px;
   }
 
-  .education__title__line {
+  .section-title__line {
     width: 100px;
   }
 
@@ -289,6 +326,18 @@
 
   .education__item h3 {
     font-size: 1.1rem;
+  }
+
+  .stat__item i {
+    font-size: 40px;
+  }
+
+  .stat__item h2 {
+    font-size: 1.8rem;
+  }
+
+  .stat__item span {
+    font-size: 2.5rem;
   }
 }
 
