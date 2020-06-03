@@ -85,81 +85,95 @@
         data-ride="carousel"
         id="myCarousel"
       >
-        <ol class="carousel-indicators carousel-indicators--config">
-          <li class="active" data-slide-to="0"></li>
-          <li data-slide-to="1" data-target="#myCarousel"></li>
-          <li data-slide-to="2" data-target="#myCarousel"></li>
-        </ol>
+        <div class="container">
+          <ol class="carousel-indicators carousel-indicators--config">
+            <li class="active" data-slide-to="0"></li>
+            <li data-slide-to="1" data-target="#myCarousel"></li>
+            <li data-slide-to="2" data-target="#myCarousel"></li>
+          </ol>
+        </div>
 
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="carousel-caption">
-              <h1>ACTION, ADVENTURE, FANTASY</h1>
-              <h2>End of the World: Part II</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                dolores quo illum iure sint possimus in iste, ullam fugiat
-                praesentium.
-              </p>
-              <div class="my-carousel__button-trailer">
-                <span>PG</span>
-                <button class="btn btn--trailer">
-                  <i class="fa fa-play"></i>
-                  PLAY TRAILER
-                </button>
+            <div class="container">
+              <div class="col-md-9">
+                <div class="carousel-caption">
+                  <h1>ACTION, ADVENTURE, FANTASY</h1>
+                  <h2>End of the World: Part II</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius dolores quo illum iure sint possimus in iste, ullam
+                    fugiat praesentium.
+                  </p>
+                  <div class="my-carousel__button-trailer">
+                    <span>PG</span>
+                    <button class="btn btn--trailer">
+                      <i class="fa fa-play"></i>
+                      PLAY TRAILER
+                    </button>
+                  </div>
+                </div>
               </div>
+              <img
+                class="my-carousel__scroll-arrow"
+                src="./img/scroll-arrow.svg"
+                alt=""
+              />
             </div>
-            <img
-              class="my-carousel__scroll-arrow"
-              src="./img/scroll-arrow.svg"
-              alt=""
-            />
           </div>
           <div class="carousel-item">
-            <div class="carousel-caption">
-              <h1>ACTION, ADVENTURE, FANTASY</h1>
-              <h2>End of the World: Part II</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                dolores quo illum iure sint possimus in iste, ullam fugiat
-                praesentium.
-              </p>
-              <div class="my-carousel__button-trailer">
-                <span>PG</span>
-                <button class="btn btn--trailer">
-                  <i class="fa fa-play"></i>
-                  PLAY TRAILER
-                </button>
+            <div class="container">
+              <div class="col-md-9">
+                <div class="carousel-caption">
+                  <h1>ACTION, ADVENTURE, FANTASY</h1>
+                  <h2>End of the World: Part II</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius dolores quo illum iure sint possimus in iste, ullam
+                    fugiat praesentium.
+                  </p>
+                  <div class="my-carousel__button-trailer">
+                    <span>PG</span>
+                    <button class="btn btn--trailer">
+                      <i class="fa fa-play"></i>
+                      PLAY TRAILER
+                    </button>
+                  </div>
+                </div>
               </div>
+              <img
+                class="my-carousel__scroll-arrow"
+                src="./img/scroll-arrow.svg"
+                alt=""
+              />
             </div>
-            <img
-              class="my-carousel__scroll-arrow"
-              src="./img/scroll-arrow.svg"
-              alt=""
-            />
           </div>
           <div class="carousel-item">
-            <div class="carousel-caption">
-              <h1>ACTION, ADVENTURE, FANTASY</h1>
-              <h2>End of the World: Part II</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                dolores quo illum iure sint possimus in iste, ullam fugiat
-                praesentium.
-              </p>
-              <div class="my-carousel__button-trailer">
-                <span>PG</span>
-                <button class="btn btn--trailer">
-                  <i class="fa fa-play"></i>
-                  PLAY TRAILER
-                </button>
+            <div class="container">
+              <div class="col-md-9">
+                <div class="carousel-caption">
+                  <h1>ACTION, ADVENTURE, FANTASY</h1>
+                  <h2>End of the World: Part II</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius dolores quo illum iure sint possimus in iste, ullam
+                    fugiat praesentium.
+                  </p>
+                  <div class="my-carousel__button-trailer">
+                    <span>PG</span>
+                    <button class="btn btn--trailer">
+                      <i class="fa fa-play"></i>
+                      PLAY TRAILER
+                    </button>
+                  </div>
+                </div>
               </div>
+              <img
+                class="my-carousel__scroll-arrow"
+                src="./img/scroll-arrow.svg"
+                alt=""
+              />
             </div>
-            <img
-              class="my-carousel__scroll-arrow"
-              src="./img/scroll-arrow.svg"
-              alt=""
-            />
           </div>
         </div>
       </div>
@@ -259,7 +273,207 @@
     </section>
 
     <!-- SHOWTIMES -->
-    <section class="showtimes"></section>
+    <section class="showtimes">
+      <div class="container">
+        <ul class="showtimes__nav nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" href="#mon" role="tab" data-toggle="tab">MON</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tue" role="tab" data-toggle="tab">TUE</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="#today"
+              role="tab"
+              data-toggle="tab"
+              >TODAY</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#thu" role="tab" data-toggle="tab">THU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fri" role="tab" data-toggle="tab">FRI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sat" role="tab" data-toggle="tab">SAT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sun" role="tab" data-toggle="tab">SUN</a>
+          </li>
+        </ul>
+        <div class="tab-content showtimes__content">
+          <div class="tab-pane" id="mon" role="tabpanel">fd</div>
+          <div class="tab-pane" id="tue" role="tabpanel">sdf</div>
+          <div class="tab-pane show active" id="today" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img class="d-block w-100" src="./img/movie-6.jpg" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="thu" role="tabpanel">sdfsd</div>
+          <div class="tab-pane" id="fri" role="tabpanel">sdf</div>
+          <div class="tab-pane" id="sat" role="tabpanel">sdfsdf</div>
+          <div class="tab-pane" id="sun" role="tabpanel">sdf</div>
+        </div>
+      </div>
+    </section>
 
     <!-- COMING -->
     <section class="coming"></section>

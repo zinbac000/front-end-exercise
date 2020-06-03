@@ -3,10 +3,6 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
 .section-title {
   color: #ec7532;
 
@@ -153,14 +149,21 @@ a {
   background-size: cover;
 }
 
-.my-carousel .carousel-caption {
-  text-align: left;
-
-  bottom: 25%;
+.my-carousel .container {
+  position: absolute;
+  top: 0;
   left: 0;
-  right: 7%;
+  right: 0;
+  bottom: 0;
 
-  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.my-carousel .carousel-caption {
+  position: static;
+
+  text-align: left;
 
   transform: scale(1.2);
   opacity: 0;
@@ -420,6 +423,160 @@ a {
   color: #fbbd61;
 }
 
+/* SHOWTIMES */
+.showtimes__nav {
+  flex-direction: column;
+
+  margin-bottom: 30px;
+  border-bottom: none;
+}
+
+.showtimes__nav .nav-item {
+  position: relative;
+}
+
+.showtimes__nav .nav-link {
+  border: none;
+  padding: 10px 30px;
+
+  color: #4a4a4a;
+
+  letter-spacing: 2px;
+}
+
+.showtimes__nav .nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  height: 0;
+  width: 4px;
+
+  background-image: linear-gradient(to top, #ec7532, #fbbd61);
+
+  transition: all 0.5s;
+}
+
+.showtimes__nav .nav-link.active {
+  color: #ec7532;
+}
+
+.showtimes__nav .nav-link:hover::after,
+.showtimes__nav .nav-link.active::after {
+  height: 100%;
+}
+
+.showtimes__item > .row {
+  padding: 30px 0;
+}
+
+.showtimes__item:not(:last-child) > .row {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.showtimes__item img {
+  border-radius: 10px;
+}
+
+.showtimes__item-content {
+  padding: 20px 0;
+}
+
+.showtimes__item-content h1 {
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+
+  color: #ec7532;
+}
+
+.showtimes__item-content h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  letter-spacing: 1px;
+}
+
+.showtimes__item-content p {
+  color: #717171;
+}
+
+.showtimes__item-content a {
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+
+  color: #ec7532;
+
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.showtimes__item-content a:hover {
+  color: #000000;
+}
+
+.showtimes__schedule {
+  font-size: 0.9rem;
+  font-size: 400;
+
+  padding: 20px 0;
+}
+
+.showtimes__schedule-label {
+  opacity: 0.75;
+}
+
+.showtimes__schedule-label i {
+  margin-right: 5px;
+}
+
+.showtimes__schedule-times {
+  margin: 20px 0;
+}
+
+.showtimes__schedule-times .badge {
+  background-color: #d8d8d8;
+  color: #717171;
+
+  padding: 10px 20px;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  opacity: 0.75;
+}
+
+.showtimes__schedule-times .badge.active {
+  opacity: 1;
+}
+
+.showtimes__duration {
+  opacity: 0.75;
+
+  letter-spacing: 2px;
+}
+
+.showtimes__duration span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background-color: #4a4a4a;
+  color: #ffffff;
+
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 576px) and (max-width: 991px) {
   .header .container {
@@ -429,9 +586,6 @@ a {
 }
 
 @media screen and (min-width: 576px) {
-  .my-carousel .carousel-caption {
-    bottom: 30%;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -493,11 +647,6 @@ a {
     font-size: 3rem;
   }
 
-  .my-carousel .carousel-caption,
-  .carousel-indicators--config {
-    margin-left: 45px;
-  }
-
   .owl-carousel--config .owl-nav.disabled {
     display: block;
   }
@@ -542,10 +691,6 @@ a {
     padding: 0.5rem 1.5rem 1rem;
   }
 
-  .my-carousel .carousel-caption {
-    width: 60%;
-  }
-
   .owl-carousel--config .owl-prev,
   .owl-carousel--config .owl-next {
     top: 20%;
@@ -553,10 +698,6 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .my-carousel .carousel-caption {
-    width: 70%;
-  }
-
   .owl-carousel--config .owl-prev,
   .owl-carousel--config .owl-next {
     top: 25%;
