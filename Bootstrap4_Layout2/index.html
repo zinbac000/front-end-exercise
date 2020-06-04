@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Movie Star - Cinema HTML Template</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -87,7 +87,7 @@
       >
         <div class="container">
           <ol class="carousel-indicators carousel-indicators--config">
-            <li class="active" data-slide-to="0"></li>
+            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
             <li data-slide-to="1" data-target="#myCarousel"></li>
             <li data-slide-to="2" data-target="#myCarousel"></li>
           </ol>
@@ -183,7 +183,10 @@
     <section class="movie py-5">
       <div class="container">
         <h1 class="section-title">NEW IN</h1>
-        <div class="owl-carousel owl-theme owl-carousel--config">
+        <div
+          id="movieCarousel"
+          class="owl-carousel owl-theme owl-carousel--config"
+        >
           <div class="movie__item">
             <div class="movie__item-image">
               <img src="./img/movie-1.jpg" alt="" />
@@ -305,94 +308,14 @@
           </li>
         </ul>
         <div class="tab-content showtimes__content">
-          <div class="tab-pane" id="mon" role="tabpanel">fd</div>
-          <div class="tab-pane" id="tue" role="tabpanel">sdf</div>
-          <div class="tab-pane show active" id="today" role="tabpanel">
+          <div class="tab-pane" id="mon" role="tabpanel">
             <div class="showtimes__list">
               <div class="showtimes__item">
                 <div class="row">
-                  <div class="col-md-2">
-                    <img class="d-block w-100" src="./img/movie-6.jpg" alt="" />
-                  </div>
-                  <div class="col-md-10">
-                    <div class="showtimes__item-content">
-                      <h1>ACTION, ADVENTURE, FANTASY</h1>
-                      <h2>It's over</h2>
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nobis incidunt explicabo laudantium earum rem
-                        quasi soluta beatae itaque sapiente odio.
-                      </p>
-                      <a href="">FULL SYNOPSIS ></a>
-                      <div class="showtimes__schedule">
-                        <div class="row">
-                          <div class="col-md-auto showtimes__schedule-label">
-                            <span
-                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
-                            >
-                          </div>
-                          <div class="col-md-auto showtimes__schedule-times">
-                            <span class="badge">14:45</span>
-                            <span class="badge active">18:30</span>
-                            <span class="badge active">20:30</span>
-                            <span class="badge active">24:45</span>
-                          </div>
-                          <div class="col-md-auto ml-auto">
-                            <div class="showtimes__duration">
-                              105 MINS <span>15</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="showtimes__item">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
-                  </div>
-                  <div class="col-md-10">
-                    <div class="showtimes__item-content">
-                      <h1>ACTION, ADVENTURE, FANTASY</h1>
-                      <h2>It's over</h2>
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nobis incidunt explicabo laudantium earum rem
-                        quasi soluta beatae itaque sapiente odio.
-                      </p>
-                      <a href="">FULL SYNOPSIS ></a>
-                      <div class="showtimes__schedule">
-                        <div class="row">
-                          <div class="col-md-auto showtimes__schedule-label">
-                            <span
-                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
-                            >
-                          </div>
-                          <div class="col-md-auto showtimes__schedule-times">
-                            <span class="badge">14:45</span>
-                            <span class="badge active">18:30</span>
-                            <span class="badge active">20:30</span>
-                            <span class="badge active">24:45</span>
-                          </div>
-                          <div class="col-md-auto ml-auto">
-                            <div class="showtimes__duration">
-                              105 MINS <span>15</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="showtimes__item">
-                <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-3 col-lg-2">
                     <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
                   </div>
-                  <div class="col-md-10">
+                  <div class="col-md-9 col-lg-10">
                     <div class="showtimes__item-content">
                       <h1>ACTION, ADVENTURE, FANTASY</h1>
                       <h2>It's over</h2>
@@ -415,7 +338,7 @@
                             <span class="badge active">20:30</span>
                             <span class="badge active">24:45</span>
                           </div>
-                          <div class="col-md-auto ml-auto">
+                          <div class="col-md-auto ml-auto px-md-0">
                             <div class="showtimes__duration">
                               105 MINS <span>15</span>
                             </div>
@@ -428,10 +351,10 @@
               </div>
               <div class="showtimes__item">
                 <div class="row">
-                  <div class="col-md-2">
-                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
                   </div>
-                  <div class="col-md-10">
+                  <div class="col-md-9 col-lg-10">
                     <div class="showtimes__item-content">
                       <h1>ACTION, ADVENTURE, FANTASY</h1>
                       <h2>It's over</h2>
@@ -454,7 +377,85 @@
                             <span class="badge active">20:30</span>
                             <span class="badge active">24:45</span>
                           </div>
-                          <div class="col-md-auto ml-auto">
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-9.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
                             <div class="showtimes__duration">
                               105 MINS <span>15</span>
                             </div>
@@ -467,22 +468,1396 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="thu" role="tabpanel">sdfsd</div>
-          <div class="tab-pane" id="fri" role="tabpanel">sdf</div>
-          <div class="tab-pane" id="sat" role="tabpanel">sdfsdf</div>
-          <div class="tab-pane" id="sun" role="tabpanel">sdf</div>
+          <div class="tab-pane" id="tue" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-9.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row no-gutters">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-9.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane show active" id="today" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-6.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="thu" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-6.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="fri" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-6.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img
+                      class="d-block w-100"
+                      src="./img/movie-11.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sat" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-9.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sun" role="tabpanel">
+            <div class="showtimes__list">
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-9.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-7.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-8.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="showtimes__item">
+                <div class="row">
+                  <div class="col-md-3 col-lg-2">
+                    <img class="d-block w-100" src="./img/movie-5.jpg" alt="" />
+                  </div>
+                  <div class="col-md-9 col-lg-10">
+                    <div class="showtimes__item-content">
+                      <h1>ACTION, ADVENTURE, FANTASY</h1>
+                      <h2>It's over</h2>
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Nobis incidunt explicabo laudantium earum rem
+                        quasi soluta beatae itaque sapiente odio.
+                      </p>
+                      <a href="">FULL SYNOPSIS ></a>
+                      <div class="showtimes__schedule">
+                        <div class="row">
+                          <div class="col-md-auto showtimes__schedule-label">
+                            <span
+                              ><i class="fa fa-clock"></i>VIEWING TIMES</span
+                            >
+                          </div>
+                          <div class="col-md-auto showtimes__schedule-times">
+                            <span class="badge">14:45</span>
+                            <span class="badge active">18:30</span>
+                            <span class="badge active">20:30</span>
+                            <span class="badge active">24:45</span>
+                          </div>
+                          <div class="col-md-auto ml-auto px-md-0">
+                            <div class="showtimes__duration">
+                              105 MINS <span>15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- COMING -->
-    <section class="coming"></section>
+    <section class="coming pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="section-title">COMING SOON</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col tab-content coming__content">
+            <div
+              class="row tab-pane fade show active align-items-center"
+              role="tabpanel"
+              id="movie1"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href=""
+                  ><img
+                    class="img-fluid"
+                    src="./img/slide-1-video.png"
+                    alt="" /><i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie2"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href=""
+                  ><img
+                    class="img-fluid"
+                    src="./img/slide-2-video.png"
+                    alt="" /><i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie3"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href="">
+                  <img class="img-fluid" src="./img/slide-3-video.png" alt="" />
+                  <i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie4"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href="">
+                  <img class="img-fluid" src="./img/slide-1-video.png" alt="" />
+                  <i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie5"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href="">
+                  <img class="img-fluid" src="./img/slide-2-video.png" alt="" />
+                  <i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie6"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href="">
+                  <img class="img-fluid" src="./img/slide-3-video.png" alt="" />
+                  <i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="row tab-pane fade align-items-center"
+              role="tabpanel"
+              id="movie7"
+            >
+              <div class="coming__item-bg"></div>
+              <div
+                class="col-12 col-md-6 col-lg-5 coming__item-info mb-5 mb-md-0"
+              >
+                <h1>ACTION, ADVENTURE, SCI-FI</h1>
+                <h2>X-Men: Days of Future Past</h2>
+                <div>
+                  <span class="coming__item-ratings">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  <span class="coming__item-calendar">
+                    <i class="fa fa-calendar"></i>
+                    07 September, 2018
+                  </span>
+                </div>
+                <p>
+                  The X-Men send Wolverine to the past in a desperate effort to
+                  change history and prevent an event that results in doom for
+                  both humans and mutants.
+                </p>
+                <a href="">MORE INFO ></a>
+              </div>
+              <div class="col-12 col-md-6 ml-lg-auto coming__item-video">
+                <a href="">
+                  <img class="img-fluid" src="./img/slide-1-video.png" alt="" />
+                  <i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming__list">
+        <div class="container">
+          <div class="row mt-5 py-5">
+            <div class="col px-3">
+              <ul
+                class="owl-carousel owl-theme nav nav-tabs"
+                id="comingCarousel"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    href="#movie1"
+                    class="nav-link active"
+                    data-toggle="tab"
+                    role="tab"
+                  >
+                    <img class="img-fluid" src="./img/movie-10.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie2"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-9.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie3"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-11.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie4"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-12.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie5"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-13.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie6"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-14.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#movie7"
+                    class="nav-link"
+                    data-toggle="tab"
+                    role="tab"
+                    ><img class="img-fluid" src="./img/movie-15.jpg" alt="" />
+                    <h4>Deepwater horizon</h4>
+                    <span>07 September, 2017</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
-    <section class="contact"></section>
+    <section class="contact text-center py-5">
+      <div class="container">
+        <h1>Need help? Contact our support team on</h1>
+        <span class="contact__number">0330 123 4567</span>
+      </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer class="pt-5">
+      <div class="container">
+        <div class="footer__details">
+          <div class="row">
+            <div class="col-12 col-md d-flex flex-column">
+              <h2>GET IN TOUCH</h2>
+              <a href="">FAQs</a>
+              <a href="">Give us feedback</a>
+              <a href="">Contact us</a>
+            </div>
+            <div class="col-12 col-md d-flex flex-column">
+              <h2>ABOUT MOVIE STAR</h2>
+              <a href="">About us</a>
+              <a href="">Find us</a>
+              <a href="">Schedule</a>
+              <a href="">News</a>
+            </div>
+            <div class="col-12 col-md d-flex flex-column">
+              <h2>LEGAL STUFF</h2>
+              <a href="">Terms & Conditions</a>
+              <a href="">Privacy policy</a>
+              <a href="">Cookie policy</a>
+            </div>
+            <div class="col-12 col-md d-flex flex-column">
+              <h2>CONNECT WITH US</h2>
+              <a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href=""><i class="fab fa-twitter"></i>Twitter</a>
+              <a href=""><i class="fab fa-google-plus-g"></i>Google +</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copy-right">
+          2017 &copy; Movie Star / Web design by Klever media
+        </div>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -505,7 +1880,7 @@
     <script src="./libs/owl-carousel/dist/owl.carousel.min.js"></script>
     <script>
       $(function () {
-        $(".owl-carousel").owlCarousel({
+        $("#movieCarousel").owlCarousel({
           loop: true,
           margin: 20,
           responsiveClass: true,
@@ -524,6 +1899,32 @@
               nav: true
             }
           }
+        });
+        $("#comingCarousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          responsiveClass: true,
+          dots: false,
+          nav: false,
+          responsive: {
+            0: {
+              items: 2
+            },
+            480: {
+              items: 3
+            },
+            768: {
+              items: 4
+            },
+            1024: {
+              items: 6
+            }
+          }
+        });
+
+        const links = $(".owl-item .nav-item .nav-link");
+        $(".owl-item .nav-item .nav-link").click(function (e) {
+          links.removeClass("active");
         });
       });
     </script>
