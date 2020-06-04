@@ -771,6 +771,20 @@
   color: #d8d8d8;
 }
 
+#myModal iframe {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+#myModal .modal-content {
+  border: none;
+}
+
+#myModal .modal-body {
+  padding: 0;
+}
+
 /* CONTACT */
 .contact h1 {
   font-size: 1.5rem;
