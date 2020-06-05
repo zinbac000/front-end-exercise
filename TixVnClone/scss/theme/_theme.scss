@@ -1,0 +1,60 @@
+// ----------- COLORS ------------
+
+// BACKGROUND COLORS
+$bgColors: (
+  "primary": #ffffff,
+  "secondary": #fb4226,
+  "lightBlue": #60c5ef,
+  "darkGrey": #4a4a4a,
+  "success": #00ac4d,
+  "danger": #fb4226,
+  "progress": #7ed321,
+  "inactive": #afafaf,
+  "normalBox": #3e515d,
+  "vipBox": #f7b500,
+  "sweetBox": #c913cc,
+  "selectingBox": #44c020,
+  "selectedBox": #eceef0,
+  "disabledBox": #cfd3d7
+);
+
+// TEXT COLORS
+$txtColors: (
+  "primary": #000000,
+  "secondary": #9b9b9b,
+  "danger": #fb4226,
+  "success": #108f3e,
+  "cgv": #e71a0f,
+  "info": #4a4a4a,
+  "lighInfo": #949494,
+  "dark": #333333,
+  "price": #44c020,
+  "orange": #f79320,
+  "disabled": #e9e9e9
+);
+
+// ----------- FONT ------------
+
+// FONT SIZE
+$fSizes: (
+  "body1": 12px,
+  "body2": 13px,
+  "title": 14px,
+  "h6": 16px,
+  "h5": 18px,
+  "h4": 20px,
+  "h3": 22px,
+  "h2": 29px,
+  "h1": 34px
+);
+
+// FONT WEIGHT
+$fWeights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 600,
+  "bold": 700
+);
+
+// SPACING
+$spacing: 10px;

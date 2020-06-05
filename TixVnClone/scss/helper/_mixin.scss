@@ -1,0 +1,132 @@
+// Text mixin
+@mixin text(
+  $color: tc("primary"),
+  $fSize: fs("body1"),
+  $fWeight: fw("regular"),
+  $lineHeight: unset,
+  $letterSpacing: unset
+) {
+  color: $color;
+
+  font-size: $fSize;
+  font-weight: $fWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+// Button mixin
+@mixin button(
+  $fs,
+  $fw,
+  $color,
+  $bgColor,
+  $border,
+  $borderSize,
+  $py,
+  $px,
+  $bgHover
+) {
+  @include text($color, $fs, $fw);
+
+  background-color: bc($bgColor);
+
+  border: $borderSize solid bc($border);
+  padding: space($py) space($px);
+
+  &:hover {
+    background-color: bc($bgHover);
+  }
+}
+
+// ::after ::before mixin
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Triangle for tooltip box mixin
+@mixin css-triangle(
+  $color,
+  $direction,
+  $size: 6px,
+  $position: absolute,
+  $round: false
+) {
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid bc($color);
+    margin-top: 0 - round($size / 2.5);
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid bc($color);
+    margin-bottom: 0 - round($size / 2.5);
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid bc($color);
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid bc($color);
+    margin-left: -$size;
+  }
+}
+
+// Placeholder prefixers mixin
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// Media queries mixin
+$breakpoints: (
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "extra-large": 1200px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Flexbox
+@mixin flex($justifyContent: center, $alignItems: center, $inline: false) {
+  @if $inline == true {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
