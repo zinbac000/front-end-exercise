@@ -1,15 +1,15 @@
 // Text mixin
 @mixin text(
-  $color: tc("primary"),
-  $fSize: fs("body1"),
-  $fWeight: fw("regular"),
+  $color: "primary",
+  $fSize: "body1",
+  $fWeight: "regular",
   $lineHeight: unset,
   $letterSpacing: unset
 ) {
-  color: $color;
+  color: tc($color);
 
-  font-size: $fSize;
-  font-weight: $fWeight;
+  font-size: fs($fSize);
+  font-weight: fw($fWeight);
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
 }
@@ -32,6 +32,8 @@
 
   border: $borderSize solid bc($border);
   padding: space($py) space($px);
+
+  transition: all 0.4s;
 
   &:hover {
     background-color: bc($bgHover);
@@ -82,25 +84,6 @@
   }
 }
 
-// Placeholder prefixers mixin
-@mixin input-placeholder {
-  &.placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-}
-
 // Media queries mixin
 $breakpoints: (
   "small": 576px,
@@ -121,7 +104,7 @@ $breakpoints: (
 }
 
 // Flexbox
-@mixin flex($justifyContent: center, $alignItems: center, $inline: false) {
+@mixin flex($justifyContent: initial, $alignItems: initial, $inline: false) {
   @if $inline == true {
     display: inline-flex;
   } @else {
@@ -129,4 +112,28 @@ $breakpoints: (
   }
   justify-content: $justifyContent;
   align-items: $alignItems;
+}
+
+// Positioning
+@mixin pos(
+  $position: relative,
+  $top: unset,
+  $right: unset,
+  $bottom: unset,
+  $left: unset,
+  $zIndex: unset
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $zIndex;
+}
+
+// Text overflow
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

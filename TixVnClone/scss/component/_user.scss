@@ -1,0 +1,47 @@
+.user {
+  @include text("secondary", "body2");
+  @include flex(center, center, true);
+
+  cursor: pointer;
+
+  @include pos();
+
+  &__picture {
+    display: block;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: space(0.5);
+  }
+
+  &__setting {
+    @include pos(absolute, $bottom: -94%, $right: 0);
+
+    display: none;
+    width: calc(100% - 35px);
+    border-radius: 4px;
+
+    background-color: bc("lightGrey");
+
+    overflow: hidden;
+
+    a {
+      display: block;
+
+      @include button(
+        "body2",
+        "regular",
+        "white",
+        "lightGrey",
+        unset,
+        unset,
+        0.5,
+        1,
+        "grey"
+      );
+    }
+  }
+
+  &:hover &__setting {
+    display: block;
+  }
+}

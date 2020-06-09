@@ -1,0 +1,90 @@
+.cinema-box {
+  border: 1px solid bc("lighterGrey");
+  border-radius: 5px;
+
+  .nav-tabs--config.nav {
+    display: block;
+
+    .nav-item {
+      padding: 0 space(1);
+      .nav-link {
+        padding: space(1) 0;
+        border-bottom: 1px solid bc("lighterGrey");
+      }
+    }
+  }
+
+  &__brands,
+  &__branches,
+  &__showtimes {
+    height: 705px;
+  }
+
+  &__branches,
+  &__showtimes {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+
+      background-color: bc("lighterGrey");
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+
+      background-color: bc("lightGrey");
+    }
+  }
+
+  &__branch {
+    @include flex(center, start);
+    padding: space(2) 0 space(1.5);
+    border-bottom: 1px solid bc("lighterGrey");
+
+    opacity: 0.5;
+    transition: all 0.3s;
+
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      margin-right: space(0.5);
+    }
+    &-content {
+      min-width: 0;
+
+      h4 {
+        @include text($fSize: "title");
+
+        span {
+          color: tc("cgv");
+        }
+      }
+      p,
+      a {
+        @include text($color: "lightInfo", $fSize: "body1");
+      }
+
+      p {
+        @include text-overflow();
+        margin: 0;
+      }
+
+      a {
+        color: tc("danger");
+      }
+    }
+  }
+
+  &__showtimes {
+  }
+}

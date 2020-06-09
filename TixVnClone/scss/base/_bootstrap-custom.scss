@@ -1,0 +1,13 @@
+.nav-tabs {
+  border-bottom: none;
+
+  .nav-item {
+    margin-bottom: 0;
+
+    .nav-link {
+      border: none;
+      padding: unset;
+      margin: unset;
+    }
+  }
+}

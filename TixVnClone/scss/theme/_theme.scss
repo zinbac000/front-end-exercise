@@ -5,9 +5,13 @@ $bgColors: (
   "primary": #ffffff,
   "secondary": #fb4226,
   "lightBlue": #60c5ef,
+  "lighterGrey": #eeeeee,
+  "lightGrey": #959595,
+  "grey": #888888,
   "darkGrey": #4a4a4a,
   "success": #00ac4d,
   "danger": #fb4226,
+  "darkRed": #b42a14,
   "progress": #7ed321,
   "inactive": #afafaf,
   "normalBox": #3e515d,
@@ -26,11 +30,12 @@ $txtColors: (
   "success": #108f3e,
   "cgv": #e71a0f,
   "info": #4a4a4a,
-  "lighInfo": #949494,
+  "lightInfo": #949494,
   "dark": #333333,
   "price": #44c020,
   "orange": #f79320,
-  "disabled": #e9e9e9
+  "disabled": #e9e9e9,
+  "white": #ffffff
 );
 
 // ----------- FONT ------------

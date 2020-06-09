@@ -1,3 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+body {
+  font-family: Roboto, sans-serif; }
+
+a {
+  text-decoration: none !important;
+  cursor: pointer; }
+
+.nav-tabs {
+  border-bottom: none; }
+  .nav-tabs .nav-item {
+    margin-bottom: 0; }
+    .nav-tabs .nav-item .nav-link {
+      border: none;
+      padding: unset;
+      margin: unset; }
+
+.user {
+  color: #9b9b9b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: unset;
+  letter-spacing: unset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  z-index: unset; }
+  .user__picture {
+    display: block;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px; }
+  .user__setting {
+    position: absolute;
+    top: unset;
+    right: 0;
+    bottom: -94%;
+    left: unset;
+    z-index: unset;
+    display: none;
+    width: calc(100% - 35px);
+    border-radius: 4px;
+    background-color: #959595;
+    overflow: hidden; }
+    .user__setting a {
+      display: block;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset;
+      background-color: #959595;
+      border: unset solid "";
+      padding: 5px 10px;
+      transition: all 0.4s; }
+      .user__setting a:hover {
+        background-color: #888888; }
+  .user:hover .user__setting {
+    display: block; }
 
 /*# sourceMappingURL=index.css.map */
