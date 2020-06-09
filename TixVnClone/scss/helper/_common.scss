@@ -1,0 +1,20 @@
+.custom-scroll {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 7px;
+
+    background-color: bc("lighterGrey");
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background-color: bc("lightGrey");
+  }
+}

@@ -4,6 +4,7 @@
 @import "./theme/theme";
 
 @import "./helper/function";
+@import "./helper/common";
 @import "./helper/mixin";
 @import "./helper/keyframes";
 
@@ -13,3 +14,4 @@
 @import "./component/user";
 @import "./component/movie-limit";
 @import "./component/cinema-box";
+@import "./component/select-input";

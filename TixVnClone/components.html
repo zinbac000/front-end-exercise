@@ -31,6 +31,7 @@
   <body>
     <div class="container">
       <!-- USER LOGIN -->
+      <h3 class="text-center">USER COMPONENT</h3>
       <div class="user">
         <img
           class="user__picture"
@@ -44,10 +45,13 @@
       </div>
 
       <hr />
+      <h3 class="text-center">MOVIE LIMIT COMPONENT</h3>
 
       <span class="movie-limit badge">C16</span>
       <span class="movie-limit badge movie-limit--no-limit">P</span>
       <hr />
+      <h3 class="text-center">CINEMA BOX COMPONENT</h3>
+
       <div class="cinema-box container">
         <div class="row">
           <ul
@@ -64,7 +68,7 @@
               /></a>
             </li>
           </ul>
-          <div class="tab-content cinema-box__branches col-md-4">
+          <div class="tab-content col-md-4 cinema-box__branches custom-scroll">
             <div class="tab-pane show active" role="tab-panel" id="cgv-tab">
               <div class="cinema-box__branch active">
                 <img class="d-block" src="https://picsum.photos/64/64" alt="" />
@@ -168,7 +172,7 @@
               </div>
             </div>
           </div>
-          <div class="cinema-box__showtimes col-md-7">
+          <div class="col-md-7 cinema-box__showtimes custom-scroll">
             <div class="cinema-box__showtime">
               <div class="cinema-box__showtime-info">
                 <div class="media">
@@ -412,6 +416,94 @@
       </div>
 
       <hr />
+      <h3 class="text-center">SELECT INPUT COMPONENT</h3>
+
+      <div class="dropdown select-input">
+        <a
+          href=""
+          class="btn select-input__link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          ><span>Phim</span><i class="fa fa-angle-down ml-2"></i
+        ></a>
+        <div class="dropdown-menu select-input__list custom-scroll">
+          <a class="dropdown-item">Trận Chiến Midway</a>
+          <a class="dropdown-item">Sky Tour Movie - Sơn Tùng M-TP</a>
+          <a class="dropdown-item">Căn Phòng Đẫm Máu - Lingering</a>
+          <a class="dropdown-item"
+            >Quỷ Lùn Tinh Nghịch: Chuyến Lưu Diễn Thế Giới</a
+          >
+          <a class="dropdown-item">Kẻ Trực Đêm - The Night Clerk</a>
+          <a class="dropdown-item">Thảm Họa Kép</a>
+          <a class="dropdown-item"
+            >Giải Cứu Cây Ước Nguyện - The Wishmas Tree</a
+          >
+          <a class="dropdown-item">Gia Tài Tội Lỗi - Inheritance - (C13)</a>
+          <a class="dropdown-item">SamSam: Siêu Tập Sự</a>
+          <a class="dropdown-item">Tôi Là Não Cá Vàng</a>
+          <a class="dropdown-item">Kẻ Đào Tẩu Giấc Mơ - Coma (C16)</a>
+          <a class="dropdown-item">Kaiji: Trận Quyết Tử</a>
+          <a class="dropdown-item">Ẩn Danh - Search Out</a>
+          <a class="dropdown-item">Baba Yaga: Ác Quỷ Rừng Sâu (C18)</a>
+          <a class="dropdown-item"
+            >Truyền Thuyết Về Quán Tiên - The Legend of Quan Tien</a
+          >
+          <a class="dropdown-item">Bà Hoàng Nói Dối - Honest Candidate (C16)</a>
+          <a class="dropdown-item">Bạn Âm 3</a>
+          <a class="dropdown-item">Pretoria: Phi Vụ Đào Tẩu</a>
+          <a class="dropdown-item">Bloodshot (C18)</a>
+          <a class="dropdown-item">Nắng 3: Lời Hứa Của Cha (C16)</a>
+          <a class="dropdown-item"
+            >Gái Già Lắm Chiêu 3 - The Royal Bride (C16)</a
+          >
+          <a class="dropdown-item"
+            >Anh Trai Yêu Quái - Dear Devil Brother (C13)</a
+          >
+        </div>
+      </div>
+      <div class="dropdown select-input">
+        <a
+          href=""
+          class="btn select-input__link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          ><span>Phim</span><i class="fa fa-angle-down ml-2"></i
+        ></a>
+        <div class="dropdown-menu select-input__list custom-scroll">
+          <a class="dropdown-item">Trận Chiến Midway</a>
+          <a class="dropdown-item">Sky Tour Movie - Sơn Tùng M-TP</a>
+          <a class="dropdown-item">Căn Phòng Đẫm Máu - Lingering</a>
+          <a class="dropdown-item"
+            >Quỷ Lùn Tinh Nghịch: Chuyến Lưu Diễn Thế Giới</a
+          >
+          <a class="dropdown-item">Kẻ Trực Đêm - The Night Clerk</a>
+          <a class="dropdown-item">Thảm Họa Kép</a>
+          <a class="dropdown-item"
+            >Giải Cứu Cây Ước Nguyện - The Wishmas Tree</a
+          >
+          <a class="dropdown-item">Gia Tài Tội Lỗi - Inheritance - (C13)</a>
+          <a class="dropdown-item">SamSam: Siêu Tập Sự</a>
+          <a class="dropdown-item">Tôi Là Não Cá Vàng</a>
+          <a class="dropdown-item">Kẻ Đào Tẩu Giấc Mơ - Coma (C16)</a>
+          <a class="dropdown-item">Kaiji: Trận Quyết Tử</a>
+          <a class="dropdown-item">Ẩn Danh - Search Out</a>
+          <a class="dropdown-item">Baba Yaga: Ác Quỷ Rừng Sâu (C18)</a>
+          <a class="dropdown-item"
+            >Truyền Thuyết Về Quán Tiên - The Legend of Quan Tien</a
+          >
+          <a class="dropdown-item">Bà Hoàng Nói Dối - Honest Candidate (C16)</a>
+          <a class="dropdown-item">Bạn Âm 3</a>
+          <a class="dropdown-item">Pretoria: Phi Vụ Đào Tẩu</a>
+          <a class="dropdown-item">Bloodshot (C18)</a>
+          <a class="dropdown-item">Nắng 3: Lời Hứa Của Cha (C16)</a>
+          <a class="dropdown-item"
+            >Gái Già Lắm Chiêu 3 - The Royal Bride (C16)</a
+          >
+          <a class="dropdown-item"
+            >Anh Trai Yêu Quái - Dear Devil Brother (C13)</a
+          >
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -430,5 +522,15 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // SELECT INPUT JAVASCRIPT
+      $(".select-input .dropdown-item").click(function () {
+        var text = $(this).text();
+        var inputLinkText = $(this)
+          .parents(".select-input")
+          .find(".select-input__link span");
+        inputLinkText.text(text);
+      });
+    </script>
   </body>
 </html>

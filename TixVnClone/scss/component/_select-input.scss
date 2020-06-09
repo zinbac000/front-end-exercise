@@ -1,0 +1,39 @@
+.select-input {
+  width: 200px; // just for test
+
+  a {
+    @include text($fSize: "title");
+  }
+
+  &__link {
+    @include flex($justifyContent: space-between, $alignItems: center);
+    width: 100%;
+
+    &:focus {
+      box-shadow: unset;
+    }
+
+    span {
+      @include text-overflow();
+
+      flex-grow: 1;
+
+      text-align: left;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__list {
+    max-height: 300px;
+
+    a.dropdown-item:hover {
+      background-color: bc("lightBlue");
+      color: tc("white");
+
+      transition: all 0.3s;
+    }
+  }
+}

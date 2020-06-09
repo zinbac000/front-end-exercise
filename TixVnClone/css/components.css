@@ -19,6 +19,18 @@ a {
       padding: unset;
       margin: unset; }
 
+.custom-scroll {
+  overflow-y: auto; }
+  .custom-scroll::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 7px;
+    background-color: #eeeeee; }
+  .custom-scroll::-webkit-scrollbar-track {
+    border-radius: 7px; }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #959595; }
+
 .user {
   color: #9b9b9b;
   font-size: 13px;
@@ -95,16 +107,6 @@ a {
     height: 705px; }
   .cinema-box__brands, .cinema-box__branches {
     border-right: 1px solid #eeeeee; }
-  .cinema-box__branches, .cinema-box__showtimes {
-    overflow-y: auto; }
-    .cinema-box__branches::-webkit-scrollbar, .cinema-box__showtimes::-webkit-scrollbar {
-      width: 4px;
-      background-color: #eeeeee; }
-    .cinema-box__branches::-webkit-scrollbar-track, .cinema-box__showtimes::-webkit-scrollbar-track {
-      border-radius: 7px; }
-    .cinema-box__branches::-webkit-scrollbar-thumb, .cinema-box__showtimes::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: #959595; }
   .cinema-box__branch {
     display: flex;
     flex-direction: initial;
@@ -195,5 +197,36 @@ a {
       color: #9b9b9b; }
       .cinema-box__schedule-item:hover span {
         color: #fb4226; }
+
+.select-input {
+  width: 200px; }
+  .select-input a {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: unset;
+    letter-spacing: unset; }
+  .select-input__link {
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .select-input__link:focus {
+      box-shadow: unset; }
+    .select-input__link span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-grow: 1;
+      text-align: left; }
+    .select-input__link::after {
+      display: none; }
+  .select-input__list {
+    max-height: 300px; }
+    .select-input__list a.dropdown-item:hover {
+      background-color: #60c5ef;
+      color: #ffffff;
+      transition: all 0.3s; }
 
 /*# sourceMappingURL=components.css.map */

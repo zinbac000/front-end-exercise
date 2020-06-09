@@ -26,27 +26,6 @@
     border-right: 1px solid bc("lighterGrey");
   }
 
-  &__branches,
-  &__showtimes {
-    overflow-y: auto;
-
-    &::-webkit-scrollbar {
-      width: 4px;
-
-      background-color: bc("lighterGrey");
-    }
-
-    &::-webkit-scrollbar-track {
-      border-radius: 7px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-
-      background-color: bc("lightGrey");
-    }
-  }
-
   &__branch {
     @include flex($justifyContent: center, $alignItems: start);
     padding: space(2) 0 space(1.5);
