@@ -14,7 +14,7 @@
   }
 
   &__setting {
-    @include pos(absolute, $bottom: -94%, $right: 0);
+    @include pos(absolute, $bottom: -80%, $right: 0);
 
     display: none;
     width: calc(100% - 35px);

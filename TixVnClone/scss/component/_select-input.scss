@@ -1,6 +1,5 @@
 .select-input {
-  width: 200px; // just for test
-
+  width: 150px;
   a {
     @include text($fSize: "title");
   }

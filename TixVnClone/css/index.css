@@ -1,3 +1,9 @@
+.hideOnMobile {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .hideOnMobile {
+      display: block; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +63,7 @@ a {
     position: absolute;
     top: unset;
     right: 0;
-    bottom: -94%;
+    bottom: -80%;
     left: unset;
     z-index: unset;
     display: none;
@@ -199,7 +205,7 @@ a {
         color: #fb4226; }
 
 .select-input {
-  width: 200px; }
+  width: 150px; }
   .select-input a {
     color: #000000;
     font-size: 14px;
@@ -228,5 +234,139 @@ a {
       background-color: #60c5ef;
       color: #ffffff;
       transition: all 0.3s; }
+
+.header {
+  position: fixed;
+  top: 0;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  z-index: unset;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.95); }
+  .header__brand img {
+    height: 50px; }
+  .header__nav {
+    display: none; }
+    .header__nav a {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset;
+      margin-right: 10px;
+      transition: all 0.3s; }
+      .header__nav a.active, .header__nav a:hover {
+        color: #fb4226; }
+  .header__account {
+    display: none; }
+    .header__account .user--header {
+      position: relative;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      z-index: unset;
+      padding-right: 10px; }
+      .header__account .user--header::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: unset;
+        left: unset;
+        z-index: unset;
+        transform: translateY(-50%);
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 80%;
+        background-color: #eeeeee; }
+    .header__account .select-input--location .select-input__link {
+      color: #9b9b9b; }
+      .header__account .select-input--location .select-input__link img {
+        opacity: 0.5; }
+      .header__account .select-input--location .select-input__link span {
+        margin-left: 5px; }
+  .header__toggler {
+    width: 25px;
+    border: none;
+    background-color: transparent; }
+    .header__toggler:focus {
+      outline: unset; }
+    .header__toggler img {
+      display: block;
+      width: 100%; }
+  .header__backdrop {
+    position: fixed;
+    top: 0;
+    right: unset;
+    bottom: unset;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s; }
+    .header__backdrop.active {
+      pointer-events: inherit;
+      opacity: 1; }
+      .header__backdrop.active .header__side-menu {
+        transform: translateX(0); }
+  .header__side-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: unset;
+    left: unset;
+    z-index: unset;
+    width: 70%;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: all 0.5s; }
+    .header__side-menu__top {
+      display: flex;
+      flex-direction: initial;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 10px; }
+      .header__side-menu__top > img {
+        width: 15px; }
+      .header__side-menu__top p {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: unset;
+        letter-spacing: unset;
+        margin: 0; }
+        .header__side-menu__top p img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px; }
+    .header__side-menu a {
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset;
+      display: block;
+      margin: 35px 0; }
+  @media only screen and (min-width: 768px) {
+    .header__nav {
+      display: block; }
+    .header__account {
+      display: flex;
+      flex-direction: initial;
+      justify-content: initial;
+      align-items: initial; }
+    .header__toggler {
+      display: none; } }
 
 /*# sourceMappingURL=index.css.map */

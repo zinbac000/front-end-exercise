@@ -1,0 +1,7 @@
+.hideOnMobile {
+  display: none;
+
+  @include mq("medium") {
+    display: block;
+  }
+}

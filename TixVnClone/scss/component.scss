@@ -1,12 +1,12 @@
-@import "./theme/theme";
-
+@import "./helper/theme";
 @import "./helper/function";
 @import "./helper/mixin";
 @import "./helper/keyframes";
+@import "./helper/common";
 
 @import "./base/reset";
 @import "./base/bootstrap-custom";
-@import "./base/custom";
+@import "./base/browser-custom";
 
 @import "./component/user";
 @import "./component/movie-limit";

@@ -1,0 +1,156 @@
+.header {
+  @include pos($position: fixed, $top: 0);
+  width: 100%;
+  height: 60px;
+  padding: 0 space(2);
+
+  box-shadow: 0 0 15px bc("boxShadow");
+  background-color: bc("header");
+
+  &__brand {
+    img {
+      height: 50px;
+    }
+  }
+
+  &__nav {
+    display: none;
+    a {
+      @include text($fSize: "title");
+
+      margin-right: space(1);
+
+      transition: all 0.3s;
+
+      &.active,
+      &:hover {
+        color: tc("danger");
+      }
+    }
+  }
+
+  &__account {
+    display: none;
+
+    .user--header {
+      @include pos();
+      padding-right: space(1);
+
+      &::after {
+        @include pos($position: absolute, $top: 50%, $right: 0);
+        transform: translateY(-50%);
+
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 80%;
+
+        background-color: bc("lighterGrey");
+      }
+    }
+
+    .select-input--location {
+      .select-input__link {
+        color: tc("secondary");
+
+        img {
+          opacity: 0.5;
+        }
+        span {
+          margin-left: space(0.5);
+        }
+      }
+    }
+  }
+
+  &__toggler {
+    width: 25px;
+    border: none;
+
+    background-color: transparent;
+
+    &:focus {
+      outline: unset;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__backdrop {
+    @include pos($position: fixed, $top: 0, $left: 0, $zIndex: 10);
+    width: 100%;
+    height: 100%;
+
+    background-color: bc("backdrop");
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: all 0.5s;
+
+    &.active {
+      pointer-events: inherit;
+      opacity: 1;
+
+      .header__side-menu {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__side-menu {
+    @include pos($position: absolute, $top: 0, $right: 0);
+    width: 70%;
+    height: 100%;
+    padding: space(1) space(2);
+
+    background-color: bc("primary");
+
+    transform: translateX(100%);
+
+    transition: all 0.5s;
+
+    &__top {
+      @include flex($justifyContent: space-between, $alignItems: center);
+      padding-right: space(1);
+
+      > img {
+        width: 15px;
+      }
+
+      p {
+        @include text($fSize: "title");
+        margin: 0;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: space(1);
+        }
+      }
+    }
+
+    a {
+      @include text($fSize: "h5");
+
+      display: block;
+      margin: space(3.5) 0;
+    }
+  }
+
+  @include mq("medium") {
+    &__nav {
+      display: block;
+    }
+    &__account {
+      @include flex();
+    }
+    &__toggler {
+      display: none;
+    }
+  }
+}

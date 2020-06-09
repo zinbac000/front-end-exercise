@@ -20,7 +20,10 @@ $bgColors: (
   "selectingBox": #44c020,
   "selectedBox": #eceef0,
   "disabledBox": #cfd3d7,
-  "scheduleItem": rgba(246, 246, 246, 0.5)
+  "scheduleItem": rgba(246, 246, 246, 0.5),
+  "boxShadow": rgba(0, 0, 0, 0.3),
+  "header": rgba(255, 255, 255, 0.95),
+  "backdrop": rgba(0, 0, 0, 0.8)
 );
 
 // TEXT COLORS

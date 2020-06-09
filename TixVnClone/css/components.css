@@ -1,3 +1,9 @@
+.hideOnMobile {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .hideOnMobile {
+      display: block; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +63,7 @@ a {
     position: absolute;
     top: unset;
     right: 0;
-    bottom: -94%;
+    bottom: -80%;
     left: unset;
     z-index: unset;
     display: none;
@@ -199,7 +205,7 @@ a {
         color: #fb4226; }
 
 .select-input {
-  width: 200px; }
+  width: 150px; }
   .select-input a {
     color: #000000;
     font-size: 14px;

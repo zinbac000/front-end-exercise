@@ -33,6 +33,119 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <header class="header d-flex justify-content-between align-items-center">
+      <a class="header__brand" href="">
+        <img src="./img/icons/web-logo.png" alt="web logo" />
+      </a>
+      <div class="header__nav">
+        <a href="">Lịch Chiếu</a>
+        <a href="">Cụm Rạp</a>
+        <a href="">Tin Tức</a>
+        <a href="">Ứng Dụng</a>
+      </div>
+      <div class="header__account">
+        <div class="user user--header">
+          <img
+            class="user__picture"
+            src="https://picsum.photos/64/64"
+            alt="user login"
+          />
+          <span>Nguyễn Hữu Vinh</span>
+          <div class="user__setting">
+            <a class="text-center" href="">Đăng xuất</a>
+          </div>
+        </div>
+        <div class="dropdown select-input select-input--location">
+          <a
+            href=""
+            class="btn select-input__link dropdown-toggle"
+            role="button"
+            data-toggle="dropdown"
+            ><img
+              src="./img/icons/location-header.png"
+              alt="location header" /><span>Hà Nội</span
+            ><i class="fa fa-angle-down ml-2"></i
+          ></a>
+          <div class="dropdown-menu select-input__list custom-scroll">
+            <a class="dropdown-item">Hồ Chí Minh </a>
+            <a class="dropdown-item">Hà Nội </a>
+            <a class="dropdown-item">Đà Nẵng </a>
+            <a class="dropdown-item">Hải Phòng </a>
+            <a class="dropdown-item">Biên Hoà </a>
+            <a class="dropdown-item">Nha Trang </a>
+            <a class="dropdown-item">Bình Dương </a>
+            <a class="dropdown-item">Phan Thiết </a>
+            <a class="dropdown-item">Hạ Long </a>
+            <a class="dropdown-item">Cần Thơ </a>
+            <a class="dropdown-item">Vũng Tàu </a>
+            <a class="dropdown-item">Quy Nhơn </a>
+            <a class="dropdown-item">Huế </a>
+            <a class="dropdown-item">Long Xuyên </a>
+            <a class="dropdown-item">Thái Nguyên </a>
+            <a class="dropdown-item">Buôn Ma Thuột </a>
+            <a class="dropdown-item">Bắc Giang </a>
+            <a class="dropdown-item">Bến Tre </a>
+            <a class="dropdown-item">Việt Trì </a>
+            <a class="dropdown-item">Ninh Bình </a>
+            <a class="dropdown-item">Thái Bình </a>
+            <a class="dropdown-item">Vinh </a>
+            <a class="dropdown-item">Bảo Lộc </a>
+            <a class="dropdown-item">Đà Lạt </a>
+            <a class="dropdown-item">Trà Vinh </a>
+            <a class="dropdown-item">Yên Bái </a>
+            <a class="dropdown-item">Kiên Giang </a>
+            <a class="dropdown-item">Vĩnh Long </a>
+            <a class="dropdown-item">Cà Mau </a>
+            <a class="dropdown-item">Hậu Giang </a>
+            <a class="dropdown-item">Tây Ninh </a>
+            <a class="dropdown-item">Tuyên Quang </a>
+            <a class="dropdown-item">Thanh Hóa </a>
+            <a class="dropdown-item">Nam Định </a>
+            <a class="dropdown-item">Hải Dương </a>
+            <a class="dropdown-item">Gia Lai </a>
+            <a class="dropdown-item">Hà Tĩnh </a>
+            <a class="dropdown-item">Phú Yên </a>
+            <a class="dropdown-item">Bạc Liêu </a>
+            <a class="dropdown-item">Long An </a>
+            <a class="dropdown-item">Đồng Hới </a>
+            <a class="dropdown-item">Hà Nam </a>
+            <a class="dropdown-item">Bắc Ninh </a>
+            <a class="dropdown-item">Quảng Trị </a>
+            <a class="dropdown-item">Kon Tum </a>
+            <a class="dropdown-item">Sóc Trăng </a>
+            <a class="dropdown-item">Sơn La </a>
+            <a class="dropdown-item">Lạng Sơn </a>
+            <a class="dropdown-item">Quảng Ngãi </a>
+            <a class="dropdown-item">Mỹ Tho </a>
+            <a class="dropdown-item">Đồng Tháp </a>
+            <a class="dropdown-item">Hưng Yên</a>
+          </div>
+        </div>
+      </div>
+      <button class="header__toggler">
+        <img src="./img/icons/menu-options.png" alt="menu option" />
+      </button>
+      <div class="header__backdrop">
+        <div class="header__side-menu">
+          <div class="header__side-menu__top">
+            <p>
+              <img src="https://picsum.photos/64/64" alt="" />Nguyễn Hữu Vinh
+            </p>
+            <img
+              class="header__toggler"
+              src="./img/icons/next-session.png"
+              alt=""
+            />
+          </div>
+          <a href="">Lịch Chiếu</a>
+          <a href="">Cụm Rạp</a>
+          <a href="">Tin Tức</a>
+          <a href="">Ứng Dụng</a>
+          <a href="">Hà Nội</a>
+          <a href="">Đăng Xuất</a>
+        </div>
+      </div>
+    </header>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -50,5 +163,29 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        // SELECT INPUT JAVASCRIPT
+        $(".select-input .dropdown-item").click(function () {
+          var text = $(this).text();
+          $(this)
+            .parents(".select-input")
+            .find(".select-input__link span")
+            .text(text);
+        });
+
+        // HEADER
+        // Toggle side menu when click on the toggler
+        $(".header__toggler").click(function () {
+          $(".header__backdrop").toggleClass("active");
+        });
+        // Close side menu when click on the backdrop
+        $(".header__backdrop").click(function (e) {
+          if (e.target.className === "header__backdrop active") {
+            $(this).removeClass("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
