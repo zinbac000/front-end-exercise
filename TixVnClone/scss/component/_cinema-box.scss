@@ -4,9 +4,10 @@
 
   .nav-tabs--config.nav {
     display: block;
+    padding: 0;
 
     .nav-item {
-      padding: 0 space(1);
+      padding: 0 space(2);
       .nav-link {
         padding: space(1) 0;
         border-bottom: 1px solid bc("lighterGrey");
@@ -18,6 +19,11 @@
   &__branches,
   &__showtimes {
     height: 705px;
+  }
+
+  &__brands,
+  &__branches {
+    border-right: 1px solid bc("lighterGrey");
   }
 
   &__branches,
@@ -42,7 +48,7 @@
   }
 
   &__branch {
-    @include flex(center, start);
+    @include flex($justifyContent: center, $alignItems: start);
     padding: space(2) 0 space(1.5);
     border-bottom: 1px solid bc("lighterGrey");
 
@@ -85,6 +91,57 @@
     }
   }
 
-  &__showtimes {
+  &__showtime {
+    padding: space(2) 0;
+    border-bottom: 1px solid bc("lighterGrey");
+
+    &-info {
+      cursor: pointer;
+
+      img {
+        max-width: 50px;
+      }
+
+      &__title {
+        @include text($fSize: "title", $fWeight: "medium");
+
+        margin-left: space(0.5);
+      }
+
+      &__duration {
+        @include text($color: "secondary");
+      }
+
+      .media-body {
+        @include flex($justifyContent: center, $flexDirection: column);
+        align-self: stretch;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    h6 {
+      @include text($fSize: "h6", $fWeight: "medium");
+    }
+  }
+
+  &__schedule-item {
+    @include text($color: "secondary", $fSize: "title", $fWeight: "medium");
+
+    background-color: bc("scheduleItem");
+    border: 1px solid bc("lighterGrey");
+
+    span {
+      @include text($color: "success", $fSize: "h5", $fWeight: "medium");
+    }
+
+    &:hover {
+      color: tc("secondary");
+      span {
+        color: tc("danger");
+      }
+    }
   }
 }

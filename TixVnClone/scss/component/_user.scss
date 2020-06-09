@@ -1,6 +1,6 @@
 .user {
   @include text("secondary", "body2");
-  @include flex(center, center, true);
+  @include flex(inline-flex, center, center);
 
   cursor: pointer;
 

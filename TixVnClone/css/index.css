@@ -26,6 +26,7 @@ a {
   line-height: unset;
   letter-spacing: unset;
   display: inline-flex;
+  flex-direction: initial;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -67,5 +68,132 @@ a {
         background-color: #888888; }
   .user:hover .user__setting {
     display: block; }
+
+.movie-limit {
+  background-color: #fb4226;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: unset;
+  letter-spacing: unset;
+  min-width: 33px; }
+  .movie-limit--no-limit {
+    background-color: #00ac4d; }
+
+.cinema-box {
+  border: 1px solid #eeeeee;
+  border-radius: 5px; }
+  .cinema-box .nav-tabs--config.nav {
+    display: block;
+    padding: 0; }
+    .cinema-box .nav-tabs--config.nav .nav-item {
+      padding: 0 20px; }
+      .cinema-box .nav-tabs--config.nav .nav-item .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid #eeeeee; }
+  .cinema-box__brands, .cinema-box__branches, .cinema-box__showtimes {
+    height: 705px; }
+  .cinema-box__brands, .cinema-box__branches {
+    border-right: 1px solid #eeeeee; }
+  .cinema-box__branches, .cinema-box__showtimes {
+    overflow-y: auto; }
+    .cinema-box__branches::-webkit-scrollbar, .cinema-box__showtimes::-webkit-scrollbar {
+      width: 4px;
+      background-color: #eeeeee; }
+    .cinema-box__branches::-webkit-scrollbar-track, .cinema-box__showtimes::-webkit-scrollbar-track {
+      border-radius: 7px; }
+    .cinema-box__branches::-webkit-scrollbar-thumb, .cinema-box__showtimes::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #959595; }
+  .cinema-box__branch {
+    display: flex;
+    flex-direction: initial;
+    justify-content: center;
+    align-items: start;
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #eeeeee;
+    opacity: 0.5;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .cinema-box__branch.active, .cinema-box__branch:hover {
+      opacity: 1; }
+    .cinema-box__branch img {
+      margin-right: 5px; }
+    .cinema-box__branch-content {
+      min-width: 0; }
+      .cinema-box__branch-content h4 {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: unset;
+        letter-spacing: unset; }
+        .cinema-box__branch-content h4 span {
+          color: #e71a0f; }
+      .cinema-box__branch-content p,
+      .cinema-box__branch-content a {
+        color: #949494;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: unset;
+        letter-spacing: unset; }
+      .cinema-box__branch-content p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0; }
+      .cinema-box__branch-content a {
+        color: #fb4226; }
+  .cinema-box__showtime {
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee; }
+    .cinema-box__showtime-info {
+      cursor: pointer; }
+      .cinema-box__showtime-info img {
+        max-width: 50px; }
+      .cinema-box__showtime-info__title {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: unset;
+        letter-spacing: unset;
+        margin-left: 5px; }
+      .cinema-box__showtime-info__duration {
+        color: #9b9b9b;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: unset;
+        letter-spacing: unset; }
+      .cinema-box__showtime-info .media-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: initial;
+        align-self: stretch; }
+        .cinema-box__showtime-info .media-body p {
+          margin: 0; }
+    .cinema-box__showtime h6 {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: unset;
+      letter-spacing: unset; }
+  .cinema-box__schedule-item {
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: unset;
+    letter-spacing: unset;
+    background-color: rgba(246, 246, 246, 0.5);
+    border: 1px solid #eeeeee; }
+    .cinema-box__schedule-item span {
+      color: #108f3e;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: unset;
+      letter-spacing: unset; }
+    .cinema-box__schedule-item:hover {
+      color: #9b9b9b; }
+      .cinema-box__schedule-item:hover span {
+        color: #fb4226; }
 
 /*# sourceMappingURL=index.css.map */

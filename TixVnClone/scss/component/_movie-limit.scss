@@ -1,0 +1,11 @@
+.movie-limit {
+  background-color: bc("danger");
+
+  @include text($color: "white", $fWeight: "medium");
+
+  min-width: 33px;
+
+  &--no-limit {
+    background-color: bc("success");
+  }
+}

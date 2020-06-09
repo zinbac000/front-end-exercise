@@ -104,12 +104,14 @@ $breakpoints: (
 }
 
 // Flexbox
-@mixin flex($justifyContent: initial, $alignItems: initial, $inline: false) {
-  @if $inline == true {
-    display: inline-flex;
-  } @else {
-    display: flex;
-  }
+@mixin flex(
+  $flex: flex,
+  $justifyContent: initial,
+  $alignItems: initial,
+  $flexDirection: initial
+) {
+  display: $flex;
+  flex-direction: $flexDirection;
   justify-content: $justifyContent;
   align-items: $alignItems;
 }
