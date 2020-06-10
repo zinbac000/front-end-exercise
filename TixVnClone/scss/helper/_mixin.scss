@@ -16,21 +16,25 @@
 
 // Button mixin
 @mixin button(
-  $fs,
-  $fw,
-  $color,
-  $bgColor,
-  $border,
-  $borderSize,
-  $py,
-  $px,
-  $bgHover
+  $fs: "title",
+  $fw: "regular",
+  $color: unset,
+  $bgColor: unset,
+  $border: unset,
+  $borderSize: unset,
+  $py: unset,
+  $px: unset,
+  $bgHover: unset
 ) {
   @include text($color, $fs, $fw);
+  border: none;
+  outline: none;
 
   background-color: bc($bgColor);
 
-  border: $borderSize solid bc($border);
+  @if $borderSize != unset && $border != unset {
+    border: $borderSize solid bc($border);
+  }
   padding: space($py) space($px);
 
   transition: all 0.4s;

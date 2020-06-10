@@ -16,6 +16,10 @@ a {
   text-decoration: none !important;
   cursor: pointer; }
 
+ul,
+ol {
+  list-style: none; }
+
 .nav-tabs {
   border-bottom: none; }
   .nav-tabs .nav-item {
@@ -78,6 +82,8 @@ a {
       font-weight: 400;
       line-height: unset;
       letter-spacing: unset;
+      border: none;
+      outline: none;
       background-color: #959595;
       border: unset solid "";
       padding: 5px 10px;
@@ -241,7 +247,7 @@ a {
   right: unset;
   bottom: unset;
   left: unset;
-  z-index: unset;
+  z-index: 100;
   width: 100%;
   height: 60px;
   padding: 0 20px;
@@ -329,7 +335,7 @@ a {
     padding: 10px 20px;
     background-color: #ffffff;
     transform: translateX(100%);
-    transition: all 0.5s; }
+    transition: all 0.3s; }
     .header__side-menu__top {
       display: flex;
       flex-direction: initial;
@@ -368,5 +374,124 @@ a {
       align-items: initial; }
     .header__toggler {
       display: none; } }
+
+#locationModal {
+  overflow: hidden; }
+  #locationModal .modal-dialog {
+    height: 100%;
+    padding: 20px; }
+    #locationModal .modal-dialog .modal-content {
+      height: 97%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
+      #locationModal .modal-dialog .modal-content ul {
+        padding: 10px; }
+        #locationModal .modal-dialog .modal-content ul li {
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: 1px solid #eeeeee; }
+
+.trailer {
+  position: relative;
+  padding-top: 60px; }
+  .trailer__slider {
+    display: none; }
+  .trailer__tools {
+    position: absolute;
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 50%;
+    z-index: unset;
+    transform: translate(-50%, 50%);
+    display: none;
+    width: 100%;
+    max-width: 940px;
+    height: 80px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
+    .trailer__tools .select-input,
+    .trailer__tools button {
+      flex-grow: 1; }
+    .trailer__tools .select-input {
+      position: relative; }
+      .trailer__tools .select-input:first-child {
+        flex-basis: 25%; }
+      .trailer__tools .select-input::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: unset;
+        left: unset;
+        z-index: unset;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 120%;
+        background-color: #eeeeee; }
+    .trailer__tools button {
+      margin-left: 10px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset;
+      border: none;
+      outline: none;
+      background-color: #4a4a4a;
+      border: unset solid "";
+      padding: 10px 20px;
+      transition: all 0.4s;
+      border-radius: 5px; }
+      .trailer__tools button:hover {
+        background-color: ""; }
+  @media only screen and (min-width: 576px) {
+    .trailer__slider {
+      display: block; }
+      .trailer__slider .slick-dots {
+        position: absolute;
+        top: unset;
+        right: unset;
+        bottom: 15%;
+        left: 0;
+        z-index: unset;
+        width: 100%; }
+        .trailer__slider .slick-dots li {
+          margin: 0; }
+          .trailer__slider .slick-dots li button {
+            background: linear-gradient(to bottom, #959595, #ffffff);
+            width: 13px;
+            height: 13px;
+            border-radius: 50%; }
+            .trailer__slider .slick-dots li button::before {
+              display: none; }
+          .trailer__slider .slick-dots li.slick-active button {
+            background-image: none;
+            background-color: #fb4226; }
+    .trailer__item {
+      position: relative;
+      cursor: pointer; }
+      .trailer__item a {
+        position: absolute;
+        top: 50%;
+        right: unset;
+        bottom: unset;
+        left: 50%;
+        z-index: unset;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.5s; }
+      .trailer__item:hover a {
+        opacity: 1; }
+        .trailer__item:hover a:hover {
+          opacity: 0.5; } }
+  @media only screen and (min-width: 992px) {
+    .trailer__tools {
+      display: flex;
+      flex-direction: initial;
+      justify-content: initial;
+      align-items: center; } }
 
 /*# sourceMappingURL=index.css.map */

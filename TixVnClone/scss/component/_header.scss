@@ -1,5 +1,5 @@
 .header {
-  @include pos($position: fixed, $top: 0);
+  @include pos($position: fixed, $top: 0, $zIndex: 100);
   width: 100%;
   height: 60px;
   padding: 0 space(2);
@@ -111,7 +111,7 @@
 
     transform: translateX(100%);
 
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     &__top {
       @include flex($justifyContent: space-between, $alignItems: center);
@@ -151,6 +151,31 @@
     }
     &__toggler {
       display: none;
+    }
+  }
+}
+
+#locationModal {
+  overflow: hidden;
+  .modal-dialog {
+    height: 100%;
+    padding: space(2);
+
+    .modal-content {
+      height: 97%;
+
+      box-shadow: 0 0 15px bc("boxShadow");
+
+      ul {
+        padding: space(1);
+
+        li {
+          text-align: center;
+
+          padding: space(1) 0;
+          border-bottom: 1px solid bc("lighterGrey");
+        }
+      }
     }
   }
 }

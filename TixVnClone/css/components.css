@@ -16,6 +16,10 @@ a {
   text-decoration: none !important;
   cursor: pointer; }
 
+ul,
+ol {
+  list-style: none; }
+
 .nav-tabs {
   border-bottom: none; }
   .nav-tabs .nav-item {
@@ -78,6 +82,8 @@ a {
       font-weight: 400;
       line-height: unset;
       letter-spacing: unset;
+      border: none;
+      outline: none;
       background-color: #959595;
       border: unset solid "";
       padding: 5px 10px;
