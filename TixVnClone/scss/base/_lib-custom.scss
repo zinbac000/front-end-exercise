@@ -1,0 +1,23 @@
+// SLICK CUSTOM
+.slider {
+  .slick-prev {
+    background: url(../../img/icons/back-session.png) no-repeat;
+  }
+
+  .slick-next {
+    background: url(../../img/icons/next-session.png) no-repeat;
+  }
+  .slick-arrow {
+    z-index: 2;
+
+    background-size: contain;
+    background-position: center;
+
+    width: 50px;
+    height: 100px;
+
+    &::before {
+      display: none;
+    }
+  }
+}

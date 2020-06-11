@@ -7,6 +7,7 @@
 @import "../base/reset";
 @import "../base/bootstrap-custom";
 @import "../base/browser-custom";
+@import "../base/lib-custom";
 
 @import "../component/user";
 @import "../component/movie-limit";
@@ -15,17 +16,59 @@
 @import "../component/header";
 @import "../component/footer";
 
-// TRAILER CSS
+// TRAILER SCSS
 .trailer {
   position: relative;
-  padding-top: 60px;
+  padding-top: space(6);
 
   &__slider {
     display: none;
+    .slick-prev {
+      left: 30px;
+    }
+
+    .slick-next {
+      right: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    cursor: pointer;
+
+    a {
+      @include pos($position: absolute, $top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+
+      opacity: 0;
+
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &-overlay {
+      @include pos($position: absolute, $top: 0, $left: 0);
+      width: 100%;
+      height: 100%;
+
+      pointer-events: none;
+
+      background: linear-gradient(to top, bc("black"), transparent 20%);
+    }
   }
 
   &__tools {
-    @include pos($position: absolute, $bottom: 0, $left: 50%);
+    @include pos($position: absolute, $bottom: 0, $left: 50%, $zIndex: 10);
     transform: translate(-50%, 50%);
 
     display: none;
@@ -68,7 +111,12 @@
     button {
       margin-left: space(1);
 
-      @include button($color: "white", $bgColor: "darkGrey", $py: 1, $px: 2);
+      @include button(
+        $color: "white",
+        $bgColor: bc("darkGrey"),
+        $py: 1,
+        $px: 2
+      );
       border-radius: 5px;
     }
   }
@@ -107,36 +155,184 @@
         }
       }
     }
-
-    &__item {
-      position: relative;
-
-      cursor: pointer;
-
-      a {
-        @include pos($position: absolute, $top: 50%, $left: 50%);
-        transform: translate(-50%, -50%);
-
-        opacity: 0;
-
-        transition: all 0.5s;
-      }
-
-      &:hover {
-        a {
-          opacity: 1;
-
-          &:hover {
-            opacity: 0.5;
-          }
-        }
-      }
-    }
   }
 
   @include mq("large") {
     &__tools {
       @include flex($alignItems: center);
     }
+  }
+}
+
+// CINEMA BOX SCSS
+#cinema-box {
+  padding: space(9) 0 space(3);
+}
+
+// MOVIE SCSS
+.movie {
+  padding: space(9) 0 space(3);
+  .slick-prev {
+    left: -70px;
+  }
+  .slick-next {
+    right: -70px;
+  }
+  &__item {
+    position: relative;
+
+    padding: space(2) space(1) 0;
+    margin-bottom: space(2.5);
+
+    &:hover {
+      .movie__button,
+      .movie__overlay {
+        opacity: 1;
+      }
+
+      .movie__info {
+        opacity: 0;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 5px;
+    margin-bottom: space(1);
+
+    cursor: pointer;
+  }
+
+  &__sneakshow,
+  &__overlay,
+  &__rating,
+  &__type,
+  &__show-date {
+    position: absolute;
+  }
+
+  &__sneakshow,
+  &__show-date {
+    @include pos($right: 10px, $bottom: 10px);
+  }
+
+  &__sneakshow {
+    @include text($color: "white");
+    padding: space(0.3) space(0.5);
+    border-radius: 5px;
+
+    background-color: bc("danger");
+    box-shadow: inset 0 0 10px bc("boxShadow");
+  }
+
+  &__overlay {
+    @include pos($top: 0, $right: 0, $bottom: 0, $left: 0);
+    @include flex($justifyContent: center, $alignItems: center);
+    background: linear-gradient(to top, bc("black"), transparent);
+    opacity: 0;
+
+    transition: all 0.3s;
+
+    a {
+      transform: scale(0.6);
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__rating,
+  &__show-date {
+    width: 54px;
+    padding: space(0.5) 0;
+
+    background-color: bc("movieRating");
+    border: 1px solid bc("movieRatingBorder");
+    border-radius: 5px;
+  }
+
+  &__show-date {
+    text-align: center;
+    @include text($color: "white", $fSize: "title2", $fWeight: "medium");
+  }
+
+  &__rating {
+    @include pos($top: 10px, $right: 10px);
+  }
+
+  &__score {
+    @include text($color: "white", $fSize: "title2", $fWeight: "medium");
+    margin-bottom: space(0.5);
+
+    text-align: center;
+
+    transform: scaleY(1.2);
+  }
+
+  &__stars {
+    @include flex($justifyContent: center);
+    margin-bottom: 0;
+    img {
+      display: block;
+      width: 8px;
+    }
+  }
+
+  &__type {
+    @include pos($top: 0, $left: 0);
+
+    width: 80%;
+    transform: translate(-6%, -17%);
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__info {
+    position: relative;
+
+    transition: all 0.3s;
+  }
+
+  &__title {
+    @include text($fSize: "title2", $fWeight: "medium");
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+
+    span {
+      margin-right: space(0.5);
+    }
+  }
+
+  &__duration {
+    display: block;
+    @include text($color: "info", $fSize: "body2");
+
+    margin-top: space(0.5);
+  }
+
+  &__button {
+    @include pos($position: absolute, $top: 0, $left: 0);
+    @include button(
+      $fs: "h6",
+      $color: "white",
+      $bgColor: bc("darkRed"),
+      $py: 1,
+      $px: 1,
+      $bgHover: bc("secondary")
+    );
+
+    width: 100%;
+    border-radius: 5px;
+
+    opacity: 0;
   }
 }

@@ -1,0 +1,87 @@
+.footer {
+  padding: space(3) 0;
+
+  background-color: bc("footer");
+  p {
+    @include text($color: "white");
+  }
+
+  &__top {
+    a {
+      @include text($color: "secondary");
+
+      transition: all 0.5s;
+
+      &:hover {
+        color: tc("white");
+      }
+    }
+  }
+
+  &__partners {
+    a {
+      display: inline-block;
+      margin-right: space(1);
+      overflow: hidden;
+
+      border-radius: 50%;
+      background-color: bc("primary");
+    }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__apps {
+    a {
+      margin: 0 space(0.5);
+    }
+    img {
+      width: 30px;
+    }
+  }
+
+  &__partners,
+  &__apps {
+    a {
+      opacity: 1;
+
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    margin: space(1) 0;
+
+    background-color: bc("darkGrey");
+  }
+
+  &__bottom {
+    p {
+      margin-bottom: space(0.5);
+    }
+    span {
+      display: block;
+
+      @include text($color: "secondary", $lineHeight: 2);
+
+      a {
+        color: tc("danger");
+      }
+    }
+    &-zion {
+      max-width: 100px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    &-cert {
+      max-width: 150px;
+      width: 100%;
+    }
+  }
+}

@@ -23,7 +23,11 @@ $bgColors: (
   "scheduleItem": rgba(246, 246, 246, 0.5),
   "boxShadow": rgba(0, 0, 0, 0.3),
   "header": rgba(255, 255, 255, 0.95),
-  "backdrop": rgba(0, 0, 0, 0.8)
+  "backdrop": rgba(0, 0, 0, 0.8),
+  "black": #000,
+  "footer": #222,
+  "movieRating": rgba(12, 27, 54, 0.8),
+  "movieRatingBorder": #1f2e46
 );
 
 // TEXT COLORS
@@ -39,7 +43,8 @@ $txtColors: (
   "price": #44c020,
   "orange": #f79320,
   "disabled": #e9e9e9,
-  "white": #ffffff
+  "white": #ffffff,
+  "tabActive": #fa5238
 );
 
 // ----------- FONT ------------
@@ -48,11 +53,12 @@ $txtColors: (
 $fSizes: (
   "body1": 12px,
   "body2": 13px,
-  "title": 14px,
-  "h6": 16px,
-  "h5": 18px,
-  "h4": 20px,
-  "h3": 22px,
+  "title1": 14px,
+  "title2": 16px,
+  "h6": 18px,
+  "h5": 20px,
+  "h4": 22px,
+  "h3": 24px,
   "h2": 29px,
   "h1": 34px
 );

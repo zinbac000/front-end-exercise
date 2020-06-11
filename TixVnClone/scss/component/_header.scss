@@ -16,7 +16,7 @@
   &__nav {
     display: none;
     a {
-      @include text($fSize: "title");
+      @include text($fSize: "title1");
 
       margin-right: space(1);
 
@@ -33,7 +33,7 @@
     display: none;
 
     .user--header {
-      @include pos();
+      position: relative;
       padding-right: space(1);
 
       &::after {
@@ -122,7 +122,7 @@
       }
 
       p {
-        @include text($fSize: "title");
+        @include text($fSize: "title1");
         margin: 0;
 
         img {
@@ -135,7 +135,7 @@
     }
 
     a {
-      @include text($fSize: "h5");
+      @include text($fSize: "h6");
 
       display: block;
       margin: space(3.5) 0;

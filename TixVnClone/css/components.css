@@ -1,13 +1,14 @@
-.hideOnMobile {
-  display: none; }
-  @media only screen and (min-width: 768px) {
-    .hideOnMobile {
-      display: block; } }
+.tixMaxWidth {
+  max-width: 940px;
+  margin: 0 auto; }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   font-family: Roboto, sans-serif; }
@@ -28,6 +29,21 @@ ol {
       border: none;
       padding: unset;
       margin: unset; }
+  .nav-tabs--tix .nav-link {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: unset;
+    letter-spacing: unset;
+    transition: all 0.2s; }
+    .nav-tabs--tix .nav-link.active {
+      color: #fa5238;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset; }
+    .nav-tabs--tix .nav-link:hover {
+      font-size: 24px; }
 
 .custom-scroll {
   overflow-y: auto; }
@@ -48,16 +64,10 @@ ol {
   line-height: unset;
   letter-spacing: unset;
   display: inline-flex;
-  flex-direction: initial;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: relative;
-  top: unset;
-  right: unset;
-  bottom: unset;
-  left: unset;
-  z-index: unset; }
+  position: relative; }
   .user__picture {
     display: block;
     width: 30px;
@@ -65,11 +75,8 @@ ol {
     margin-right: 5px; }
   .user__setting {
     position: absolute;
-    top: unset;
     right: 0;
     bottom: -80%;
-    left: unset;
-    z-index: unset;
     display: none;
     width: calc(100% - 35px);
     border-radius: 4px;
@@ -121,7 +128,6 @@ ol {
     border-right: 1px solid #eeeeee; }
   .cinema-box__branch {
     display: flex;
-    flex-direction: initial;
     justify-content: center;
     align-items: start;
     padding: 20px 0 15px;
@@ -181,7 +187,6 @@ ol {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: initial;
         align-self: stretch; }
         .cinema-box__showtime-info .media-body p {
           margin: 0; }
@@ -220,7 +225,6 @@ ol {
     letter-spacing: unset; }
   .select-input__link {
     display: flex;
-    flex-direction: initial;
     justify-content: space-between;
     align-items: center;
     width: 100%; }

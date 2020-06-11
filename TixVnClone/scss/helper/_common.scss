@@ -1,7 +1,4 @@
-.hideOnMobile {
-  display: none;
-
-  @include mq("medium") {
-    display: block;
-  }
+.tixMaxWidth {
+  max-width: 940px;
+  margin: 0 auto;
 }

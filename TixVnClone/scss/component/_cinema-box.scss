@@ -48,7 +48,7 @@
       min-width: 0;
 
       h4 {
-        @include text($fSize: "title");
+        @include text($fSize: "title1");
 
         span {
           color: tc("cgv");
@@ -82,7 +82,7 @@
       }
 
       &__title {
-        @include text($fSize: "title", $fWeight: "medium");
+        @include text($fSize: "title1", $fWeight: "medium");
 
         margin-left: space(0.5);
       }
@@ -102,18 +102,18 @@
     }
 
     h6 {
-      @include text($fSize: "h6", $fWeight: "medium");
+      @include text($fSize: "title2", $fWeight: "medium");
     }
   }
 
   &__schedule-item {
-    @include text($color: "secondary", $fSize: "title", $fWeight: "medium");
+    @include text($color: "secondary", $fSize: "title1", $fWeight: "medium");
 
     background-color: bc("scheduleItem");
     border: 1px solid bc("lighterGrey");
 
     span {
-      @include text($color: "success", $fSize: "h5", $fWeight: "medium");
+      @include text($color: "success", $fSize: "h6", $fWeight: "medium");
     }
 
     &:hover {

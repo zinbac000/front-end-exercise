@@ -16,23 +16,23 @@
 
 // Button mixin
 @mixin button(
-  $fs: "title",
+  $fs: "title2",
   $fw: "regular",
-  $color: unset,
-  $bgColor: unset,
-  $border: unset,
-  $borderSize: unset,
-  $py: unset,
-  $px: unset,
-  $bgHover: unset
+  $color: null,
+  $bgColor: null,
+  $border: null,
+  $borderSize: null,
+  $py: null,
+  $px: null,
+  $bgHover: null
 ) {
   @include text($color, $fs, $fw);
   border: none;
   outline: none;
 
-  background-color: bc($bgColor);
+  background-color: $bgColor;
 
-  @if $borderSize != unset && $border != unset {
+  @if $borderSize != null && $border != null {
     border: $borderSize solid bc($border);
   }
   padding: space($py) space($px);
@@ -40,15 +40,8 @@
   transition: all 0.4s;
 
   &:hover {
-    background-color: bc($bgHover);
+    background-color: $bgHover;
   }
-}
-
-// ::after ::before mixin
-@mixin pseudo($display: block, $pos: absolute, $content: "") {
-  content: $content;
-  display: $display;
-  position: $pos;
 }
 
 // Triangle for tooltip box mixin
@@ -110,9 +103,9 @@ $breakpoints: (
 // Flexbox
 @mixin flex(
   $flex: flex,
-  $justifyContent: initial,
-  $alignItems: initial,
-  $flexDirection: initial
+  $justifyContent: null,
+  $alignItems: null,
+  $flexDirection: null
 ) {
   display: $flex;
   flex-direction: $flexDirection;
@@ -122,12 +115,12 @@ $breakpoints: (
 
 // Positioning
 @mixin pos(
-  $position: relative,
-  $top: unset,
-  $right: unset,
-  $bottom: unset,
-  $left: unset,
-  $zIndex: unset
+  $position: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $zIndex: null
 ) {
   position: $position;
   top: $top;

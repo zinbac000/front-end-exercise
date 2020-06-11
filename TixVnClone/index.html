@@ -42,8 +42,8 @@
         <img src="./img/icons/web-logo.png" alt="web logo" />
       </a>
       <div class="header__nav">
-        <a href="">Lịch Chiếu</a>
-        <a href="">Cụm Rạp</a>
+        <a href="#movie">Lịch Chiếu</a>
+        <a href="#cinema-box">Cụm Rạp</a>
         <a href="">Tin Tức</a>
         <a href="">Ứng Dụng</a>
       </div>
@@ -218,9 +218,9 @@
       </div>
     </div>
 
-    <!-- TRAILER -->
-    <section class="trailer">
-      <div class="trailer__slider">
+    <!-- TRAILER SLIDER -->
+    <section class="trailer d-none d-md-block">
+      <div class="trailer__slider slider">
         <div class="trailer__item">
           <img
             class="d-block w-100"
@@ -363,6 +363,1584 @@
       </div>
     </section>
 
+    <!-- MOVIE SLIDER -->
+    <section id="movie" class="movie tixMaxWidth">
+      <ul
+        class="nav nav-tabs nav-tabs--tix justify-content-center align-items-center mb-5"
+        role="tablist"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active mr-3"
+            href="#showingMovie"
+            role="tab"
+            data-toggle="tab"
+            >Đang Chiếu</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#comingMovie" role="tab" data-toggle="tab"
+            >Sắp Chiếu</a
+          >
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div
+          class="tab-pane fade show active movie__slider slider"
+          id="showingMovie"
+          role="tabpanel"
+        >
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade movie__slider slider"
+          id="comingMovie"
+          role="tabpanel"
+        >
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge movie-limit--no-limit"
+                        >P</span
+                      >Kẻ Trực Đêm - The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+              <div class="movie__item col-3">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <div class="movie__overlay">
+                    <a href=""
+                      ><img src="./img/icons/play-video.png" alt=""
+                    /></a>
+                  </div>
+                  <span class="movie__show-date">12/09</span>
+
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+                <div class="movie__content">
+                  <div class="movie__info">
+                    <div class="movie__title">
+                      <span class="movie-limit badge">C16</span>Kẻ Trực Đêm -
+                      The Night Clerk
+                    </div>
+                    <span class="movie__duration">77 phút - 5.9 IMDb</span>
+                  </div>
+                  <button class="movie__button">MUA VÉ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMA BOX -->
+    <section class="d-none d-md-block" id="cinema-box">
+      <div class="cinema-box container">
+        <div class="row">
+          <ul
+            class="nav nav-tabs nav-tabs--config cinema-box__brands col-md-2 col-lg-1"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                href="#cgv-tab"
+                class="nav-link active"
+                role="tab"
+                data-toggle="tab"
+                ><img
+                  class="d-block img-fluid"
+                  src="./img/icons/cgv_logo.png"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+          <div
+            class="tab-content col-md-5 col-lg-4 cinema-box__branches custom-scroll"
+          >
+            <div class="tab-pane show active" role="tab-panel" id="cgv-tab">
+              <div class="cinema-box__branch active">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+              <div class="cinema-box__branch">
+                <img class="d-block" src="https://picsum.photos/64/64" alt="" />
+                <div class="cinema-box__branch-content">
+                  <h4><span>CGV</span> - Satra Củ Chi</h4>
+                  <p>
+                    Tầng 3, TTTM Satra Củ Chi, Số 123 Đường Mạc Đĩnh Chi
+                  </p>
+                  <a href="">[chi tiết]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-7 cinema-box__showtimes custom-scroll">
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+            <div class="cinema-box__showtime">
+              <div class="cinema-box__showtime-info">
+                <div class="media">
+                  <img
+                    class="d-block mr-3"
+                    src="https://picsum.photos/64/64"
+                    alt="showtime poster"
+                  />
+                  <div class="media-body">
+                    <p>
+                      <span class="movie-limit badge">C16</span
+                      ><span class="cinema-box__showtime-info__title"
+                        >Nắng 3: Lời Hứa Của Cha</span
+                      >
+                    </p>
+                    <p class="cinema-box__showtime-info__duration">
+                      109 phút - TIX 7.9 - IMDb 0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-3">2D Digital</h6>
+              <div class="cinema-box__showtime-schedule">
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+                <a class="badge cinema-box__schedule-item" href=""
+                  ><span>14:20</span> ~ 16:09</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="row d-none d-lg-block">
+              <div class="col">
+                <p>TIX</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="d-none d-lg-block col-lg-auto">
+                <a class="d-block mb-2" href="">FAQ</a>
+                <a class="d-block" href="">Brand Guidelines</a>
+              </div>
+              <div class="col-12 col-lg-auto text-center text-md-left">
+                <a class="d-inline d-lg-block mr-2 mb-2" href=""
+                  >Thỏa thuận sử dụng</a
+                >
+                <a class="d-inline d-lg-block" href="">Chính sách bảo mật</a>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-lg-block col-lg-4 footer__partners">
+            <div class="row">
+              <div class="col">
+                <p>ĐỐI TÁC</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a href=""><img src="./img/icons/cgv.png" alt="" /></a>
+                <a href=""><img src="./img/icons/bhd.png" alt="" /></a>
+                <a href=""><img src="./img/icons/galaxycine.png" alt="" /></a>
+                <a href=""><img src="./img/icons/cinestar.png" alt="" /></a>
+                <a href=""
+                  ><img
+                    src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/megags.png" alt="" /></a>
+                <a href=""><img src="./img/icons/bt.jpg" alt="" /></a>
+                <a href=""><img src="./img/icons/dongdacinema.png" alt="" /></a>
+                <a href=""><img src="./img/icons/TOUCH.png" alt="" /></a>
+                <a href=""><img src="./img/icons/cnx.jpg" alt="" /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/STARLIGHT.png" alt="" /></a>
+                <a href=""><img src="./img/icons/dcine.png" alt="" /></a>
+                <a href=""><img src="./img/icons/zalopay_icon.png" alt="" /></a>
+                <a href=""><img src="./img/icons/payoo.jpg" alt="" /></a>
+                <a href=""><img src="./img/icons/VCB.png" alt="" /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/AGRIBANK.png" alt="" /></a>
+                <a href=""><img src="./img/icons/VIETTINBANK.png" alt="" /></a>
+                <a href=""><img src="./img/icons/IVB.png" alt="" /></a>
+                <a href=""><img src="./img/icons/123go.png" alt="" /></a>
+                <a href=""><img src="./img/icons/laban.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mt-2 mt-md-0 footer__apps">
+            <div class="row">
+              <div class="d-none d-lg-block col-lg-6 text-center">
+                <p>MOBILE APP</p>
+                <a href=""><img src="./img/icons/apple-logo.png" alt="" /></a>
+                <a href=""><img src="./img/icons/android-logo.png" alt="" /></a>
+              </div>
+              <div
+                class="col-12 col-lg-6 text-center text-md-left text-lg-center"
+              >
+                <p class="d-none d-lg-block">SOCIAL</p>
+                <a href=""
+                  ><img src="./img/icons/facebook-logo.png" alt=""
+                /></a>
+                <a href=""><img src="./img/icons/zalo-logo.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__bottom row">
+          <div class="col-12 col-md-2 text-center">
+            <img
+              class="footer__bottom-zion"
+              src="./img/icons/zion-logo.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-md-8 text-center text-lg-left my-3 my-md-0">
+            <p>TIX - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
+            <span
+              >Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+              Chí Minh, Việt Nam.</span
+            >
+            <span
+              >Giấy chứng nhận đăng ký kinh doanh số: 0101659783,<br />
+              đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
+              hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</span
+            >
+            <span
+              >Số Điện Thoại (Hotline): 1900 545 436<br />
+              Email: <a href="">support@tix.vn</a></span
+            >
+          </div>
+          <div class="col-12 col-md-2 text-center">
+            <img
+              class="footer__bottom-cert"
+              src="https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -413,9 +1991,17 @@
 
         // TRAILER SLIDER INIT
         $(".trailer__slider").slick({
-          arrows: false,
+          arrows: true,
           dots: true,
           autoplay: true
+        });
+
+        $(".movie__slider").slick({
+          arrows: true
+        });
+
+        $('a[data-toggle="tab"]').on("shown.bs.tab", () => {
+          $(".slider").slick("setPosition");
         });
       });
     </script>
