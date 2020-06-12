@@ -107,7 +107,8 @@ ol {
   font-weight: 600;
   line-height: unset;
   letter-spacing: unset;
-  min-width: 33px; }
+  min-width: 33px;
+  padding: 0; }
   .movie-limit--no-limit {
     background-color: #00ac4d; }
 

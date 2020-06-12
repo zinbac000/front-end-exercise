@@ -141,7 +141,7 @@
               alt=""
             />
           </div>
-          <a href="">Lịch Chiếu</a>
+          <a href="#movie">Lịch Chiếu</a>
           <a href="">Cụm Rạp</a>
           <a href="">Tin Tức</a>
           <a href="">Ứng Dụng</a>
@@ -366,7 +366,7 @@
     <!-- MOVIE SLIDER -->
     <section id="movie" class="movie tixMaxWidth">
       <ul
-        class="nav nav-tabs nav-tabs--tix justify-content-center align-items-center mb-5"
+        class="nav nav-tabs nav-tabs--tix justify-content-center align-items-center mb-4 d-none d-md-flex"
         role="tablist"
       >
         <li class="nav-item">
@@ -385,7 +385,7 @@
         </li>
       </ul>
 
-      <div class="tab-content">
+      <div class="tab-content d-none d-md-block">
         <div
           class="tab-pane fade show active movie__slider slider"
           id="showingMovie"
@@ -1449,6 +1449,196 @@
           </div>
         </div>
       </div>
+
+      <ul
+        class="nav nav-tabs nav-tabs--tix justify-content-center align-items-center mb-4 d-md-none"
+        role="tablist"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active mr-3"
+            href="#showingMovieMobile"
+            role="tab"
+            data-toggle="tab"
+            >Đang Chiếu</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#comingMovieMobile"
+            role="tab"
+            data-toggle="tab"
+            >Sắp Chiếu</a
+          >
+        </li>
+      </ul>
+
+      <div class="tab-content d-md-none">
+        <div
+          class="tab-pane fade show active"
+          id="showingMovieMobile"
+          role="tabpanel"
+        >
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item movie__item--mobile col-12">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/06/con-mua-tinh-dau-classic-again-15918659621836_540x225.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                  <span
+                    class="badge movie-limit movie-limit--no-limit movie__limit d-md-none"
+                    >P</span
+                  >
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+              </div>
+              <div class="movie__item movie__item--mobile col-12">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/06/con-mua-tinh-dau-classic-again-15918659621836_540x225.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                  <span class="badge movie-limit movie__limit d-md-none"
+                    >C16</span
+                  >
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+              </div>
+              <div class="movie__item movie__item--mobile col-12">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/06/con-mua-tinh-dau-classic-again-15918659621836_540x225.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="movie__sneakshow">Suất Chiếu Sớm</span>
+                  <div class="movie__rating">
+                    <p class="movie__score">7.4</p>
+                    <p class="movie__stars">
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.png" alt="star" />
+                      <img src="./img/icons/star1.2.png" alt="1/2" />
+                    </p>
+                  </div>
+                  <span class="badge movie-limit movie__limit d-md-none"
+                    >C16</span
+                  >
+                </div>
+                <img
+                  class="movie__type"
+                  src="./img/icons/film_type_3.png"
+                  alt="film type"
+                />
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button class="movie__watch-more">XEM THÊM</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="comingMovieMobile" role="tabpanel">
+          <div class="movie__items">
+            <div class="row mx-0">
+              <div class="movie__item movie__item--mobile col-6">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span
+                    class="badge movie-limit movie-limit--no-limit movie__limit d-md-none"
+                    >P</span
+                  >
+
+                  <span class="movie__show-date">12/09</span>
+                </div>
+              </div>
+              <div class="movie__item movie__item--mobile col-6">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span class="badge movie-limit movie__limit d-md-none"
+                    >C16</span
+                  >
+
+                  <span class="movie__show-date">12/09</span>
+                </div>
+              </div>
+              <div class="movie__item movie__item--mobile col-6">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span
+                    class="badge movie-limit movie-limit--no-limit movie__limit d-md-none"
+                    >P</span
+                  >
+
+                  <span class="movie__show-date">12/09</span>
+                </div>
+              </div>
+              <div class="movie__item movie__item--mobile col-6">
+                <div class="movie__image">
+                  <img
+                    class="d-block w-100"
+                    src="https://s3img.vcdn.vn/mobile/123phim/2020/05/tran-chien-midway-15904626652053_215x318.png"
+                    alt="tran chien midway"
+                  />
+                  <span
+                    class="badge movie-limit movie-limit--no-limit movie__limit d-md-none"
+                    >P</span
+                  >
+
+                  <span class="movie__show-date">12/09</span>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button class="movie__watch-more">XEM THÊM</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CINEMA BOX -->
@@ -1960,50 +2150,8 @@
     ></script>
     <!-- Slick JS -->
     <script src="./lib/slick/slick.min.js"></script>
-    <script>
-      $(function () {
-        // SELECT INPUT JAVASCRIPT
-        $(".select-input .dropdown-item").click(function () {
-          var text = $(this).text();
-          $(this)
-            .parents(".select-input")
-            .find(".select-input__link span")
-            .text(text);
-        });
-
-        // HEADER
-        // Toggle side menu when click on the toggler
-        $(".header__toggler").click(function () {
-          $(".header__backdrop").toggleClass("active");
-        });
-        // Close side menu when click on the backdrop
-        $(".header__backdrop").click(function (e) {
-          if (e.target.className === "header__backdrop active") {
-            $(this).removeClass("active");
-          }
-        });
-        // When click a value in location modal on mobile, the value will be updated in location link in side menu
-        $("#locationModal li").click(function () {
-          var text = $(this).text();
-          $(".header__side-menu__location").text(text);
-          $("#locationModal").modal("hide");
-        });
-
-        // TRAILER SLIDER INIT
-        $(".trailer__slider").slick({
-          arrows: true,
-          dots: true,
-          autoplay: true
-        });
-
-        $(".movie__slider").slick({
-          arrows: true
-        });
-
-        $('a[data-toggle="tab"]').on("shown.bs.tab", () => {
-          $(".slider").slick("setPosition");
-        });
-      });
-    </script>
+    <script src="./js/component/header.js"></script>
+    <script src="./js/component/select-input.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
