@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function xuatSoLe() {
+        document.write("Chương trỉnh xuất số lẻ <br>");
+        for (var i = 0; i < 100; i++) {
+          if (i % 2 !== 0) {
+            document.write(i + "<br>");
+          }
+        }
+      }
+
+      function vongWhile() {
+        document.write("Vong while <br>");
+        var i = 0;
+        while (i < 10) {
+          i++;
+          document.write("So " + i + "<br>");
+        }
+      }
+
+      function vongDoWhile() {
+        document.write("Vong do while <br>");
+        var i = 0;
+        do {
+          i++;
+          document.write("So " + i + "<br>");
+        } while (i < 10);
+      }
+
+      xuatSoLe();
+      vongDoWhile();
+      vongDoWhile();
+    </script>
+  </body>
+</html>

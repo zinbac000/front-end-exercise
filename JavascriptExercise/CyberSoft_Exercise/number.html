@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise: Number</title>
+  </head>
+  <body>
+    <form action="#">
+      Số a: <input type="text" id="soA" /> Số b:
+      <input type="text" id="soB" /> Kết quả: <span id="kq"></span>
+      <button id="btnCalc">Tính Tổng</button>
+    </form>
+    <script>
+      const calcSum = function () {
+        var soA = document.getElementById("soA").value;
+        var soB = document.getElementById("soB").value;
+
+        if (isNaN(soA) || isNaN(soB)) {
+          alert("Xin nhập số!");
+        } else {
+          document.getElementById("kq").innerHTML = +soA + +soB;
+        }
+      };
+
+      var btnCalc = document.getElementById("btnCalc");
+      btnCalc.addEventListener("click", calcSum);
+    </script>
+  </body>
+</html>

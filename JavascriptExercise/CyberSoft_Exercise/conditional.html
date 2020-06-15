@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo conditional syntax</title>
+  </head>
+  <body>
+    <button onclick="kiemTraNhap(6)">Click vào đây</button>
+    <button onclick="xetHocLucSinhVien(9)">Xem học lực</button>
+    <script>
+      function kiemTraNhap(giatri) {
+        if (giatri === 8) {
+          alert("Số tám");
+        } else if (giatri === 9) {
+          alert("Số chín");
+        } else {
+          alert("Không phải tám và chín");
+        }
+      }
+
+      function xetHocLucSinhVien(dtb) {
+        var hocLuc;
+        switch (dtb) {
+          case 9:
+            hocLuc = "học lực xuất sắc";
+            break;
+          case 8:
+            hocLuc = "học lực giỏi";
+            break;
+          case 7:
+            hocLuc = "học lực khá";
+            break;
+          case 6:
+            hocLuc = "học lực trung bình";
+            break;
+          default:
+            hocLuc = "chưa xét được học lực";
+        }
+
+        alert(hocLuc);
+      }
+    </script>
+  </body>
+</html>

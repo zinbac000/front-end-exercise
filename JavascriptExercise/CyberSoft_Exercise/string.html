@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example: String</title>
+  </head>
+  <body>
+    <script>
+      // Tìm vị trí chuỗi con nằm đầu
+      var str = "Hệ thống khóa học myclass.vn";
+      document.write(
+        `Vị trí xuất hiện của "myclass.vn" là: <b>${str.indexOf(
+          "myclass.vn"
+        )}</b><br/>`
+      );
+
+      var str =
+        "Học lập trình myclass.vn học theo dự án thực tiễn tại myclass.vn";
+      document.write(
+        `Vị trí xuất hiện của "myclass.vn" là: <b>${str.lastIndexOf(
+          "myclass.vn"
+        )}</b></br>`
+      );
+
+      var str = "Hệ thống khóa học myclass.vn";
+      document.write(
+        `Vị trí xuất hiện của "myclass.vn" là: <b>${str.search(
+          "myclass.vn"
+        )}</b></br>`
+      );
+
+      // Slice
+      var string = "Xin chào các bạn đến hệ thống myclass.vn";
+      document.write(`Chuỗi cần lấy là: <b>${string.slice(30, 40)}</b></br>`);
+
+      // Negative input
+      document.write(`Chuỗi cần lấy là: <b>${string.slice(-12, 35)}</b></br>`);
+
+      // No input for ending
+      document.write(`Chuỗi cần lấy là: <b>${string.slice(24)}</b></br>`);
+
+      // Substring
+      document.write(
+        `Chuỗi cần lấy là: <b>${string.substring(22, 35)}</b></br>`
+      );
+
+      // Substr
+      document.write(`Chuỗi cần lấy là: <b>${string.substr(22, 5)}</b></br>`);
+
+      // Substr negative start input
+      document.write(`Chuỗi cần lấy là: <b>${string.substr(-22, 35)}</b></br>`);
+
+      // TÌM KIẾM VÀ THAY THẾ
+      // replace(str_find, str_replace)
+      var str = "Welcome to itclass.vn";
+      document.write(str.replace("itclass.vn", "myclass.vn"));
+
+      // CHUYỂN HOA THƯỜNG
+      // toUpperCase(): chuyển sang chữ hoa
+      // toLowerCase(): chuyển sang chữ thường
+
+      var str = "Xin chào myclass.vn";
+      document.write(`<br/>${str.toUpperCase()}<br/>`);
+      document.write(`${str.toLowerCase()}<br/>`);
+
+      // NỐI CHUỖI
+      // dùng dấu + để nối chuỗi vào
+      var str = "Welcome " + "to" + " myclass.vn";
+      document.write(str + "<br/>");
+
+      // hoặc dùng hàm concat
+      var str = "<br/> Welcome ";
+      str = str.concat("to", " myclass.vn");
+      document.write(str);
+    </script>
+  </body>
+</html>

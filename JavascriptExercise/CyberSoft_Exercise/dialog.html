@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example: Dialogs</title>
+  </head>
+  <body>
+    <button onclick="xuatThongBao()">Thông báo</button>
+    <button onclick="xacnhan()">Xác nhận</button>
+    <button onclick="nhapDuLieu()">Nhập dữ liệu</button>
+
+    <script>
+      // CÁC HỘP THOẠI TRONG JAVASCRIPT
+
+      // 1. Hộp thoại cảnh báo (alert)
+      const xuatThongBao = function () {
+        alert("Xin chào các bạn đến với hệ thống lập trình myclass.vn");
+      };
+
+      // 2. Hộp thoại xác nhận (confirm)
+      const xacnhan = function () {
+        var result = confirm("Bạn đã đánh giá khóa học này chưa?");
+        if (result) {
+          document.write("Xin cảm ơn các bạn");
+        } else {
+          document.write(
+            "Vui lòng click vào nút màu vàng đánh giá khóa học để đánh giá giảng viên. Xin cảm ơn"
+          );
+        }
+      };
+
+      // 3. Hộp thoại nhập liệu (prompt)
+      const nhapDuLieu = function () {
+        var ten = prompt("Vui lòng nhập vào tên của bạn");
+        document.write(ten);
+      };
+    </script>
+  </body>
+</html>

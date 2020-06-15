@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example: Date</title>
+  </head>
+  <body>
+    <script>
+      var now = new Date();
+      alert(now);
+
+      var vnwomanDay = new Date(2015, 9, 20); // Năm, tháng, ngày
+      alert(vnwomanDay);
+
+      var vnwomanDayandTime = new Date(2015, 9, 20, 12, 20, 30); // Năm, tháng, ngày, giờ, phút, giây
+      alert(vnwomanDayandTime);
+
+      var now = new Date();
+
+      alert("Ngày hôm nay: " + now);
+
+      alert(
+        "Ngày hôm qua: " +
+          new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1)
+      );
+
+      alert(
+        "Ngày mai: " +
+          new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
+      );
+
+      alert(
+        "Ngày mốt: " +
+          new Date(now.getFullYear(), now.getMonth(), now.getDate() + 2)
+      );
+    </script>
+  </body>
+</html>

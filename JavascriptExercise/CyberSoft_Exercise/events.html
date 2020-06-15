@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example: mouse events for input and button</title>
+  </head>
+  <body>
+    <button
+      id="btnClick"
+      onmouseover="thayDoiChonButton(1)"
+      onmousedown="thayDoiChonButton(2)"
+      onmouseup="thayDoiChonButton(3)"
+      onmouseout="thayDoiChonButton(4)"
+    >
+      Click vào đây
+    </button>
+    <input
+      type="text"
+      id="txtTest"
+      onmouseover="onHover()"
+      onfocus="onFocus()"
+      onblur="onBlur()"
+      oninput="onChange()"
+    />
+    <script>
+      var btnClick = document.getElementById("btnClick");
+      var txtTest = document.getElementById("txtTest");
+
+      const thayDoiChonButton = function (giatri) {
+        var backgroundColor;
+        switch (giatri) {
+          case 1:
+            backgroundColor = "red";
+            break;
+          case 2:
+            backgroundColor = "green";
+            break;
+          case 3:
+            backgroundColor = "blue";
+            break;
+          case 4:
+            backgroundColor = "orange";
+            break;
+          default:
+            console.log("mode is not supported");
+            return;
+        }
+
+        btnClick.style.backgroundColor = backgroundColor;
+      };
+
+      const onFocus = function () {
+        txtTest.style.border = "2px solid black";
+      };
+
+      const onHover = function () {
+        txtTest.style.border = "2px solid red";
+      };
+
+      const onBlur = function () {
+        txtTest.style.border = "2px solid yellow";
+      };
+
+      const onChange = function () {
+        console.log("changed");
+        txtTest.style.backgroundColor = "green";
+      };
+    </script>
+  </body>
+</html>
