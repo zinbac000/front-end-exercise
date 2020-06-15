@@ -2,3 +2,14 @@
   max-width: 940px;
   margin: 0 auto;
 }
+
+.back-news::before {
+  content: "";
+  display: block;
+  padding: space(12) 0 0;
+  @extend .tixMaxWidth;
+
+  background: url(../../img/icons/back-news.png);
+  background-size: cover;
+  background-position: center 3px;
+}

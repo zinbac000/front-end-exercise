@@ -1,0 +1,53 @@
+.showtime {
+  padding: space(2) 0;
+  border-bottom: 1px solid bc("lighterGrey");
+
+  &__info {
+    cursor: pointer;
+
+    img {
+      max-width: 50px;
+    }
+
+    &-title {
+      @include text($fSize: "title1", $fWeight: "medium");
+
+      margin-left: space(0.5);
+    }
+
+    &-duration {
+      @include text($color: "secondary");
+    }
+
+    .media-body {
+      @include flex($justifyContent: center, $flexDirection: column);
+      align-self: stretch;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  h6 {
+    @include text($fSize: "title2", $fWeight: "medium");
+  }
+
+  &__schedule-item {
+    @include text($color: "secondary", $fSize: "title1", $fWeight: "medium");
+
+    background-color: bc("scheduleItem");
+    border: 1px solid bc("lighterGrey");
+
+    span {
+      @include text($color: "success", $fSize: "h6", $fWeight: "medium");
+    }
+
+    &:hover {
+      color: tc("secondary");
+      span {
+        color: tc("danger");
+      }
+    }
+  }
+}

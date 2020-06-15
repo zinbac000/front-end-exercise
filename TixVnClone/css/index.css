@@ -1,6 +1,14 @@
-.tixMaxWidth {
+.tixMaxWidth, .back-news::before {
   max-width: 940px;
   margin: 0 auto; }
+
+.back-news::before {
+  content: "";
+  display: block;
+  padding: 120px 0 0;
+  background: url(../../img/icons/back-news.png);
+  background-size: cover;
+  background-position: center 3px; }
 
 * {
   margin: 0;
@@ -125,6 +133,58 @@ ol {
   .movie-limit--no-limit {
     background-color: #00ac4d; }
 
+.showtime {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee; }
+  .showtime__info {
+    cursor: pointer; }
+    .showtime__info img {
+      max-width: 50px; }
+    .showtime__info-title {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: unset;
+      letter-spacing: unset;
+      margin-left: 5px; }
+    .showtime__info-duration {
+      color: #9b9b9b;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: unset;
+      letter-spacing: unset; }
+    .showtime__info .media-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch; }
+      .showtime__info .media-body p {
+        margin: 0; }
+  .showtime h6 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: unset;
+    letter-spacing: unset; }
+  .showtime__schedule-item {
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: unset;
+    letter-spacing: unset;
+    background-color: rgba(246, 246, 246, 0.5);
+    border: 1px solid #eeeeee; }
+    .showtime__schedule-item span {
+      color: #108f3e;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: unset;
+      letter-spacing: unset; }
+    .showtime__schedule-item:hover {
+      color: #9b9b9b; }
+      .showtime__schedule-item:hover span {
+        color: #fb4226; }
+
 .cinema-box {
   border: 1px solid #eeeeee;
   border-radius: 5px; }
@@ -176,57 +236,6 @@ ol {
         white-space: nowrap;
         margin: 0; }
       .cinema-box__branch-content a {
-        color: #fb4226; }
-  .cinema-box__showtime {
-    padding: 20px 0;
-    border-bottom: 1px solid #eeeeee; }
-    .cinema-box__showtime-info {
-      cursor: pointer; }
-      .cinema-box__showtime-info img {
-        max-width: 50px; }
-      .cinema-box__showtime-info__title {
-        color: #000000;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: unset;
-        letter-spacing: unset;
-        margin-left: 5px; }
-      .cinema-box__showtime-info__duration {
-        color: #9b9b9b;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: unset;
-        letter-spacing: unset; }
-      .cinema-box__showtime-info .media-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: stretch; }
-        .cinema-box__showtime-info .media-body p {
-          margin: 0; }
-    .cinema-box__showtime h6 {
-      color: #000000;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: unset;
-      letter-spacing: unset; }
-  .cinema-box__schedule-item {
-    color: #9b9b9b;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: unset;
-    letter-spacing: unset;
-    background-color: rgba(246, 246, 246, 0.5);
-    border: 1px solid #eeeeee; }
-    .cinema-box__schedule-item span {
-      color: #108f3e;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: unset;
-      letter-spacing: unset; }
-    .cinema-box__schedule-item:hover {
-      color: #9b9b9b; }
-      .cinema-box__schedule-item:hover span {
         color: #fb4226; }
 
 .select-input {
@@ -548,11 +557,8 @@ ol {
       display: flex;
       align-items: center; } }
 
-#cinema-box {
-  padding: 60px 0 30px; }
-
 .movie {
-  padding: 80px 0 30px; }
+  padding-top: 80px; }
   .movie .slick-prev {
     left: -70px; }
   .movie .slick-next {
@@ -662,14 +668,16 @@ ol {
     font-weight: 600;
     line-height: unset;
     letter-spacing: unset;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    line-height: 22px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     display: -webkit-box;
-    max-height: 50px;
-    height: 50px; }
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    line-height: 22px;
+    height: 46px;
+    max-height: 46px; }
     .movie__title span {
       margin-right: 5px; }
   .movie__duration {
@@ -700,7 +708,7 @@ ol {
     opacity: 0; }
     .movie__button:hover {
       background-color: #fb4226; }
-  .movie__watch-more {
+  .movie__watch-more, .news__watch-more {
     color: #949494;
     font-size: 14px;
     font-weight: 400;
@@ -713,5 +721,96 @@ ol {
     transition: all 0.4s;
     border-radius: 5px;
     background: 0 0; }
+
+.news__item {
+  margin-bottom: 15px; }
+.news__image {
+  display: block;
+  overflow: hidden;
+  border-radius: 5px; }
+.news__title {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: unset;
+  letter-spacing: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  line-height: 22px;
+  height: 46px;
+  max-height: 46px;
+  margin: 5px 0;
+  transition: all 0.3s;
+  cursor: pointer; }
+  .news__title:hover {
+    color: #fb4226; }
+.news__content {
+  color: #4a4a4a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: unset;
+  letter-spacing: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
+  line-height: 22px;
+  height: 69px;
+  max-height: 69px; }
+.news__like, .news__comment {
+  display: inline-flex;
+  align-items: flex-start;
+  margin-right: 10px; }
+  .news__like span, .news__comment span {
+    color: #bbbbbb;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: unset;
+    letter-spacing: unset; }
+  .news__like img, .news__comment img {
+    width: 15px;
+    margin-right: 7px;
+    transition: all 0.3s; }
+    .news__like img:hover, .news__comment img:hover {
+      transform: scale(1.2); }
+.news__small-item img {
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer; }
+.news__small-item p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: unset;
+  letter-spacing: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  line-height: 22px;
+  height: 46px;
+  max-height: 46px;
+  opacity: 0.7;
+  transition: all 0.3s;
+  cursor: pointer; }
+  .news__small-item p:hover {
+    color: #fb4226; }
+.news__watch-more {
+  transition: all 0.3s; }
+  .news__watch-more:hover {
+    background-color: #fb4226;
+    border-color: #fb4226;
+    color: #ffffff; }
 
 /*# sourceMappingURL=index.css.map */
