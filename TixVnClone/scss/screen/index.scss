@@ -112,12 +112,7 @@
     button {
       margin-left: space(1);
 
-      @include button(
-        $color: "white",
-        $bgColor: bc("darkGrey"),
-        $py: 1,
-        $px: 2
-      );
+      @include button($color: "white", $bgColor: "darkGrey", $py: 1, $px: 2);
       border-radius: 5px;
     }
   }
@@ -336,10 +331,10 @@
     @include button(
       $fs: "h6",
       $color: "white",
-      $bgColor: bc("darkRed"),
+      $bgColor: "darkRed",
       $py: 1,
       $px: 1,
-      $bgHover: bc("secondary")
+      $bgHover: "secondary"
     );
 
     width: 100%;
@@ -447,5 +442,69 @@
       border-color: bc("secondary");
       color: tc("white");
     }
+  }
+}
+
+// APPS SCSS
+#apps {
+  background: url(../../img/icons/backapp.jpg);
+}
+
+.apps {
+  padding: space(12) 0 space(8);
+
+  &__info {
+    padding: space(6) space(3) 0;
+  }
+
+  &__title {
+    @include text(
+      $color: "white",
+      $fSize: "h1",
+      $fWeight: "medium",
+      $lineHeight: 1.2
+    );
+  }
+
+  &__content {
+    @include text($color: "white", $fSize: "title2");
+  }
+
+  &__download {
+    @include button($color: "white", $bgColor: "secondary", $py: 1, $px: 2);
+    border-radius: 5px;
+  }
+
+  &__link {
+    @include text($color: "white", $fSize: "title1");
+    margin-top: space(1);
+
+    a {
+      color: tc("white");
+      text-decoration: underline !important;
+    }
+  }
+
+  &__slide-wrapper {
+    position: relative;
+  }
+
+  &__back-app {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 212px;
+  }
+
+  &__slider {
+    width: 200px;
+    border-radius: 19px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  @include mq("medium") {
   }
 }

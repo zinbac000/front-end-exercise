@@ -3,8 +3,8 @@
   $color: "primary",
   $fSize: "body1",
   $fWeight: "regular",
-  $lineHeight: unset,
-  $letterSpacing: unset
+  $lineHeight: null,
+  $letterSpacing: null
 ) {
   color: tc($color);
 
@@ -30,7 +30,7 @@
   border: none;
   outline: none;
 
-  background-color: $bgColor;
+  background-color: bc($bgColor);
 
   @if $borderSize != null && $border != null {
     border: $borderSize solid bc($border);
@@ -40,7 +40,7 @@
   transition: all 0.4s;
 
   &:hover {
-    background-color: $bgHover;
+    background-color: bc($bgHover);
   }
 }
 
