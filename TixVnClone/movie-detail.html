@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIX - Đặt Vé Nhanh Nhất / Trang Chủ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/gif"
+      href="https://s3img.vcdn.vn/123phim/2018/09/459970ce80ca2c762c8c8076b415c06e.png"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="./lib/slick/slick.css" />
+    <link rel="stylesheet" href="./lib/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/movie-detail.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header d-flex justify-content-between align-items-center">
+      <a class="header__back d-md-none" href=""
+        ><img src="./img/icons/left-arrow.png" alt="back"
+      /></a>
+      <a class="header__brand" href="">
+        <img src="./img/icons/web-logo.png" alt="web logo" />
+      </a>
+      <div class="header__nav">
+        <a href="#movie">Lịch Chiếu</a>
+        <a href="#cinema-box">Cụm Rạp</a>
+        <a href="#news">Tin Tức</a>
+        <a href="#apps">Ứng Dụng</a>
+      </div>
+      <div class="header__account">
+        <div class="user user--header">
+          <img
+            class="user__picture"
+            src="https://picsum.photos/64/64"
+            alt="user login"
+          />
+          <span>Nguyễn Hữu Vinh</span>
+          <div class="user__setting">
+            <a class="text-center" href="">Đăng xuất</a>
+          </div>
+        </div>
+        <div class="dropdown select-input select-input--location">
+          <a
+            href=""
+            class="btn select-input__link dropdown-toggle"
+            role="button"
+            data-toggle="dropdown"
+            ><img
+              src="./img/icons/location-header.png"
+              alt="location header" /><span>Hà Nội</span
+            ><i class="fa fa-angle-down ml-2"></i
+          ></a>
+          <div class="dropdown-menu select-input__list custom-scroll">
+            <a class="dropdown-item">Hồ Chí Minh </a>
+            <a class="dropdown-item">Hà Nội </a>
+            <a class="dropdown-item">Đà Nẵng </a>
+            <a class="dropdown-item">Hải Phòng </a>
+            <a class="dropdown-item">Biên Hoà </a>
+            <a class="dropdown-item">Nha Trang </a>
+            <a class="dropdown-item">Bình Dương </a>
+            <a class="dropdown-item">Phan Thiết </a>
+            <a class="dropdown-item">Hạ Long </a>
+            <a class="dropdown-item">Cần Thơ </a>
+            <a class="dropdown-item">Vũng Tàu </a>
+            <a class="dropdown-item">Quy Nhơn </a>
+            <a class="dropdown-item">Huế </a>
+            <a class="dropdown-item">Long Xuyên </a>
+            <a class="dropdown-item">Thái Nguyên </a>
+            <a class="dropdown-item">Buôn Ma Thuột </a>
+            <a class="dropdown-item">Bắc Giang </a>
+            <a class="dropdown-item">Bến Tre </a>
+            <a class="dropdown-item">Việt Trì </a>
+            <a class="dropdown-item">Ninh Bình </a>
+            <a class="dropdown-item">Thái Bình </a>
+            <a class="dropdown-item">Vinh </a>
+            <a class="dropdown-item">Bảo Lộc </a>
+            <a class="dropdown-item">Đà Lạt </a>
+            <a class="dropdown-item">Trà Vinh </a>
+            <a class="dropdown-item">Yên Bái </a>
+            <a class="dropdown-item">Kiên Giang </a>
+            <a class="dropdown-item">Vĩnh Long </a>
+            <a class="dropdown-item">Cà Mau </a>
+            <a class="dropdown-item">Hậu Giang </a>
+            <a class="dropdown-item">Tây Ninh </a>
+            <a class="dropdown-item">Tuyên Quang </a>
+            <a class="dropdown-item">Thanh Hóa </a>
+            <a class="dropdown-item">Nam Định </a>
+            <a class="dropdown-item">Hải Dương </a>
+            <a class="dropdown-item">Gia Lai </a>
+            <a class="dropdown-item">Hà Tĩnh </a>
+            <a class="dropdown-item">Phú Yên </a>
+            <a class="dropdown-item">Bạc Liêu </a>
+            <a class="dropdown-item">Long An </a>
+            <a class="dropdown-item">Đồng Hới </a>
+            <a class="dropdown-item">Hà Nam </a>
+            <a class="dropdown-item">Bắc Ninh </a>
+            <a class="dropdown-item">Quảng Trị </a>
+            <a class="dropdown-item">Kon Tum </a>
+            <a class="dropdown-item">Sóc Trăng </a>
+            <a class="dropdown-item">Sơn La </a>
+            <a class="dropdown-item">Lạng Sơn </a>
+            <a class="dropdown-item">Quảng Ngãi </a>
+            <a class="dropdown-item">Mỹ Tho </a>
+            <a class="dropdown-item">Đồng Tháp </a>
+            <a class="dropdown-item">Hưng Yên</a>
+          </div>
+        </div>
+      </div>
+      <button class="header__toggler">
+        <img src="./img/icons/menu-options.png" alt="menu option" />
+      </button>
+      <div class="header__backdrop">
+        <div class="header__side-menu">
+          <div class="header__side-menu__top">
+            <p>
+              <img src="https://picsum.photos/64/64" alt="" />Nguyễn Hữu Vinh
+            </p>
+            <img
+              class="header__toggler"
+              src="./img/icons/next-session.png"
+              alt=""
+            />
+          </div>
+          <a href="#movie">Lịch Chiếu</a>
+          <a href="">Cụm Rạp</a>
+          <a href="#news">Tin Tức</a>
+          <a href="#apps">Ứng Dụng</a>
+          <a
+            class="header__side-menu__location"
+            href="#locationModal"
+            data-toggle="modal"
+            >Hà Nội</a
+          >
+          <a href="">Đăng Xuất</a>
+        </div>
+      </div>
+    </header>
+    <div class="modal" id="locationModal">
+      <div class="modal-dialog">
+        <div class="modal-content custom-scroll">
+          <div class="modal-body">
+            <ul>
+              <li><span>Hồ Chí Minh </span></li>
+              <li><span>Hà Nội </span></li>
+              <li><span>Đà Nẵng </span></li>
+              <li><span>Hải Phòng </span></li>
+              <li><span>Biên Hoà </span></li>
+              <li><span>Nha Trang </span></li>
+              <li><span>Bình Dương </span></li>
+              <li><span>Phan Thiết </span></li>
+              <li><span>Hạ Long </span></li>
+              <li><span>Cần Thơ </span></li>
+              <li><span>Vũng Tàu </span></li>
+              <li><span>Quy Nhơn </span></li>
+              <li><span>Huế </span></li>
+              <li><span>Long Xuyên </span></li>
+              <li><span>Thái Nguyên </span></li>
+              <li><span>Buôn Ma Thuột </span></li>
+              <li><span>Bắc Giang </span></li>
+              <li><span>Bến Tre </span></li>
+              <li><span>Việt Trì </span></li>
+              <li><span>Ninh Bình </span></li>
+              <li><span>Thái Bình </span></li>
+              <li><span>Vinh </span></li>
+              <li><span>Bảo Lộc </span></li>
+              <li><span>Đà Lạt </span></li>
+              <li><span>Trà Vinh </span></li>
+              <li><span>Yên Bái </span></li>
+              <li><span>Kiên Giang </span></li>
+              <li><span>Vĩnh Long </span></li>
+              <li><span>Cà Mau </span></li>
+              <li><span>Hậu Giang </span></li>
+              <li><span>Tây Ninh </span></li>
+              <li><span>Tuyên Quang </span></li>
+              <li><span>Thanh Hóa </span></li>
+              <li><span>Nam Định </span></li>
+              <li><span>Hải Dương </span></li>
+              <li><span>Gia Lai </span></li>
+              <li><span>Hà Tĩnh </span></li>
+              <li><span>Phú Yên </span></li>
+              <li><span>Bạc Liêu </span></li>
+              <li><span>Long An </span></li>
+              <li><span>Đồng Hới </span></li>
+              <li><span>Hà Nam </span></li>
+              <li><span>Bắc Ninh </span></li>
+              <li><span>Quảng Trị </span></li>
+              <li><span>Kon Tum </span></li>
+              <li><span>Sóc Trăng </span></li>
+              <li><span>Sơn La </span></li>
+              <li><span>Lạng Sơn </span></li>
+              <li><span>Quảng Ngãi </span></li>
+              <li><span>Mỹ Tho </span></li>
+              <li><span>Đồng Tháp </span></li>
+              <li><span>Hưng Yên</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOVIE DETAIL -->
+    <section class="movie-detail">
+      <div class="movie-detail__image">
+        <iframe
+          class="movie-detail__trailer"
+          src="https://www.youtube.com/embed/4btkAVuajss"
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <img
+          class="d-block w-100"
+          src="https://s3img.vcdn.vn/mobile/123phim/2020/06/con-mua-tinh-dau-classic-again-15918662988358_540x225.png"
+          alt="movie poster"
+        />
+        <div class="movie-detail__overlay"></div>
+        <div class="movie-rating">
+          <p class="movie-rating__score">7.4</p>
+          <p class="movie-rating__stars">
+            <img src="./img/icons/star1.png" alt="star" />
+            <img src="./img/icons/star1.png" alt="star" />
+            <img src="./img/icons/star1.png" alt="star" />
+            <img src="./img/icons/star1.2.png" alt="1/2" />
+          </p>
+        </div>
+        <button class="movie-detail__play">
+          <img src="./img/icons/play-video.png" alt="play button" />
+        </button>
+      </div>
+      <div class="movie-detail__content pb-5">
+        <div class="container tixMaxWidth">
+          <div class="movie-detail__brief d-md-none">
+            <p class="movie-detail__date">19.06.2020</p>
+            <p class="movie-detail__name">Cơn Mưa Tình Yêu - Classic Again</p>
+            <p class="movie-detail__duration">100 phút - 0 IMDb - 2d/Digital</p>
+          </div>
+          <ul
+            class="nav nav-tabs nav-tabs--tix justify-content-center align-items-center mb-4"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active mr-4"
+                href="#schedule"
+                role="tab"
+                data-toggle="tab"
+                >Lịch Chiếu</a
+              >
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#info" role="tab" data-toggle="tab"
+                >Thông Tin</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback" role="tab" data-toggle="tab"
+                >Đánh Giá</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              role="tabpanel"
+              id="schedule"
+            >
+              1
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="info">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Ngày công chiếu</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value">19.06.2020</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Đạo diễn</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value">
+                        Arm Thatchaphong Suphasri
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Diễn viên</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value"></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Thể loại</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value">Tình cảm</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Định dạng</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value">2D/Digital</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p class="movie-detail__info-key">Quốc Gia SX</p>
+                    </div>
+                    <div class="col-8">
+                      <p class="movie-detail__info-value">Thái Lan</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <p class="movie-detail__info-key">Nội dung</p>
+                  <p class="movie-detail__info-value">
+                    Phim là sự đan xen của hai câu chuyện tình yêu cách nhau 3
+                    thập kỷ. Bota và cô bạn thân Poppy cùng cảm nắng Non – một
+                    anh bạn cùng trường đại học. Hiểu tấm lòng của người bạn
+                    thân, Bota giấu đi cảm xúc thật của mình để cổ vũ Poppy đến
+                    với Non. Một ngày, Bota tình cờ tìm thấy chiếc hộp cũ chứa
+                    đầy những lá thư và kỷ niệm về mối tình đầu của mẹ. Những
+                    bức thư giữa mẹ cô, Dalah và một chàng trai nhà nghèo tên
+                    Kajorn khiến Bota nhận ra cảm xúc hiện tại của mình thật
+                    giống với câu chuyện tình dở dang của mẹ. Liệu cô có dũng
+                    cảm giữ lấy tình yêu của mình hay mối tình đầu của Bota cũng
+                    sẽ kết thúc đầy tiếc nuối?
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p class="movie-detail__related-heading">Tin liên quan</p>
+                </div>
+                <div class="col-12 col-md-3 movie-detail__related-item">
+                  <a href="" class="movie-detail__related-link mb-2">
+                    <img
+                      class="d-block w-100"
+                      src="https://s3img.vcdn.vn/123phim/2020/06/cung-on-lai-tinh-dau-voi-phim-dien-anh-kinh-dien-cua-chi-dep-son-ye-jin-duoc-thai-lan-lam-lai-15918642064393.jpg"
+                      alt="movie news"
+                    />
+                  </a>
+                  <p class="movie-detail__related-title">
+                    Cùng ôn lại 'Tình đầu' với phim điện ảnh kinh điển của chị
+                    đẹp Son Ye-jin được Thái Lan làm lại
+                  </p>
+                </div>
+                <div class="col-12 col-md-3 movie-detail__related-item">
+                  <div class="row no-gutters">
+                    <div class="col-3 col-md-12 pr-2 pr-md-0">
+                      <a href="" class="movie-detail__related-link mb-md-2">
+                        <img
+                          class="d-block w-100"
+                          src="https://s3img.vcdn.vn/123phim/2020/03/thai-lan-remake-cau-chuyen-tinh-kinh-dien-the-classic-voi-con-mua-tinh-dau-15832975976373.jpg"
+                          alt="movie news"
+                        />
+                      </a>
+                    </div>
+                    <div class="col-9 col-md-12 align-self-center">
+                      <p class="movie-detail__related-title">
+                        Câu chuyện tình kinh điển The Classic trở lại màn ảnh
+                        rộng với phiên bản remake Cơn Mưa Tình Đầu
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="feedback">
+              <a class="movie-detail__feedback-form">
+                <img
+                  class="movie-detail__feedback-avatar"
+                  src="https://picsum.photos/64/64"
+                  alt="avatar"
+                />
+                <span class="movie-detail__feedback-hint"
+                  >Bạn nghĩ gì về phim này</span
+                >
+                <img
+                  class="movie-detail__feedback-stars"
+                  src="./img/icons/listStar.png"
+                  alt="list star"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="row d-none d-lg-block">
+              <div class="col">
+                <p>TIX</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="d-none d-lg-block col-lg-auto">
+                <a class="d-block mb-2" href="">FAQ</a>
+                <a class="d-block" href="">Brand Guidelines</a>
+              </div>
+              <div class="col-12 col-lg-auto text-center text-md-left">
+                <a class="d-inline d-lg-block mr-2 mb-2" href=""
+                  >Thỏa thuận sử dụng</a
+                >
+                <a class="d-inline d-lg-block" href="">Chính sách bảo mật</a>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-lg-block col-lg-4 footer__partners">
+            <div class="row">
+              <div class="col">
+                <p>ĐỐI TÁC</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a href=""><img src="./img/icons/cgv.png" alt="" /></a>
+                <a href=""><img src="./img/icons/bhd.png" alt="" /></a>
+                <a href=""><img src="./img/icons/galaxycine.png" alt="" /></a>
+                <a href=""><img src="./img/icons/cinestar.png" alt="" /></a>
+                <a href=""
+                  ><img
+                    src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/megags.png" alt="" /></a>
+                <a href=""><img src="./img/icons/bt.jpg" alt="" /></a>
+                <a href=""><img src="./img/icons/dongdacinema.png" alt="" /></a>
+                <a href=""><img src="./img/icons/TOUCH.png" alt="" /></a>
+                <a href=""><img src="./img/icons/cnx.jpg" alt="" /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/STARLIGHT.png" alt="" /></a>
+                <a href=""><img src="./img/icons/dcine.png" alt="" /></a>
+                <a href=""><img src="./img/icons/zalopay_icon.png" alt="" /></a>
+                <a href=""><img src="./img/icons/payoo.jpg" alt="" /></a>
+                <a href=""><img src="./img/icons/VCB.png" alt="" /></a>
+              </div>
+              <div class="col-12">
+                <a href=""><img src="./img/icons/AGRIBANK.png" alt="" /></a>
+                <a href=""><img src="./img/icons/VIETTINBANK.png" alt="" /></a>
+                <a href=""><img src="./img/icons/IVB.png" alt="" /></a>
+                <a href=""><img src="./img/icons/123go.png" alt="" /></a>
+                <a href=""><img src="./img/icons/laban.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mt-2 mt-md-0 footer__apps">
+            <div class="row">
+              <div class="d-none d-lg-block col-lg-6 text-center">
+                <p>MOBILE APP</p>
+                <a href=""><img src="./img/icons/apple-logo.png" alt="" /></a>
+                <a href=""><img src="./img/icons/android-logo.png" alt="" /></a>
+              </div>
+              <div
+                class="col-12 col-lg-6 text-center text-md-left text-lg-center"
+              >
+                <p class="d-none d-lg-block">SOCIAL</p>
+                <a href=""
+                  ><img src="./img/icons/facebook-logo.png" alt=""
+                /></a>
+                <a href=""><img src="./img/icons/zalo-logo.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="footer__bottom row">
+          <div class="col-12 col-md-2 text-center">
+            <img
+              class="footer__bottom-zion"
+              src="./img/icons/zion-logo.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-12 col-md-8 text-center text-lg-left my-3 my-md-0">
+            <p>TIX - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
+            <span
+              >Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+              Chí Minh, Việt Nam.</span
+            >
+            <span
+              >Giấy chứng nhận đăng ký kinh doanh số: 0101659783,<br />
+              đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
+              hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</span
+            >
+            <span
+              >Số Điện Thoại (Hotline): 1900 545 436<br />
+              Email: <a href="">support@tix.vn</a></span
+            >
+          </div>
+          <div class="col-12 col-md-2 text-center">
+            <img
+              class="footer__bottom-cert"
+              src="https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Slick JS -->
+    <script src="./lib/slick/slick.min.js"></script>
+    <script src="./js/component/header.js"></script>
+    <script src="./js/component/select-input.js"></script>
+    <script src="./js/movie-detail.js"></script>
+  </body>
+</html>

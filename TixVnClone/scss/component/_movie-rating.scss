@@ -1,0 +1,27 @@
+.movie-rating {
+  @include pos($position: absolute, $top: 10px, $right: 10px);
+  width: 54px;
+  padding: space(0.5) 0;
+  border: 1px solid bc("movieRatingBorder");
+  border-radius: 5px;
+
+  background-color: bc("movieRating");
+
+  &__score {
+    @include text($color: "white", $fSize: "title2", $fWeight: "medium");
+    margin-bottom: space(0.5);
+
+    text-align: center;
+
+    transform: scaleY(1.2);
+  }
+
+  &__stars {
+    @include flex($justifyContent: center);
+    margin-bottom: 0;
+    img {
+      display: block;
+      width: 8px;
+    }
+  }
+}

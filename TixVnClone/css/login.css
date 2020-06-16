@@ -17,6 +17,10 @@ ul,
 ol {
   list-style: none; }
 
+button {
+  border: none;
+  outline: none; }
+
 body {
   display: flex;
   justify-content: center;

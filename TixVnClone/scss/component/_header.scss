@@ -7,6 +7,12 @@
   box-shadow: 0 0 15px bc("boxShadow1");
   background-color: bc("header");
 
+  &__back {
+    img {
+      width: 15px;
+    }
+  }
+
   &__brand {
     img {
       height: 50px;

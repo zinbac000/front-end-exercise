@@ -29,6 +29,10 @@ ul,
 ol {
   list-style: none; }
 
+button {
+  border: none;
+  outline: none; }
+
 .nav-tabs {
   border-bottom: none; }
   .nav-tabs .nav-item {
@@ -36,7 +40,8 @@ ol {
     .nav-tabs .nav-item .nav-link {
       border: none;
       padding: unset;
-      margin: unset; }
+      margin: unset;
+      background-color: transparent; }
   .nav-tabs--tix .nav-link {
     color: #000000;
     font-size: 20px;
@@ -102,8 +107,6 @@ ol {
       color: #ffffff;
       font-size: 13px;
       font-weight: 400;
-      border: none;
-      outline: none;
       background-color: #959595;
       border: unset solid "";
       padding: 5px 10px;
@@ -119,7 +122,7 @@ ol {
   font-size: 12px;
   font-weight: 600;
   min-width: 33px;
-  padding: 0; }
+  padding: 5px 0; }
   .movie-limit--no-limit {
     background-color: #00ac4d; }
 
@@ -242,6 +245,30 @@ ol {
       color: #ffffff;
       transition: all 0.3s; }
 
+.movie-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 54px;
+  padding: 5px 0;
+  border: 1px solid #1f2e46;
+  border-radius: 5px;
+  background-color: rgba(12, 27, 54, 0.8); }
+  .movie-rating__score {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+    transform: scaleY(1.2); }
+  .movie-rating__stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0; }
+    .movie-rating__stars img {
+      display: block;
+      width: 8px; }
+
 .header {
   position: fixed;
   top: 0;
@@ -251,6 +278,8 @@ ol {
   padding: 0 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.95); }
+  .header__back img {
+    width: 15px; }
   .header__brand img {
     height: 50px; }
   .header__nav {
@@ -486,8 +515,6 @@ ol {
       color: #ffffff;
       font-size: 16px;
       font-weight: 400;
-      border: none;
-      outline: none;
       background-color: #4a4a4a;
       border: solid "";
       padding: 10px 20px;
@@ -552,7 +579,7 @@ ol {
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer; }
-  .movie__sneakshow, .movie__overlay, .movie__rating, .movie__type, .movie__show-date {
+  .movie__sneakshow, .movie__overlay, .movie__type, .movie__show-date {
     position: absolute; }
   .movie__sneakshow, .movie__show-date {
     right: 10px;
@@ -573,7 +600,7 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #000, transparent);
+    background: linear-gradient(to top, #000, transparent 100%);
     opacity: 0;
     transition: all 0.3s; }
     .movie__overlay a {
@@ -581,7 +608,7 @@ ol {
       transition: all 0.3s; }
       .movie__overlay a:hover {
         opacity: 0.5; }
-  .movie__rating, .movie__show-date {
+  .movie__show-date {
     width: 54px;
     padding: 5px 0;
     background-color: rgba(12, 27, 54, 0.8);
@@ -592,23 +619,6 @@ ol {
     color: #ffffff;
     font-size: 16px;
     font-weight: 600; }
-  .movie__rating {
-    top: 10px;
-    right: 10px; }
-  .movie__score {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-align: center;
-    transform: scaleY(1.2); }
-  .movie__stars {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0; }
-    .movie__stars img {
-      display: block;
-      width: 8px; }
   .movie__type {
     top: 0;
     left: 0;
@@ -648,8 +658,6 @@ ol {
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
-    border: none;
-    outline: none;
     background-color: #b42a14;
     border: solid "";
     padding: 10px 10px;
@@ -663,8 +671,6 @@ ol {
     color: #949494;
     font-size: 14px;
     font-weight: 400;
-    border: none;
-    outline: none;
     background-color: "";
     border: 1px solid #959595;
     padding: 5px 25px;
@@ -777,8 +783,6 @@ ol {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    border: none;
-    outline: none;
     background-color: #fb4226;
     border: solid "";
     padding: 10px 20px;
