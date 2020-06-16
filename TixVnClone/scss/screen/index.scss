@@ -80,7 +80,7 @@
     border-radius: 5px;
 
     background-color: bc("primary");
-    box-shadow: 0 0 15px bc("boxShadow");
+    box-shadow: 0 0 15px bc("boxShadow1");
 
     .select-input,
     button {
@@ -235,7 +235,7 @@
     border-radius: 5px;
 
     background-color: bc("danger");
-    box-shadow: inset 0 0 10px bc("boxShadow");
+    box-shadow: inset 0 0 10px bc("boxShadow1");
   }
 
   &__overlay {

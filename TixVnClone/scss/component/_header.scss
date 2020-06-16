@@ -4,7 +4,7 @@
   height: 60px;
   padding: 0 space(2);
 
-  box-shadow: 0 0 15px bc("boxShadow");
+  box-shadow: 0 0 15px bc("boxShadow1");
   background-color: bc("header");
 
   &__brand {
@@ -164,7 +164,7 @@
     .modal-content {
       height: 97%;
 
-      box-shadow: 0 0 15px bc("boxShadow");
+      box-shadow: 0 0 15px bc("boxShadow1");
 
       ul {
         padding: space(1);

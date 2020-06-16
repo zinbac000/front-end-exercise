@@ -21,13 +21,19 @@ $bgColors: (
   "selectedBox": #eceef0,
   "disabledBox": #cfd3d7,
   "scheduleItem": rgba(246, 246, 246, 0.5),
-  "boxShadow": rgba(0, 0, 0, 0.3),
+  "boxShadow1": rgba(0, 0, 0, 0.3),
+  "boxShadow2": rgba(0, 0, 0, 0.45),
+  "boxShadow3": rgba(0, 0, 0, 0.5),
   "header": rgba(255, 255, 255, 0.95),
   "backdrop": rgba(0, 0, 0, 0.8),
   "black": #000,
   "footer": #222,
   "movieRating": rgba(12, 27, 54, 0.8),
-  "movieRatingBorder": #1f2e46
+  "movieRatingBorder": #1f2e46,
+  "loginFrom": rgba(20, 50, 93, 0.9),
+  "loginTo": rgba(8, 22, 48, 0.9),
+  "loginClose": #081630,
+  "loginCloseStick": #455570
 );
 
 // TEXT COLORS

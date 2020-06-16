@@ -1,0 +1,109 @@
+@import "../helper/theme";
+@import "../helper/function";
+@import "../helper/mixin";
+
+@import "../base/reset";
+
+body {
+  @include flex($justifyContent: center, $alignItems: center);
+  width: 100vw;
+  height: 100vh;
+
+  background: url(../../img/icons/bg2.jpg) center;
+  background-size: contain;
+}
+
+.sign-in {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  padding: space(4) space(4) 0;
+  border-radius: 5px;
+
+  text-align: center;
+
+  background-image: linear-gradient(to bottom, bc("loginFrom"), bc("loginTo"));
+  box-shadow: 0 0 10px bc("boxShadow2");
+
+  &__logo {
+    display: block;
+    margin-bottom: space(10);
+
+    img {
+      width: 210px;
+    }
+  }
+
+  &__content {
+    @include text($color: "white", $fSize: "title1");
+  }
+
+  &__providers {
+    img {
+      display: block;
+      width: 100%;
+      margin-bottom: space(1.5);
+
+      cursor: pointer;
+    }
+  }
+
+  &__close {
+    @include pos($position: absolute, $top: 10px, $right: 10px);
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    background-color: bc("loginClose");
+    box-shadow: 2px 1px 10px bc("boxShadow3");
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+
+      @include pos($position: absolute, $top: 50%, $left: 50%);
+
+      display: block;
+      width: 2px;
+      height: 75%;
+
+      background-color: #455570;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotateZ(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotateZ(-45deg);
+    }
+  }
+
+  @include mq("small") {
+    width: 50%;
+    max-width: 360px;
+    height: auto;
+    padding-bottom: space(1);
+
+    &__close {
+      @include pos($top: 0, $right: 0);
+      width: 35px;
+      height: 35px;
+
+      transform: translate(50%, -50%);
+
+      &::after,
+      &::before {
+        height: 45%;
+      }
+    }
+  }
+
+  @include mq("medium") {
+    width: 47%;
+  }
+}

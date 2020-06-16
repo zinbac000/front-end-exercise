@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: Roboto, sans-serif; }
+
+a {
+  text-decoration: none !important;
+  cursor: pointer; }
+
+ul,
+ol {
+  list-style: none; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(../../img/icons/bg2.jpg) center;
+  background-size: contain; }
+
+.sign-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px 40px 0;
+  border-radius: 5px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45); }
+  .sign-in__logo {
+    display: block;
+    margin-bottom: 100px; }
+    .sign-in__logo img {
+      width: 210px; }
+  .sign-in__content {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400; }
+  .sign-in__providers img {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer; }
+  .sign-in__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #081630;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+    .sign-in__close::before, .sign-in__close::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 2px;
+      height: 75%;
+      background-color: #455570; }
+    .sign-in__close::before {
+      transform: translate(-50%, -50%) rotateZ(45deg); }
+    .sign-in__close::after {
+      transform: translate(-50%, -50%) rotateZ(-45deg); }
+  @media only screen and (min-width: 576px) {
+    .sign-in {
+      width: 50%;
+      max-width: 360px;
+      height: auto;
+      padding-bottom: 10px; }
+      .sign-in__close {
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        transform: translate(50%, -50%); }
+        .sign-in__close::after, .sign-in__close::before {
+          height: 45%; } }
+  @media only screen and (min-width: 768px) {
+    .sign-in {
+      width: 47%; } }
+
+/*# sourceMappingURL=login.css.map */
