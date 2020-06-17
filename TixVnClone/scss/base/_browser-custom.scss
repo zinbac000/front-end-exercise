@@ -1,11 +1,18 @@
 .custom-scroll {
-  overflow-y: auto;
+  overflow: auto;
 
   &::-webkit-scrollbar {
     width: 4px;
     border-radius: 7px;
 
     background-color: bc("lighterGrey");
+  }
+
+  &--horizontal {
+    &::-webkit-scrollbar {
+      width: unset;
+      height: 4px;
+    }
   }
 
   &::-webkit-scrollbar-track {

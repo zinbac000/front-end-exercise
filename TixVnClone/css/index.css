@@ -53,13 +53,34 @@ button {
       font-weight: 400; }
     .nav-tabs--tix .nav-link:hover {
       font-size: 24px; }
+  .nav-tabs--schedule {
+    flex-wrap: nowrap; }
+    .nav-tabs--schedule .nav-item .nav-link {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      padding: 10px 30px; }
+      .nav-tabs--schedule .nav-item .nav-link span {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400; }
+      .nav-tabs--schedule .nav-item .nav-link.active, .nav-tabs--schedule .nav-item .nav-link.active span {
+        color: #fa5238; }
+      .nav-tabs--schedule .nav-item .nav-link.active span {
+        font-size: 20px; }
+      .nav-tabs--schedule .nav-item .nav-link.disabled, .nav-tabs--schedule .nav-item .nav-link.disabled span {
+        color: #e9e9e9; }
 
 .custom-scroll {
-  overflow-y: auto; }
+  overflow: auto; }
   .custom-scroll::-webkit-scrollbar {
     width: 4px;
     border-radius: 7px;
     background-color: #eeeeee; }
+  .custom-scroll--horizontal::-webkit-scrollbar {
+    width: unset;
+    height: 4px; }
   .custom-scroll::-webkit-scrollbar-track {
     border-radius: 7px; }
   .custom-scroll::-webkit-scrollbar-thumb {

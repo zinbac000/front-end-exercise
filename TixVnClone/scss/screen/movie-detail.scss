@@ -43,9 +43,18 @@
   }
 
   &__content {
-    padding: 0 space(1.5);
-
     background-color: bc("movieDetail");
+
+    > ul {
+      .nav-link {
+        @include text($color: "white", $fSize: "title2");
+
+        &.active,
+        &:hover {
+          font-size: fs("title2");
+        }
+      }
+    }
   }
 
   &__brief {
@@ -63,15 +72,6 @@
 
   &__name {
     @include text($color: "disabled", $fSize: "h5");
-  }
-
-  .nav-link {
-    @include text($color: "white", $fSize: "title2");
-
-    &.active,
-    &:hover {
-      font-size: fs("title2");
-    }
   }
 
   &__info {
@@ -135,5 +135,9 @@
     &-stars {
       width: 100px;
     }
+  }
+
+  &__schedule {
+    background-color: bc("primary");
   }
 }

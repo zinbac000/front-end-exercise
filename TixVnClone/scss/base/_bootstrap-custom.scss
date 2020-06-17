@@ -28,4 +28,34 @@
       }
     }
   }
+
+  &--schedule {
+    flex-wrap: nowrap;
+    .nav-item {
+      .nav-link {
+        @include text($fSize: "title2");
+        text-align: center;
+
+        padding: space(1) space(3);
+
+        span {
+          @include text($fSize: "h6");
+        }
+
+        &.active,
+        &.active span {
+          color: tc("tabActive");
+        }
+
+        &.active span {
+          font-size: fs("h5");
+        }
+
+        &.disabled,
+        &.disabled span {
+          color: tc("disabled");
+        }
+      }
+    }
+  }
 }
