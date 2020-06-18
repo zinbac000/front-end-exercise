@@ -517,7 +517,7 @@ button {
     border-radius: 5px;
     background-color: #ffffff; }
   .movie-detail__feedback-avatar {
-    width: 40px;
+    width: 35px;
     border-radius: 50%;
     margin-right: 5px; }
   .movie-detail__feedback-hint {
@@ -527,6 +527,61 @@ button {
     flex-grow: 1; }
   .movie-detail__feedback-stars {
     width: 100px; }
+  .movie-detail__feedback-item {
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto 0;
+    border-radius: 5px;
+    background-color: #ffffff; }
+  .movie-detail__feedback-image {
+    position: relative;
+    margin-right: 15px; }
+    .movie-detail__feedback-image img:first-child {
+      width: 30px;
+      border-radius: 50%; }
+    .movie-detail__feedback-image img:last-child {
+      position: absolute;
+      right: -5px;
+      bottom: 0; }
+  .movie-detail__feedback-name {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0; }
+  .movie-detail__feedback-moment {
+    color: #9b9b9b;
+    font-size: 12px;
+    font-weight: 400; }
+  .movie-detail__feedback-score {
+    text-align: center; }
+    .movie-detail__feedback-score span {
+      color: #91d25a; }
+    .movie-detail__feedback-score p {
+      line-height: 0.5; }
+    .movie-detail__feedback-score img {
+      display: inline-block;
+      margin: 0 -2px;
+      width: 10px; }
+  .movie-detail__feedback-content {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid #eeeeee; }
+  .movie-detail__feedback-like a {
+    display: inline-flex;
+    align-items: center;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 10px; }
+    .movie-detail__feedback-like a img {
+      width: 15px;
+      transition: all 0.3s; }
+    .movie-detail__feedback-like a span {
+      font-weight: 600;
+      margin: 0 5px; }
+    .movie-detail__feedback-like a:hover img {
+      transform: scale(1.2); }
   .movie-detail__schedule {
     background-color: #ffffff; }
     .movie-detail__schedule-dropdown {
