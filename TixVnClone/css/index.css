@@ -150,6 +150,9 @@ button {
 .showtime {
   padding: 20px 0;
   border-bottom: 1px solid #eeeeee; }
+  .showtime--border-top {
+    border-bottom: 0;
+    border-top: 1px solid #eeeeee; }
   .showtime__info {
     cursor: pointer; }
     .showtime__info img {
@@ -159,10 +162,22 @@ button {
       font-size: 14px;
       font-weight: 600;
       margin-left: 5px; }
-    .showtime__info-duration {
+      .showtime__info-title span {
+        color: #fb4226; }
+    .showtime__info-duration, .showtime__info-address {
       color: #9b9b9b;
       font-size: 12px;
-      font-weight: 400; }
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: normal;
+      line-height: 22px;
+      height: 46px;
+      max-height: 46px; }
     .showtime__info .media-body {
       display: flex;
       flex-direction: column;
@@ -179,7 +194,8 @@ button {
     font-size: 14px;
     font-weight: 600;
     background-color: rgba(246, 246, 246, 0.5);
-    border: 1px solid #eeeeee; }
+    border: 1px solid #eeeeee;
+    margin-right: 10px; }
     .showtime__schedule-item span {
       color: #108f3e;
       font-size: 18px;

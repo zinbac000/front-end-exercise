@@ -2,6 +2,11 @@
   padding: space(2) 0;
   border-bottom: 1px solid bc("lighterGrey");
 
+  &--border-top {
+    border-bottom: 0;
+    border-top: 1px solid bc("lighterGrey");
+  }
+
   &__info {
     cursor: pointer;
 
@@ -13,10 +18,16 @@
       @include text($fSize: "title1", $fWeight: "medium");
 
       margin-left: space(0.5);
+
+      span {
+        color: tc("danger");
+      }
     }
 
-    &-duration {
+    &-duration,
+    &-address {
       @include text($color: "secondary");
+      @include line-clamp($lineCount: 2, $lineHeight: 22px);
     }
 
     .media-body {
@@ -38,6 +49,8 @@
 
     background-color: bc("scheduleItem");
     border: 1px solid bc("lighterGrey");
+
+    margin-right: space(1);
 
     span {
       @include text($color: "success", $fSize: "h6", $fWeight: "medium");
