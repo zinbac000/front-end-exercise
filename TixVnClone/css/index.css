@@ -42,16 +42,16 @@ button {
       padding: unset;
       margin: unset;
       background-color: transparent; }
-  .nav-tabs--tix .nav-link {
+  .nav-tabs--tix .nav-item .nav-link {
     color: #000000;
     font-size: 20px;
     font-weight: 400;
     transition: all 0.2s; }
-    .nav-tabs--tix .nav-link.active {
+    .nav-tabs--tix .nav-item .nav-link.active {
       color: #fa5238;
       font-size: 24px;
       font-weight: 400; }
-    .nav-tabs--tix .nav-link:hover {
+    .nav-tabs--tix .nav-item .nav-link:hover {
       font-size: 24px; }
   .nav-tabs--schedule {
     flex-wrap: nowrap; }

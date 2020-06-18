@@ -14,17 +14,19 @@
   }
 
   &--tix {
-    .nav-link {
-      @include text($fSize: "h5");
+    .nav-item {
+      .nav-link {
+        @include text($fSize: "h5");
 
-      transition: all 0.2s;
+        transition: all 0.2s;
 
-      &.active {
-        @include text($color: "tabActive", $fSize: "h3");
-      }
+        &.active {
+          @include text($color: "tabActive", $fSize: "h3");
+        }
 
-      &:hover {
-        font-size: fs("h3");
+        &:hover {
+          font-size: fs("h3");
+        }
       }
     }
   }

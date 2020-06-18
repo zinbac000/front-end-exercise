@@ -223,7 +223,7 @@
 
     <!-- MOVIE DETAIL -->
     <section class="movie-detail">
-      <div class="movie-detail__image">
+      <div class="movie-detail__image d-md-none">
         <iframe
           class="movie-detail__trailer"
           src="https://www.youtube.com/embed/4btkAVuajss"
@@ -250,6 +250,49 @@
           <img src="./img/icons/play-video.png" alt="play button" />
         </button>
       </div>
+      <div class="movie-detail__intro d-none d-md-block">
+        <img
+          src="https://s3img.vcdn.vn/123phim/2020/06/con-mua-tinh-dau-classic-again-15918662988358.png"
+          alt=""
+        />
+        <div class="movie-detail__intro-overlay"></div>
+        <div class="movie-detail__intro-content container tixMaxWidth">
+          <div class="movie-detail__intro-image">
+            <img
+              src="https://s3img.vcdn.vn/mobile/123phim/2020/06/con-mua-tinh-dau-classic-again-15922110606607_215x318.png"
+              alt="movie poster"
+            />
+            <a href=""
+              ><img src="./img/icons/play-video.png" alt="play button"
+            /></a>
+          </div>
+          <div class="movie-detail__intro-info">
+            <p>19.06.2020</p>
+            <h3>
+              <span class="badge movie-limit movie-limit--no-limit">P</span>Cơn
+              Mưa Tình Đầu - Classic Again
+            </h3>
+            <p>100 phút - 0 IMDb - 2D/Digital</p>
+            <button>Mua vé</button>
+          </div>
+          <div class="movie-detail__intro-score">
+            <div class="movie-detail__intro-progress">
+              <svg>
+                <circle cx="60" cy="60" r="50"></circle>
+                <circle cx="60" cy="60" r="50"></circle>
+              </svg>
+              <span>8.9</span>
+            </div>
+            <p>
+              <img src="./img/icons/star1.png" alt="star" />
+              <img src="./img/icons/star1.png" alt="star" />
+              <img src="./img/icons/star1.png" alt="star" />
+              <img src="./img/icons/star1.png" alt="star" />
+            </p>
+            <span>4 người đánh giá</span>
+          </div>
+        </div>
+      </div>
       <div class="movie-detail__content">
         <div class="movie-detail__brief d-md-none container tixMaxWidth">
           <p class="movie-detail__date">19.06.2020</p>
@@ -257,7 +300,7 @@
           <p class="movie-detail__duration">100 phút - 0 IMDb - 2d/Digital</p>
         </div>
         <ul
-          class="nav nav-tabs nav-tabs--tix container tixMaxWidth justify-content-center align-items-center mb-4"
+          class="nav nav-tabs nav-tabs--tix mobileOnly container tixMaxWidth justify-content-center align-items-center mb-4 d-md-none"
           role="tablist"
         >
           <li class="nav-item">
@@ -280,9 +323,34 @@
             >
           </li>
         </ul>
+        <ul
+          class="nav nav-tabs nav-tabs--tix container tixMaxWidth justify-content-center align-items-center d-none d-md-flex"
+          role="tablist"
+        >
+          <li class="nav-item">
+            <a
+              class="nav-link active mr-4"
+              href="#schedule"
+              role="tab"
+              data-toggle="tab"
+              >Lịch Chiếu</a
+            >
+          </li>
+          <li class="nav-item mr-4">
+            <a class="nav-link" href="#info" role="tab" data-toggle="tab"
+              >Thông Tin</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feedback" role="tab" data-toggle="tab"
+              >Đánh Giá</a
+            >
+          </li>
+        </ul>
+
         <div class="tab-content">
           <div class="tab-pane fade show active" role="tabpanel" id="schedule">
-            <div class="movie-detail__schedule">
+            <div class="movie-detail__schedule d-md-none">
               <ul
                 class="nav nav-tabs nav-tabs--schedule custom-scroll custom-scroll--horizontal"
                 role="tablist"

@@ -12,12 +12,132 @@
 @import "../component/user";
 @import "../component/select-input";
 @import "../component/movie-rating";
+@import "../component/movie-limit";
 @import "../component/showtime";
 @import "../component/header";
 @import "../component/footer";
 
 .movie-detail {
   padding-top: space(6);
+
+  &__intro {
+    position: relative;
+    overflow: hidden;
+
+    > img {
+      display: block;
+      width: calc(100% + 50px);
+
+      filter: blur(16px);
+      -webkit-filter: blur(16px);
+
+      margin: space(-1) 0 space(-1) space(-2.8);
+    }
+
+    &-overlay {
+      @include pos($position: absolute, $top: 0, $left: 0);
+      @include overlay("movieDetail", 100%);
+      width: 100%;
+      height: 100%;
+    }
+
+    &-content {
+      @include flex($alignItems: center);
+      @include pos($position: absolute, $top: 50%, $left: 50%, $zIndex: 10);
+      transform: translate(-50%, -50%);
+    }
+
+    &-image {
+      position: relative;
+      margin-right: space(1.5);
+
+      a {
+        @include pos($position: absolute, $top: 50%, $left: 50%);
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      &:hover a {
+        opacity: 1;
+      }
+    }
+
+    &-info {
+      max-width: 300px;
+
+      p {
+        @include text($color: "disabled", $fSize: "title1");
+        margin-bottom: 0;
+      }
+
+      h3 {
+        @include text($color: "white", $fSize: "h3", $fWeight: "medium");
+
+        span {
+          font-size: fs("title2");
+          margin-right: space(1);
+          vertical-align: middle;
+        }
+      }
+
+      button {
+        @include button(
+          $color: "white",
+          $bgColor: "secondary",
+          $py: 0.7,
+          $px: 1.5,
+          $bgHover: "darkRed"
+        );
+
+        border-radius: 5px;
+        margin: space(1.5) 0;
+      }
+    }
+
+    &-score {
+      margin-left: auto;
+
+      text-align: center;
+      p {
+        margin-bottom: space(1);
+      }
+
+      span {
+        @include text($color: "white", $fSize: "title1");
+      }
+    }
+
+    &-progress {
+      position: relative;
+
+      svg {
+        width: 120px;
+        height: 120px;
+        transform: rotate(270deg);
+
+        circle {
+          fill: bc("boxShadow1");
+          stroke-width: 10;
+          stroke: bc("backdrop");
+          stroke-linecap: round;
+
+          &:last-child {
+            stroke: bc("progressCircle");
+            stroke-dasharray: 250;
+          }
+        }
+      }
+
+      span {
+        @include pos($position: absolute, $top: 50%, $left: 50%);
+        @include text($color: "white", $fSize: "h1");
+
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 
   &__image {
     position: relative;
@@ -44,16 +164,35 @@
   }
 
   &__content {
+    position: relative;
+    z-index: 10;
     background-color: bc("movieDetail");
 
     > ul {
-      .nav-link {
+      .nav-item .nav-link {
+        @include text($color: "white", $fSize: "title2");
+        &.active,
+        &:hover {
+          font-size: fs("h6");
+        }
+      }
+
+      &:nth-child(2) .nav-link {
         @include text($color: "white", $fSize: "title2");
 
         &.active,
         &:hover {
           font-size: fs("title2");
         }
+      }
+    }
+
+    @include mq("medium") {
+      margin-top: space(-1.5);
+
+      > ul {
+        position: relative;
+        top: -40px;
       }
     }
   }
