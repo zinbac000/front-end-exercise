@@ -409,4 +409,58 @@
       }
     }
   }
+
+  &__scheduleBox {
+    padding-bottom: space(2);
+
+    &-wrapper {
+      background-color: bc("primary");
+
+      border-radius: 5px;
+    }
+
+    &-nav {
+      flex-shrink: 0;
+      padding: space(1.5) 0;
+      border-right: 1px solid bc("lighterGrey");
+
+      li.nav-item {
+        padding: 0 space(1.5);
+
+        a.nav-link {
+          @include flex($alignItems: center);
+          padding-bottom: space(1.5);
+          border-bottom: 1px solid bc("lighterGrey");
+
+          > img {
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    &-cinema-info {
+      margin-left: space(1.5);
+
+      @include text($fSize: "title2", $fWeight: "medium");
+
+      span {
+        @include text($color: "danger", $fSize: "body1");
+
+        img {
+          width: 15px;
+          margin-right: space(0.5);
+        }
+      }
+    }
+
+    &-content-wrapper {
+      overflow: hidden;
+    }
+
+    &-showtimes {
+      padding: 0 space(1.5);
+      max-height: 700px;
+    }
+  }
 }

@@ -38,7 +38,9 @@
         @include text($fSize: "title2");
         text-align: center;
 
-        padding: space(1) space(3);
+        min-width: 50px;
+        padding: space(1) 0;
+        margin: 0 space(1.5);
 
         span {
           @include text($fSize: "h6");
@@ -56,6 +58,10 @@
         &.disabled,
         &.disabled span {
           color: tc("disabled");
+        }
+
+        @include mq("medium") {
+          min-width: 70px;
         }
       }
     }

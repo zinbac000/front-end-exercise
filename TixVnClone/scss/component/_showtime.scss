@@ -28,6 +28,16 @@
     &-address {
       @include text($color: "secondary");
       @include line-clamp($lineCount: 2, $lineHeight: 22px);
+
+      @include mq("medium") {
+        @include line-clamp($lineCount: 1, $lineHeight: 22px);
+        max-width: 89%;
+
+        + a {
+          @include text($color: "danger", $fSize: "body2");
+          margin-left: space(0.5);
+        }
+      }
     }
 
     .media-body {

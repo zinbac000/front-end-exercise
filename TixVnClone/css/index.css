@@ -60,7 +60,9 @@ button {
       font-size: 16px;
       font-weight: 400;
       text-align: center;
-      padding: 10px 30px; }
+      min-width: 50px;
+      padding: 10px 0;
+      margin: 0 15px; }
       .nav-tabs--schedule .nav-item .nav-link span {
         color: #000000;
         font-size: 18px;
@@ -71,6 +73,9 @@ button {
         font-size: 20px; }
       .nav-tabs--schedule .nav-item .nav-link.disabled, .nav-tabs--schedule .nav-item .nav-link.disabled span {
         color: #e9e9e9; }
+      @media only screen and (min-width: 768px) {
+        .nav-tabs--schedule .nav-item .nav-link {
+          min-width: 70px; } }
 
 .custom-scroll {
   overflow: auto; }
@@ -178,6 +183,24 @@ button {
       line-height: 22px;
       height: 46px;
       max-height: 46px; }
+      @media only screen and (min-width: 768px) {
+        .showtime__info-duration, .showtime__info-address {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          white-space: normal;
+          line-height: 22px;
+          height: 23px;
+          max-height: 23px;
+          max-width: 89%; }
+          .showtime__info-duration + a, .showtime__info-address + a {
+            color: #fb4226;
+            font-size: 13px;
+            font-weight: 400;
+            margin-left: 5px; } }
     .showtime__info .media-body {
       display: flex;
       flex-direction: column;
