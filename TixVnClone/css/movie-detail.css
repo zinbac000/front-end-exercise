@@ -288,7 +288,10 @@ button {
   height: 60px;
   padding: 0 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.95); }
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s; }
+  .header:hover {
+    background-color: #ffffff; }
   .header__back img {
     width: 15px; }
   .header__brand img {
