@@ -1,0 +1,190 @@
+@import "../helper/theme";
+@import "../helper/function";
+@import "../helper/mixin";
+@import "../helper/keyframes";
+@import "../helper/common";
+
+@import "../base/reset";
+@import "../base/bootstrap-custom";
+@import "../base/browser-custom";
+@import "../base/lib-custom";
+
+@import "../component/user";
+@import "../component/movie-limit";
+
+// RIGHT CONTENT
+.right-content {
+  background-color: bc("primary");
+  box-shadow: 0 0 10px bc("boxShadow1");
+
+  height: 100vh;
+}
+
+// LEFT CONTENT
+.header {
+  position: relative;
+  height: 75px;
+  padding: 0 space(2) 0 space(7.5);
+
+  box-shadow: 0 0 10px bc("boxShadow1");
+
+  &__step {
+    display: inline-block;
+    margin-right: space(5);
+
+    @include text($fSize: "title1", $fWeight: "medium", $lineHeight: 75px);
+
+    &-number {
+      margin-right: space(0.5);
+
+      @include text($fSize: "h6", $fWeight: "medium");
+    }
+
+    &.active {
+      border-top: 2px solid bc("secondary");
+    }
+
+    &.active,
+    &.active &-number {
+      color: tc("danger");
+    }
+  }
+
+  &__right {
+    .user span {
+      font-size: fs("title1");
+    }
+  }
+}
+
+.seat-map {
+  background: linear-gradient(bc("backdrop"), bc("backdrop")),
+    url(https://s3img.vcdn.vn/123phim/2020/06/con-mua-tinh-dau-classic-again-15924959166782.png);
+
+  &__content {
+    height: calc(100vh - 75px);
+    width: calc(100% - 75px);
+    margin-left: auto;
+    padding: 0 space(1.5);
+
+    background-color: bc("primary");
+  }
+
+  &__body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__info {
+    padding: space(1.5) 0;
+
+    &-content {
+      > img {
+        width: 50px;
+      }
+    }
+
+    &-place {
+      margin-bottom: 0;
+    }
+
+    &-place,
+    &-place span {
+      @include text($fSize: "title2");
+    }
+
+    &-place span,
+    &-showtime {
+      color: tc("lightInfo");
+    }
+
+    &-showtime {
+      @include text($color: null, $fSize: "title1");
+    }
+
+    &-timer {
+      text-align: center;
+      p {
+        margin-bottom: 0;
+        @include text($color: "lightInfo", $fSize: "body1");
+      }
+
+      span {
+        @include text($color: "danger", $fSize: "h2");
+      }
+    }
+  }
+
+  &__map {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
+
+  &__row {
+    @include flex($alignItems: center);
+    flex-wrap: wrap;
+
+    &-label {
+      width: 50px;
+    }
+  }
+
+  &__seat-wrapper {
+    overflow: hidden;
+    width: 40px;
+    line-height: 0;
+  }
+
+  &__seat-icon {
+    position: relative;
+    font-size: 32px;
+    cursor: pointer;
+
+    &--normal {
+      color: tc("normalBox");
+    }
+
+    &--vip {
+      color: tc("vipBox");
+    }
+
+    &--sweet {
+      color: tc("sweetBox");
+
+      &.left {
+        right: -17px;
+      }
+
+      &.right {
+        left: -17px;
+      }
+    }
+
+    &--selecting {
+      color: tc("selectingBox");
+    }
+
+    &--selected {
+      color: tc("selectedBox");
+    }
+
+    &--disabled {
+      color: tc("disabledBox");
+    }
+  }
+
+  &__annotation-item {
+    margin-right: space(2);
+    text-align: center;
+
+    span {
+      font-size: 20px;
+    }
+
+    p {
+      @include text($color: "lightInfo", $fSize: "body2");
+    }
+  }
+}

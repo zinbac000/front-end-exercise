@@ -14,12 +14,6 @@ $bgColors: (
   "darkRed": #b42a14,
   "progress": #7ed321,
   "inactive": #afafaf,
-  "normalBox": #3e515d,
-  "vipBox": #f7b500,
-  "sweetBox": #c913cc,
-  "selectingBox": #44c020,
-  "selectedBox": #eceef0,
-  "disabledBox": #cfd3d7,
   "scheduleItem": rgba(246, 246, 246, 0.5),
   "boxShadow1": rgba(0, 0, 0, 0.3),
   "boxShadow2": rgba(0, 0, 0, 0.45),
@@ -54,7 +48,13 @@ $txtColors: (
   "white": #ffffff,
   "tabActive": #fa5238,
   "amount": #bbbbbb,
-  "feedbackScore": #91d25a
+  "feedbackScore": #91d25a,
+  "normalBox": #3e515d,
+  "vipBox": #f7b500,
+  "sweetBox": #c913cc,
+  "selectingBox": #44c020,
+  "selectedBox": #eceef0,
+  "disabledBox": #cfd3d7
 );
 
 // ----------- FONT ------------
