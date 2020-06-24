@@ -32,6 +32,8 @@ ol {
 button {
   border: none;
   outline: none; }
+  button.disabled {
+    cursor: default; }
 
 .nav-tabs {
   border-bottom: none; }

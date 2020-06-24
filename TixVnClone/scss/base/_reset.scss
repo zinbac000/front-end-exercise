@@ -26,4 +26,8 @@ ol {
 button {
   border: none;
   outline: none;
+
+  &.disabled {
+    cursor: default;
+  }
 }

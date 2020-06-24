@@ -20,6 +20,8 @@ ol {
 button {
   border: none;
   outline: none; }
+  button.disabled {
+    cursor: default; }
 
 body {
   display: flex;

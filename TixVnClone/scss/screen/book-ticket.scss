@@ -71,7 +71,7 @@
   }
 
   &__body {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -153,6 +153,8 @@
     &--sweet {
       color: tc("sweetBox");
 
+      transform: scaleX(1.5);
+
       &.left {
         right: -17px;
       }
@@ -185,6 +187,157 @@
 
     p {
       @include text($color: "lightInfo", $fSize: "body2");
+    }
+  }
+}
+
+.booking {
+  &__top {
+    padding: space(3);
+
+    .booking__block:not(:last-child) {
+      border-bottom: 1px dashed bc("lighterGrey");
+    }
+  }
+
+  &__block {
+    padding: space(1) 0;
+  }
+
+  &__total {
+    text-align: center;
+    @include text($color: "price", $fSize: "h1");
+  }
+
+  &__film-info {
+    p {
+      margin-bottom: 0;
+
+      @include text($color: "dark", $fSize: "title2");
+
+      &:first-child {
+        margin-bottom: space(0.5);
+
+        color: tc("primary");
+        font-weight: fw("medium");
+      }
+    }
+  }
+
+  &__seat {
+    span {
+      @include text($fSize: "title2");
+
+      &:first-child {
+        color: tc("danger");
+      }
+
+      &:last-child {
+        color: tc("price");
+      }
+    }
+  }
+
+  &__combo {
+    span {
+      @include text($fSize: "title2");
+
+      &:first-child {
+        img {
+          width: 20px;
+          margin-right: space(1.5);
+
+          vertical-align: middle;
+        }
+      }
+
+      &:last-child {
+        color: tc("price");
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    label {
+      @include pos($position: absolute, $top: 10px, $left: 0, $zIndex: 10);
+      @include text($color: "secondary", $fSize: "title2");
+
+      transition: all 0.3s;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      width: 100%;
+
+      &:focus {
+        padding-top: space(1.5);
+      }
+      &:focus + label {
+        font-size: fs("body2");
+
+        color: tc("focusLabel");
+      }
+    }
+
+    &--no-effect {
+      label {
+        font-size: fs("body2");
+        top: -5px;
+      }
+
+      input {
+        padding-top: space(1.5);
+      }
+    }
+  }
+
+  &__discount {
+    button {
+      @include button($color: "disabled", $bgColor: "inactive", $py: 0.7, $px: 1.5);
+      border-radius: 5px;
+    }
+  }
+
+  &__payment-type {
+    span {
+      &:first-child {
+        @include text($fSize: "title2");
+      }
+
+      &:last-child {
+        @include text($color: "danger", $fSize: "body2");
+      }
+    }
+  }
+
+  &__bottom {
+    p {
+      padding: 0 space(3);
+
+      @include text($color: "info", $fSize: "title1");
+      text-align: center;
+    }
+
+    button {
+      @include button($fs: "h4", $color: "disabled", $bgColor: "inactive", $py: 1.5);
+    }
+  }
+
+  &__warning-1 {
+    margin-bottom: 0;
+
+    img {
+      width: 15px;
+      margin-right: space(0.5);
+    }
+  }
+
+  &__warning-2 {
+    span {
+      color: tc("orange");
     }
   }
 }

@@ -1,11 +1,5 @@
 // Text mixin
-@mixin text(
-  $color: "primary",
-  $fSize: "body1",
-  $fWeight: "regular",
-  $lineHeight: null,
-  $letterSpacing: null
-) {
+@mixin text($color: "primary", $fSize: "body1", $fWeight: "regular", $lineHeight: null, $letterSpacing: null) {
   color: tc($color);
 
   font-size: fs($fSize);
@@ -15,17 +9,7 @@
 }
 
 // Button mixin
-@mixin button(
-  $fs: "title2",
-  $fw: "regular",
-  $color: null,
-  $bgColor: null,
-  $border: null,
-  $borderSize: null,
-  $py: null,
-  $px: null,
-  $bgHover: null
-) {
+@mixin button($fs: "title2", $fw: "regular", $color: null, $bgColor: null, $border: null, $borderSize: null, $py: 0, $px: 0, $bgHover: null) {
   @include text($color, $fs, $fw);
 
   background-color: bc($bgColor);
@@ -62,12 +46,7 @@ $breakpoints: (
 }
 
 // Flexbox
-@mixin flex(
-  $flex: flex,
-  $justifyContent: null,
-  $alignItems: null,
-  $flexDirection: null
-) {
+@mixin flex($flex: flex, $justifyContent: null, $alignItems: null, $flexDirection: null) {
   display: $flex;
   flex-direction: $flexDirection;
   justify-content: $justifyContent;
@@ -75,14 +54,7 @@ $breakpoints: (
 }
 
 // Positioning
-@mixin pos(
-  $position: null,
-  $top: null,
-  $right: null,
-  $bottom: null,
-  $left: null,
-  $zIndex: null
-) {
+@mixin pos($position: null, $top: null, $right: null, $bottom: null, $left: null, $zIndex: null) {
   position: $position;
   top: $top;
   right: $right;
