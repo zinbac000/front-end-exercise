@@ -21,10 +21,13 @@
 }
 
 // LEFT CONTENT
+.left-content {
+  position: relative;
+}
 .header {
   position: relative;
   height: 75px;
-  padding: 0 space(2) 0 space(7.5);
+  padding: 0 space(1.5);
 
   box-shadow: 0 0 10px bc("boxShadow1");
 
@@ -55,6 +58,39 @@
       font-size: fs("title1");
     }
   }
+
+  &__close {
+    img {
+      width: 15px;
+    }
+  }
+
+  &__mobile {
+    height: 100%;
+
+    span {
+      @include text($fSize: "title1", $fWeight: "medium");
+    }
+
+    > img {
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  &__mobile-button {
+    @include pos($position: absolute, $bottom: 0, $left: 0);
+    width: 100%;
+    border-top: 1px solid bc("lighterGrey");
+
+    button {
+      @include button($fs: "h4", $color: "disabled", $bgColor: "inactive", $py: 1.5);
+    }
+  }
+
+  @include mq("large") {
+    padding: 0 space(2) 0 space(7.5);
+  }
 }
 
 .seat-map {
@@ -63,11 +99,14 @@
 
   &__content {
     height: calc(100vh - 75px);
-    width: calc(100% - 75px);
-    margin-left: auto;
     padding: 0 space(1.5);
 
     background-color: bc("primary");
+
+    @include mq("large") {
+      width: calc(100% - 75px);
+      margin-left: auto;
+    }
   }
 
   &__body {
@@ -115,11 +154,29 @@
     }
   }
 
+  &__wrapper {
+    overflow-x: auto;
+
+    img {
+      width: 700px;
+      margin: 0 auto;
+
+      @include mq("large") {
+        width: 100%;
+      }
+    }
+  }
+
   &__map {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 700px;
     margin: auto;
+    padding: 0 space(3);
+
+    @include mq("large") {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
   }
 
   &__row {
@@ -139,7 +196,7 @@
 
   &__seat-icon {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     cursor: pointer;
 
     &--normal {
@@ -161,6 +218,10 @@
 
       &.right {
         left: -17px;
+      }
+
+      @include mq("large") {
+        font-size: 32px;
       }
     }
 

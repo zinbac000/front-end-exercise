@@ -159,10 +159,13 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   height: 100vh; }
 
+.left-content {
+  position: relative; }
+
 .header {
   position: relative;
   height: 75px;
-  padding: 0 20px 0 75px;
+  padding: 0 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
   .header__step {
     display: inline-block;
@@ -182,15 +185,47 @@ button {
       color: #fb4226; }
   .header__right .user span {
     font-size: 14px; }
+  .header__close img {
+    width: 15px; }
+  .header__mobile {
+    height: 100%; }
+    .header__mobile span {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 600; }
+    .header__mobile > img {
+      width: 40px;
+      border-radius: 50%; }
+  .header__mobile-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eeeeee; }
+    .header__mobile-button button {
+      color: #e9e9e9;
+      font-size: 22px;
+      font-weight: 400;
+      background-color: #afafaf;
+      border: solid "";
+      padding: 15px 0px;
+      transition: all 0.4s; }
+      .header__mobile-button button:hover {
+        background-color: ""; }
+  @media only screen and (min-width: 992px) {
+    .header {
+      padding: 0 20px 0 75px; } }
 
 .seat-map {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://s3img.vcdn.vn/123phim/2020/06/con-mua-tinh-dau-classic-again-15924959166782.png); }
   .seat-map__content {
     height: calc(100vh - 75px);
-    width: calc(100% - 75px);
-    margin-left: auto;
     padding: 0 15px;
     background-color: #ffffff; }
+    @media only screen and (min-width: 992px) {
+      .seat-map__content {
+        width: calc(100% - 75px);
+        margin-left: auto; } }
   .seat-map__body {
     max-width: 900px;
     margin: 0 auto; }
@@ -221,11 +256,23 @@ button {
         color: #fb4226;
         font-size: 29px;
         font-weight: 400; }
+  .seat-map__wrapper {
+    overflow-x: auto; }
+    .seat-map__wrapper img {
+      width: 700px;
+      margin: 0 auto; }
+      @media only screen and (min-width: 992px) {
+        .seat-map__wrapper img {
+          width: 100%; } }
   .seat-map__map {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto; }
+    width: 700px;
+    margin: auto;
+    padding: 0 30px; }
+    @media only screen and (min-width: 992px) {
+      .seat-map__map {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content; } }
   .seat-map__row {
     display: flex;
     align-items: center;
@@ -238,7 +285,7 @@ button {
     line-height: 0; }
   .seat-map__seat-icon {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     cursor: pointer; }
     .seat-map__seat-icon--normal {
       color: #3e515d; }
@@ -251,6 +298,9 @@ button {
         right: -17px; }
       .seat-map__seat-icon--sweet.right {
         left: -17px; }
+      @media only screen and (min-width: 992px) {
+        .seat-map__seat-icon--sweet {
+          font-size: 32px; } }
     .seat-map__seat-icon--selecting {
       color: #44c020; }
     .seat-map__seat-icon--selected {
