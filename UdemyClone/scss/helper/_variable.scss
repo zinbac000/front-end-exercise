@@ -1,0 +1,62 @@
+// ----------- COLORS ------------
+
+// BACKGROUND COLORS
+$bgColors: (
+  "primary": #ffffff,
+  "secondary": #0f7c90,
+  "tag": #ffe799,
+  "business": #003640,
+  "instructor": #fbfbf8,
+  "start": #6e1a52,
+  "lightGrey": #dcdacb,
+  "darkGrey": #3c3b37,
+  "linear1": rgb(100, 91, 83),
+  "linear2": rgb(235, 82, 82),
+  "linear3": rgb(247, 143, 47),
+  "linear4": rgb(244, 193, 81),
+  "linear5": rgb(82, 187, 118),
+  "linear6": rgb(38, 165, 215),
+  "linear7": rgb(224, 105, 183),
+  "boxShadow": rgba(0, 0, 0, 0.08),
+  "addCart": #ec5252,
+  "addCartHover": #e61b1b,
+  "borderHover": #c3c0a6
+);
+
+// TEXT COLORS
+$txtColors: (
+  "primary": #3c3b37,
+  "secondary": #0f7c90,
+  "white": #ffffff,
+  "grey": #73726c,
+  "score": #be5a0e,
+  "star": #eb8a2f,
+  "tag": #593d00,
+  "success": #6aa878,
+  "favorite": #094c59
+);
+
+// ----------- FONT ------------
+
+// FONT SIZE
+$fSizes: (
+  "small": 0.75rem,
+  "oldPrice": 0.875rem,
+  "newPrice": 1rem,
+  "body1": 1.1875rem,
+  "body2": 1rem,
+  "title1": 0.875rem,
+  "title2": 1rem,
+  "h1": 2.5rem,
+  "h2": 2rem,
+  "h3": 1.5rem
+);
+
+// FONT WEIGHT
+$fWeights: (
+  "regular": 400,
+  "bold": 700
+);
+
+// SPACING
+$spacing: 10px;

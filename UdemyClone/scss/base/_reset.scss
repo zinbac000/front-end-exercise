@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: fw("regular");
+  src: url(../../assets/font/SF-Pro-Text-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-weight: fw("bold");
+  src: url(../../assets/font/SF-Pro-Text-Bold.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SF Pro Text", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+
+  &.disabled {
+    cursor: default;
+  }
+}
