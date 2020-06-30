@@ -1,0 +1,333 @@
+.header {
+  box-shadow: 0 0 10px bc("boxShadow");
+
+  &::before {
+    content: "";
+
+    display: block;
+    height: 8px;
+
+    background: linear-gradient(to right, bc("linear1"), bc("linear2"), bc("linear3"), bc("linear4"), bc("linear5"), bc("linear6"), bc("linear7"));
+  }
+
+  &__content {
+    @include flex($alignItems: center);
+
+    height: 65px;
+    padding: 0 space(1);
+  }
+
+  &__toggler {
+    color: tc("grey");
+
+    font-size: 1.25rem;
+
+    width: 56px;
+    height: 56px;
+    padding: space(1);
+    margin-right: space(5.6);
+    flex-shrink: 0;
+  }
+
+  &__brand {
+    flex-grow: 1;
+    @include flex($justifyContent: center, $alignItems: center);
+
+    img {
+      width: 100px;
+    }
+
+    @include mq("large") {
+      flex-grow: 0;
+    }
+  }
+
+  &__search,
+  &__link &__cart {
+    color: tc("grey");
+
+    font-size: 1.25rem;
+    text-align: center;
+
+    width: 48px;
+
+    &:hover {
+      color: tc("secondary");
+    }
+  }
+
+  &__search {
+    margin-left: space(1.6);
+  }
+
+  &__side-menu {
+    @include pos($position: fixed, $top: 0, $right: 0, $bottom: 0, $left: 0, $zIndex: 100);
+
+    background-color: transparent;
+
+    transition: all 0.3s;
+
+    pointer-events: none;
+
+    &__content {
+      position: relative;
+
+      width: 290px;
+      height: 100%;
+
+      background-color: bc("primary");
+
+      transform: translateX(-390px);
+      transition: all 0.3s;
+    }
+
+    &__close {
+      @include pos($position: absolute, $top: 10px, $right: -60px);
+
+      background-color: bc("primary");
+
+      @include flex($justifyContent: center, $alignItems: center);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+      font-size: 1.25rem;
+      color: tc("grey");
+
+      transform: scale(0);
+      transition: all 0.3s 0.3s;
+    }
+
+    &__body {
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    &__auth,
+    &__categories {
+      padding: space(1.5);
+    }
+
+    &__auth {
+      p {
+        @include text($color: "secondary", $fSize: "title2");
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__categories {
+      border-top: 1px solid bc("lightGrey");
+
+      p {
+        margin-bottom: 0;
+
+        @include text($color: "grey", $fSize: "title1", $fWeight: "bold");
+      }
+    }
+
+    &__category {
+      @include flex($justifyContent: space-between, $alignItems: center);
+
+      margin: space(1) 0;
+
+      span,
+      i {
+        @include text($color: "primary", $fSize: "title2");
+      }
+    }
+
+    &__sub-menu {
+      @include pos($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: 0, $zIndex: 1);
+
+      background-color: bc("primary");
+
+      transform: translateX(300px);
+      transition: all 0.3s;
+    }
+
+    &__sub-header {
+      padding: space(1.5);
+
+      background-color: bc("instructor");
+
+      label {
+        margin-right: space(1.5);
+      }
+
+      span {
+        @include text($color: "primary", $fSize: "title2");
+      }
+    }
+
+    &__sub-content {
+      padding: space(1) space(1.5);
+    }
+
+    &__sub-title {
+      padding: space(1) 0;
+
+      @include text($color: "primary", $fSize: "title2", $fWeight: "bold");
+    }
+
+    &__sub-item {
+      padding: space(1) 0;
+
+      @include text($color: "primary", $fSize: "title2");
+    }
+
+    &__toggler {
+      display: none;
+
+      &:checked + .header__side-menu__sub-menu {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  #sideBarToggler {
+    display: none;
+
+    &:checked + .header__side-menu {
+      background-color: bc("overlay");
+
+      pointer-events: inherit;
+    }
+
+    &:checked + .header__side-menu .header__side-menu__content {
+      transform: translateX(0);
+    }
+
+    &:checked + .header__side-menu .header__side-menu__close {
+      transform: scale(1);
+    }
+  }
+
+  &__category,
+  &__link {
+    padding-left: space(1.5);
+    height: 100%;
+    align-items: center;
+
+    a {
+      @include text($color: "primary", $fSize: "title1");
+
+      &:hover {
+        color: tc("secondary");
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    &-down {
+      @include pos($position: absolute, $top: 100%, $right: 0);
+      display: none;
+      width: 300px;
+      padding: space(1.5);
+      border: 1px solid bc("lightGrey");
+
+      background-color: bc("primary");
+      box-shadow: 0 3px 5px bc("boxShadow");
+
+      p {
+        @include text($color: "primary", $fSize: "body1", $fWeight: "bold", $lineHeight: 1.2);
+      }
+
+      button {
+        @include button($fs: "title2", $fw: "bold", $color: "white", $bgColor: "secondary", $py: 1, $bgHover: "business");
+        border-radius: 5px;
+      }
+
+      &.header__cart-content {
+        p {
+          @include text($color: "grey", $fSize: "body2", $fWeight: "regular");
+        }
+
+        a {
+          @include text($color: "secondary", $fSize: "title1", $fWeight: "bold");
+
+          &:hover {
+            color: tc("linkHover");
+          }
+        }
+      }
+    }
+
+    &:hover &-down {
+      display: block;
+    }
+  }
+
+  &__search-input {
+    position: relative;
+
+    flex-grow: 1;
+    @include flex($alignItems: center);
+    height: 50px;
+    margin-left: space(1.5);
+    border: 1px solid bc("lightGrey");
+    border-radius: 200px;
+
+    background-color: bc("instructor");
+
+    &:hover {
+      border-color: bc("borderHover");
+    }
+
+    i {
+      color: tc("grey");
+
+      padding: 0 space(1.5);
+    }
+
+    input {
+      border: none;
+      outline: none;
+      width: 100%;
+      padding-right: space(1.5);
+
+      background-color: transparent;
+
+      &::-webkit-input-placeholder {
+        @include text($color: "primary", $fSize: "title1");
+      }
+
+      &::-moz-placeholder {
+        @include text($color: "primary", $fSize: "title1");
+      }
+
+      &:-ms-input-placeholder {
+        @include text($color: "primary", $fSize: "title1");
+      }
+
+      &::-ms-input-placeholder {
+        @include text($color: "primary", $fSize: "title1");
+      }
+
+      &::placeholder {
+        @include text($color: "primary", $fSize: "title1");
+      }
+    }
+  }
+
+  &__login,
+  &__signup {
+    @include button($fs: "title1", $fw: "bold", $color: "white", $bgColor: "secondary", $py: 1, $bgHover: "business");
+
+    width: 100px;
+    margin-left: space(1.5);
+    border-radius: 5px;
+  }
+
+  &__login {
+    @include button($color: "secondary", $bgColor: "primary", $border: "lightGrey", $borderSize: 1px, $py: 1, $bgHover: "primary");
+
+    &:hover {
+      border-color: bc("borderHover");
+    }
+  }
+}

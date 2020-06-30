@@ -17,7 +17,8 @@ $bgColors: (
   "linear5": rgb(82, 187, 118),
   "linear6": rgb(38, 165, 215),
   "linear7": rgb(224, 105, 183),
-  "boxShadow": rgba(0, 0, 0, 0.08),
+  "boxShadow": rgba(0, 0, 0, 0.3),
+  "overlay": rgba(0, 0, 0, 0.75),
   "addCart": #ec5252,
   "addCartHover": #e61b1b,
   "borderHover": #c3c0a6
@@ -33,7 +34,8 @@ $txtColors: (
   "star": #eb8a2f,
   "tag": #593d00,
   "success": #6aa878,
-  "favorite": #094c59
+  "favorite": #094c59,
+  "linkHover": #003640
 );
 
 // ----------- FONT ------------

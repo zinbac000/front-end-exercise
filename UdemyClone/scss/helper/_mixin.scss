@@ -1,9 +1,14 @@
 // Text mixin
 @mixin text($color: null, $fSize: null, $fWeight: null, $lineHeight: null, $letterSpacing: null) {
-  color: tc($color);
-
-  font-size: fs($fSize);
-  font-weight: fw($fWeight);
+  @if $color != null {
+    color: tc($color);
+  }
+  @if $fSize != null {
+    font-size: fs($fSize);
+  }
+  @if $fWeight != null {
+    font-weight: fw($fWeight);
+  }
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
 }
