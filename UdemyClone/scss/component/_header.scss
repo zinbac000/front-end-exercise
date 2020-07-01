@@ -1,15 +1,6 @@
 .header {
   box-shadow: 0 0 10px bc("boxShadow");
 
-  &::before {
-    content: "";
-
-    display: block;
-    height: 8px;
-
-    background: linear-gradient(to right, bc("linear1"), bc("linear2"), bc("linear3"), bc("linear4"), bc("linear5"), bc("linear6"), bc("linear7"));
-  }
-
   &__content {
     @include flex($alignItems: center);
 

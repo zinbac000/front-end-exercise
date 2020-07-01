@@ -4,9 +4,11 @@
 @import "../helper/common";
 
 @import "../base/reset";
+@import "../base/slick-custom";
 
 @import "../component/header";
 
+// HERO SCSS
 .hero {
   position: relative;
 
@@ -91,5 +93,91 @@
         font-size: fs("body1");
       }
     }
+  }
+}
+
+// COURSES SCSS
+.courses {
+  padding: space(1.5);
+
+  &__field {
+    border-top: 1px solid bc("lightGrey");
+
+    a {
+      @include text($color: "primary", $fSize: "body1", $fWeight: "bold");
+      @include flex($justifyContent: space-between, $alignItems: center);
+      padding: space(1.5) 0;
+    }
+  }
+
+  &__item {
+    &:hover {
+      .courses__image::after {
+        background-color: bc("overlay");
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid bc("lightGrey");
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      @include pos($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+
+      transition: all 0.3s;
+    }
+  }
+
+  &__content {
+    padding-top: space(1);
+  }
+
+  &__title {
+    @include text($color: "primary", $fSize: "body2", $fWeight: "bold");
+    @include line-clamp(2, 22px);
+  }
+
+  &__author {
+    @include text($color: "grey", $fSize: "small");
+    @include line-clamp(1, 22px);
+  }
+
+  &__rating-score {
+    @include text($color: "score", $fSize: "score", $fWeight: "bold");
+  }
+
+  &__rating-stars {
+    i {
+      font-size: fs("small");
+      vertical-align: middle;
+      color: tc("star");
+    }
+  }
+
+  &__rating-number {
+    @include text($color: "grey", $fSize: "small");
+  }
+
+  &__oldPrice {
+    @include text($color: "grey", $fSize: "oldPrice", $fWeight: "regular");
+    text-decoration: line-through;
+  }
+
+  &__newPrice {
+    @include text($color: "primary", $fSize: "newPrice", $fWeight: "bold");
+    margin-right: space(0.5);
+  }
+
+  &__bestseller {
+    background-color: bc("tag");
+
+    @include text($color: "tag", $fSize: "small", $fWeight: "bold");
+
+    padding: space(0.5) space(1);
+    border-radius: 5px;
   }
 }
