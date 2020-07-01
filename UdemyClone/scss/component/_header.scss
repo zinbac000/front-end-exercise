@@ -213,8 +213,10 @@
 
     a {
       @include text($color: "primary", $fSize: "title1");
+    }
 
-      &:hover {
+    &:hover {
+      > a {
         color: tc("secondary");
       }
     }
@@ -259,6 +261,84 @@
 
     &:hover &-down {
       display: block;
+    }
+  }
+
+  &__category {
+    position: relative;
+
+    &-list {
+      @include pos($position: absolute, $top: 100%, $left: 0);
+
+      background-color: bc("primary");
+      box-shadow: 0 3px 5px bc("boxShadow");
+
+      display: none;
+      min-width: 250px;
+      min-height: 500px;
+      padding: space(2) 0;
+      border: 1px solid bc("lightGrey");
+    }
+
+    &:hover {
+      > a {
+        color: tc("secondary");
+      }
+      .header__category-list {
+        display: block;
+      }
+    }
+
+    &-item {
+      padding: 0 space(1.5);
+      margin-bottom: space(1);
+
+      a {
+        @include flex($justifyContent: space-between, $alignItems: center);
+      }
+
+      &:hover {
+        > a {
+          color: tc("secondary");
+        }
+        > .header__sub-category {
+          display: block;
+        }
+      }
+    }
+
+    &-content {
+      p {
+        font-weight: fw("bold");
+      }
+
+      a {
+        padding: 0 space(1.5);
+        margin-bottom: space(1);
+
+        &:hover {
+          color: tc("secondary");
+        }
+      }
+    }
+  }
+
+  &__sub-category {
+    @include pos($position: absolute, $top: 0, $left: 100%);
+
+    background-color: bc("primary");
+    box-shadow: 0 3px 5px bc("boxShadow");
+
+    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    padding: space(2) 0;
+    border: 1px solid bc("lightGrey");
+
+    p {
+      padding: 0 space(1.5);
+      margin-bottom: space(1);
+      @include text($color: "primary", $fSize: "title1");
     }
   }
 

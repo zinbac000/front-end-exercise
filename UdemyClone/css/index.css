@@ -178,8 +178,8 @@ button {
     .header__category a, .header__link a {
       color: #3c3b37;
       font-size: 0.875rem; }
-      .header__category a:hover, .header__link a:hover {
-        color: #0f7c90; }
+    .header__category:hover > a, .header__link:hover > a {
+      color: #0f7c90; }
   .header__link {
     position: relative; }
     .header__link-down {
@@ -220,6 +220,57 @@ button {
           color: #003640; }
     .header__link:hover .header__link-down {
       display: block; }
+  .header__category {
+    position: relative; }
+    .header__category-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      display: none;
+      min-width: 250px;
+      min-height: 500px;
+      padding: 20px 0;
+      border: 1px solid #dcdacb; }
+    .header__category:hover > a {
+      color: #0f7c90; }
+    .header__category:hover .header__category-list {
+      display: block; }
+    .header__category-item {
+      padding: 0 15px;
+      margin-bottom: 10px; }
+      .header__category-item a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .header__category-item:hover > a {
+        color: #0f7c90; }
+      .header__category-item:hover > .header__sub-category {
+        display: block; }
+    .header__category-content p {
+      font-weight: 700; }
+    .header__category-content a {
+      padding: 0 15px;
+      margin-bottom: 10px; }
+      .header__category-content a:hover {
+        color: #0f7c90; }
+  .header__sub-category {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 20px 0;
+    border: 1px solid #dcdacb; }
+    .header__sub-category p {
+      padding: 0 15px;
+      margin-bottom: 10px;
+      color: #3c3b37;
+      font-size: 0.875rem; }
   .header__search-input {
     position: relative;
     flex-grow: 1;
