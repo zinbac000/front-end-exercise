@@ -22,10 +22,12 @@
 
     font-size: 1.25rem;
 
+    @include flex($alignItems: center);
     width: 56px;
     height: 56px;
     padding: space(1);
     margin-right: space(5.6);
+    margin-bottom: 0;
     flex-shrink: 0;
   }
 
