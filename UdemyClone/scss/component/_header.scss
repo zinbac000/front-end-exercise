@@ -1,5 +1,7 @@
 .header {
   box-shadow: 0 0 10px bc("boxShadow");
+  position: relative;
+  z-index: 100;
 
   &__content {
     @include flex($alignItems: center);

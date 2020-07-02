@@ -4,6 +4,7 @@
 @import "../helper/common";
 
 @import "../base/reset";
+@import "../base/bootstrap-custom";
 @import "../base/slick-custom";
 
 @import "../component/header";
@@ -98,8 +99,6 @@
 
 // COURSES SCSS
 .courses {
-  padding: space(1.5);
-
   &__field {
     border-top: 1px solid bc("lightGrey");
 
@@ -112,6 +111,7 @@
 
   &__item {
     &:hover {
+      cursor: pointer;
       .courses__image::after {
         background-color: bc("overlay");
       }
@@ -179,5 +179,170 @@
 
     padding: space(0.5) space(1);
     border-radius: 5px;
+  }
+
+  &__desktop {
+    margin-top: space(4);
+    ul {
+      margin-bottom: space(1.5);
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      flex-wrap: nowrap;
+      .nav-link {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.section-title {
+  @include text($color: "primary", $fSize: "h3", $fWeight: "bold");
+}
+
+// VIEWING COURSES SCSS
+.viewing-courses {
+  h2 {
+    @extend .section-title;
+  }
+}
+
+// SEARCHED COURSES SCSS
+.searched-courses {
+  h2 {
+    @extend .section-title;
+    span {
+      color: tc("secondary");
+    }
+  }
+}
+
+// GET STARTED SCSS
+.get-started {
+  background: url(https://udemy-images.udemy.com/browse_components/shared-assets/purple-intersect.svg) repeat-x bc("start");
+  border-radius: 5px;
+
+  h2 {
+    @include text($color: "white", $fSize: "h2", $fWeight: "bold");
+  }
+
+  p {
+    @include text($color: "white", $fSize: "body2");
+
+    @include mq("medium") {
+      font-size: fs("body1");
+    }
+  }
+
+  button {
+    @include button($fs: "title2", $fw: "bold", $color: "white", $border: "primary", $borderSize: 1px, $py: 1, $px: 1.5);
+    border-radius: 5px;
+  }
+}
+
+// TOP CATEGORIES SCSS
+.top-categories {
+  h2 {
+    @extend .section-title;
+  }
+
+  &__mobile {
+    a {
+      @include button($fs: "title2", $fw: "bold", $color: "secondary", $border: "secondary", $borderSize: 1px, $py: 1, $px: 1.5);
+      border-radius: 200px;
+      margin: 0 space(1) space(1) 0;
+
+      &:hover {
+        color: tc("linkHover");
+      }
+    }
+  }
+
+  &__desktop {
+    margin: 0 space(-0.75);
+  }
+
+  &__cardWrapper {
+    flex-basis: 33.33%;
+    padding: 0 space(0.75);
+    margin-bottom: space(1.5);
+
+    @include mq("large") {
+      flex-basis: 25%;
+    }
+
+    .card-title {
+      @include text($color: "primary", $fSize: "title2", $fWeight: "bold");
+    }
+  }
+}
+
+// TESTIMONIAL SCSS
+.testimonial {
+  h2 {
+    @extend .section-title;
+    margin-bottom: space(1.5);
+  }
+
+  &__item {
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: space(1.5);
+    }
+  }
+
+  &__name {
+    @include text($color: "secondary", $fSize: "title2", $fWeight: "bold");
+  }
+
+  &__feedback {
+    text-align: center;
+    @include text($color: "primary", $fSize: "body2", $fWeight: "regular");
+  }
+}
+
+// INSTRUCTOR SCSS
+.instructor {
+  background-color: bc("instructor");
+
+  img {
+    height: 300px;
+    margin-right: space(10);
+    transform: scale(1.25);
+    box-shadow: 0 0 5px bc("lightGrey");
+  }
+
+  &__content {
+    padding: space(4) space(1.5);
+    text-align: center;
+
+    h2 {
+      @include text($color: "primary", $fSize: "h2", $fWeight: "bold");
+    }
+
+    p {
+      @include text($color: "primary", $fSize: "body2", $fWeight: "regular");
+    }
+
+    button {
+      @include button($fs: "title2", $fw: "bold", $color: "white", $bgColor: "secondary", $py: 1, $px: 1.5);
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    @include mq("small") {
+      button {
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    @include mq("medium") {
+      flex-basis: 35%;
+      text-align: left;
+    }
   }
 }

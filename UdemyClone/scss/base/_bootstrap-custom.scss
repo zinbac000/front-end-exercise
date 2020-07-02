@@ -1,0 +1,15 @@
+.nav.nav-tabs {
+  border-bottom: 1px solid bc("lightGrey");
+
+  .nav-item {
+    .nav-link {
+      @include text($color: "grey", $fSize: "title2", $fWeight: "bold");
+      border: none;
+
+      &.active {
+        color: tc("primary");
+        border-bottom: 3px solid bc("secondary");
+      }
+    }
+  }
+}
