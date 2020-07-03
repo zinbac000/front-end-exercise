@@ -511,7 +511,7 @@ button {
     .courses__desktop ul .nav-link {
       white-space: nowrap; }
 
-.section-title, .viewing-courses h2, .searched-courses h2, .top-categories h2, .testimonial h2 {
+.section-title {
   color: #3c3b37;
   font-size: 1.5rem;
   font-weight: 700; }
@@ -589,25 +589,24 @@ button {
   font-size: 1rem;
   font-weight: 400; }
 
-.instructor {
+.instructor, .business {
   background-color: #fbfbf8; }
-  .instructor img {
+  .instructor img, .business img {
     height: 300px;
-    margin-right: 100px;
     transform: scale(1.25);
-    box-shadow: 0 0 5px #dcdacb; }
-  .instructor__content {
+    box-shadow: 0 0 2px #dcdacb; }
+  .instructor__content, .business__content {
     padding: 40px 15px;
     text-align: center; }
-    .instructor__content h2 {
+    .instructor__content h2, .business__content h2 {
       color: #3c3b37;
       font-size: 2rem;
       font-weight: 700; }
-    .instructor__content p {
+    .instructor__content p, .business__content p {
       color: #3c3b37;
       font-size: 1rem;
       font-weight: 400; }
-    .instructor__content button {
+    .instructor__content button, .business__content button {
       color: #ffffff;
       font-size: 1rem;
       font-weight: 700;
@@ -618,15 +617,83 @@ button {
       display: block;
       width: 100%;
       border-radius: 5px; }
-      .instructor__content button:hover {
+      .instructor__content button:hover, .business__content button:hover {
         background-color: ""; }
     @media only screen and (min-width: 576px) {
-      .instructor__content button {
+      .instructor__content button, .business__content button {
         display: inline-block;
         width: auto; } }
     @media only screen and (min-width: 768px) {
-      .instructor__content {
+      .instructor__content, .business__content {
         flex-basis: 35%;
-        text-align: left; } }
+        text-align: left; }
+        .instructor__content p, .business__content p {
+          font-size: 1.1875rem; } }
+  @media only screen and (min-width: 768px) {
+    .instructor > div > :first-child, .business > div > :first-child {
+      margin-right: 100px; } }
+
+.partner {
+  border-top: 1px solid #dcdacb;
+  border-bottom: 1px solid #dcdacb;
+  margin-top: 100px; }
+  .partner__item {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    margin: 15px; }
+    .partner__item img {
+      max-height: 100%; }
+    .partner__item:nth-child(3) img {
+      height: 30px; }
+
+.business {
+  margin-top: 100px;
+  background-color: #003640; }
+  .business__content h2,
+  .business__content p {
+    color: #ffffff; }
+
+.footer {
+  margin-top: 100px;
+  border-top: 1px solid #dcdacb; }
+  .footer__select-input {
+    position: relative; }
+    .footer__select-input i {
+      position: absolute;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 90%;
+      margin: 2px;
+      pointer-events: none;
+      background-color: #ffffff;
+      color: #73726c; }
+      .footer__select-input i:first-of-type {
+        top: 0;
+        left: 0; }
+      .footer__select-input i:last-of-type {
+        top: 0;
+        right: 0; }
+    .footer__select-input select {
+      padding: 10px 40px;
+      border-color: #73726c;
+      border-radius: 5px;
+      color: #73726c; }
+  .footer__links a {
+    color: #0f7c90;
+    font-size: 0.875rem;
+    margin-bottom: 10px; }
+    .footer__links a:hover {
+      color: #003640; }
+  .footer__bottom {
+    padding: 30px 0; }
+    .footer__bottom a {
+      display: block;
+      width: 100px; }
+    .footer__bottom span {
+      color: #73726c;
+      font-size: 0.75rem; }
 
 /*# sourceMappingURL=index.css.map */

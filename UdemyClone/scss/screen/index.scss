@@ -200,17 +200,9 @@
   @include text($color: "primary", $fSize: "h3", $fWeight: "bold");
 }
 
-// VIEWING COURSES SCSS
-.viewing-courses {
-  h2 {
-    @extend .section-title;
-  }
-}
-
 // SEARCHED COURSES SCSS
 .searched-courses {
   h2 {
-    @extend .section-title;
     span {
       color: tc("secondary");
     }
@@ -242,10 +234,6 @@
 
 // TOP CATEGORIES SCSS
 .top-categories {
-  h2 {
-    @extend .section-title;
-  }
-
   &__mobile {
     a {
       @include button($fs: "title2", $fw: "bold", $color: "secondary", $border: "secondary", $borderSize: 1px, $py: 1, $px: 1.5);
@@ -280,7 +268,6 @@
 // TESTIMONIAL SCSS
 .testimonial {
   h2 {
-    @extend .section-title;
     margin-bottom: space(1.5);
   }
 
@@ -309,9 +296,8 @@
 
   img {
     height: 300px;
-    margin-right: space(10);
     transform: scale(1.25);
-    box-shadow: 0 0 5px bc("lightGrey");
+    box-shadow: 0 0 2px bc("lightGrey");
   }
 
   &__content {
@@ -343,6 +329,119 @@
     @include mq("medium") {
       flex-basis: 35%;
       text-align: left;
+
+      p {
+        font-size: fs("body1");
+      }
+    }
+  }
+
+  @include mq("medium") {
+    > div > :first-child {
+      margin-right: space(10);
+    }
+  }
+}
+
+// PARTNER SCSS
+.partner {
+  border-top: 1px solid bc("lightGrey");
+  border-bottom: 1px solid bc("lightGrey");
+  margin-top: space(10);
+
+  &__item {
+    @include flex($flex: inline-flex, $alignItems: center);
+    height: 50px;
+    margin: space(1.5);
+
+    img {
+      max-height: 100%;
+    }
+
+    &:nth-child(3) {
+      img {
+        height: 30px;
+      }
+    }
+  }
+}
+
+// BUSINESS SCSS
+.business {
+  @extend .instructor;
+
+  margin-top: space(10);
+  background-color: bc("business");
+
+  &__content {
+    @extend .instructor__content;
+
+    h2,
+    p {
+      color: tc("white");
+    }
+  }
+}
+
+// FOOTER SCSS
+.footer {
+  margin-top: space(10);
+  border-top: 1px solid bc("lightGrey");
+
+  &__select-input {
+    position: relative;
+
+    i {
+      @include pos($position: absolute);
+      @include flex($flex: inline-flex, $justifyContent: center, $alignItems: center);
+      width: 40px;
+      height: 90%;
+      margin: space(0.2);
+
+      pointer-events: none;
+
+      background-color: bc("primary");
+      color: tc("grey");
+
+      &:first-of-type {
+        top: 0;
+        left: 0;
+      }
+
+      &:last-of-type {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    select {
+      padding: space(1) space(4);
+      border-color: bc("border");
+      border-radius: 5px;
+
+      color: tc("grey");
+    }
+  }
+
+  &__links {
+    a {
+      @include text($color: "secondary", $fSize: "title1");
+      margin-bottom: space(1);
+      &:hover {
+        color: tc("linkHover");
+      }
+    }
+  }
+
+  &__bottom {
+    padding: space(3) 0;
+    a {
+      display: block;
+      width: 100px;
+    }
+
+    span {
+      @include text($color: "grey", $fSize: "small");
     }
   }
 }
