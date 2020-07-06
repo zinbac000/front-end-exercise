@@ -1,0 +1,189 @@
+@import "./helper/variable";
+@import "./helper/function";
+@import "./helper/mixin";
+
+@import "./base/reset";
+@import "./base/bootstrap-custom";
+
+.left {
+  width: 60%;
+  padding: 0 space(3);
+}
+
+.right {
+  @include pos($position: fixed, $top: 0, $right: 0);
+  width: 40%;
+  height: 100%;
+
+  background-color: bc("primary");
+  box-shadow: 0 0 10px bc("boxShadow");
+}
+
+.header {
+  h1 {
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px bc("boxShadow");
+  }
+}
+
+.product {
+  &__select-input {
+    label {
+      @include text($color: "primary", $fSize: "title2", $fWeight: "bold");
+    }
+
+    select {
+      background-color: bc("secondary");
+
+      @include text($color: "white", $fSize: "title2", $fWeight: "medium");
+
+      border-radius: 5px;
+      padding: space(0.7) space(1.5);
+    }
+  }
+
+  &__item {
+    box-shadow: 0 0 10px bc("boxShadow");
+  }
+
+  &__content {
+    padding: space(1.5);
+  }
+
+  &__name {
+    @include text($color: "primary", $fSize: "title2", $fWeight: "bold");
+  }
+
+  &__desc {
+    @include text($color: "secondary", $fSize: "title1", $fWeight: "regular");
+  }
+
+  &__rating {
+    margin-bottom: space(1);
+
+    i {
+      font-size: 10px;
+      color: tc("starInactive");
+
+      &.active {
+        color: tc("starActive");
+      }
+    }
+  }
+
+  &__status {
+    background-color: bc("available");
+
+    border-radius: 5px;
+    padding: space(0.5);
+
+    @include text($color: "white", $fSize: "small", $fWeight: "medium");
+  }
+
+  &__price {
+    @include text($color: "price", $fSize: "h3", $fWeight: "bold");
+  }
+
+  &__addToCart {
+    @include button($fs: "title2", $fw: "bold", $color: "white", $bgColor: "secondary", $py: 1);
+    text-transform: uppercase;
+
+    border-radius: 5px;
+  }
+}
+
+.cart {
+  height: 100%;
+  @include flex($flexDirection: column);
+
+  h1 {
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px bc("boxShadow");
+  }
+
+  &__list {
+    flex-grow: 1;
+    overflow: auto;
+    padding: space(2);
+  }
+
+  &__item {
+    @include flex($alignItems: center);
+    padding: space(1.5);
+    margin-bottom: space(1.5);
+
+    box-shadow: 0 0 10px bc("boxShadow");
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+
+    &-info {
+      flex-grow: 1;
+      padding: 0 space(1.5);
+    }
+
+    &-name {
+      @extend .product__name;
+    }
+
+    &-desc {
+      @extend .product__desc;
+    }
+
+    &-price,
+    &-quantity,
+    &-totalPrice,
+    &-remove {
+      padding: 0 space(1.5);
+    }
+
+    &-price,
+    &-totalPrice {
+      @include text($color: "primary", $fSize: "body1", $fWeight: "bold");
+    }
+
+    &-totalPrice {
+      color: tc("price");
+    }
+
+    &-quantity {
+      button {
+        background-color: bc("secondary");
+        width: 25px;
+        height: 25px;
+        i {
+          font-size: 10px;
+          color: tc("white");
+        }
+      }
+
+      span {
+        margin: 0 space(0.5);
+        @include text($color: "primary", $fSize: "title2", $fWeight: "medium");
+      }
+    }
+
+    &-remove {
+      font-size: 24px;
+      color: tc("danger");
+    }
+  }
+
+  &__total {
+    padding: space(1.5);
+
+    text-align: center;
+
+    @include text($color: "primary", $fSize: "h2", $fWeight: "bold");
+  }
+
+  &__totalNumber {
+    color: tc("price");
+  }
+
+  &__pay {
+    @include button($fs: "h2", $fw: "bold", $color: "white", $bgColor: "secondary", $py: 1.5);
+  }
+}

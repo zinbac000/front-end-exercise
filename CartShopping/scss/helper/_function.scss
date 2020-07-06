@@ -1,0 +1,33 @@
+// Get background color
+@function bc($color) {
+  @return getVal($bgColors, $color, "This background color isn't supported");
+}
+
+// Get text color
+@function tc($color) {
+  @return getVal($txtColors, $color, "This text color isn't supported");
+}
+
+// Get font size
+@function fs($fSize) {
+  @return getVal($fSizes, $fSize, "This font size isn't supported");
+}
+
+// Get font weight
+@function fw($fWeight) {
+  @return getVal($fWeights, $fWeight, "This font weight isn't supported");
+}
+
+// Get value from map
+@function getVal($map, $key, $warningMessage) {
+  @if map-has-key($map: $map, $key: $key) {
+    @return map-get($map: $map, $key: $key);
+  }
+  @warn ($warningMessage);
+  @return "";
+}
+
+// Get spacing value
+@function space($value) {
+  @return $spacing * $value;
+}

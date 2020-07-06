@@ -1,0 +1,93 @@
+// Text mixin
+@mixin text($color: null, $fSize: null, $fWeight: null, $lineHeight: null, $letterSpacing: null) {
+  @if $color != null {
+    color: tc($color);
+  }
+  @if $fSize != null {
+    font-size: fs($fSize);
+  }
+  @if $fWeight != null {
+    font-weight: fw($fWeight);
+  }
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+// Button mixin
+@mixin button($fs: null, $fw: null, $color: null, $bgColor: null, $border: null, $borderSize: null, $py: 0, $px: 0, $bgHover: null) {
+  @include text($color, $fs, $fw);
+
+  background-color: bc($bgColor);
+
+  @if $borderSize != null && $border != null {
+    border: $borderSize solid bc($border);
+  }
+  padding: space($py) space($px);
+
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: bc($bgHover);
+  }
+}
+
+// Media queries mixin
+$breakpoints: (
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "extra-large": 1200px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Flexbox
+@mixin flex($flex: flex, $justifyContent: null, $alignItems: null, $flexDirection: null) {
+  display: $flex;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// Positioning
+@mixin pos($position: null, $top: null, $right: null, $bottom: null, $left: null, $zIndex: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $zIndex;
+}
+
+// Text overflow
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Box line clamp
+@mixin line-clamp($lineCount, $lineHeight) {
+  @include text-overflow();
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineCount;
+  white-space: normal;
+  line-height: $lineHeight;
+
+  height: ($lineHeight + 1px) * $lineCount;
+  max-height: ($lineHeight + 1px) * $lineCount;
+}
+
+@mixin overlay($bgColor, $percent) {
+  background: linear-gradient(to top, bc($bgColor), transparent $percent);
+}

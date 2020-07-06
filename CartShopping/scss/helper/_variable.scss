@@ -1,0 +1,49 @@
+// ----------- COLORS ------------
+
+// BACKGROUND COLORS
+$bgColors: (
+  "primary": #f4f6ff,
+  "secondary": #4f8a8b,
+  "boxShadow": rgba(0, 0, 0, 0.3),
+  "available": #c79030,
+  "outOfStock": #801919
+);
+
+// TEXT COLORS
+$txtColors: (
+  "primary": #000000,
+  "secondary": #888888,
+  "starActive": #ffcb74,
+  "starInactive": #7c7c7c,
+  "price": #ea907a,
+  "white": #ffffff,
+  "danger": #c72727
+);
+
+// ----------- FONT ------------
+
+// FONT SIZE
+$fSizes: (
+  "small": 0.75rem,
+  "oldPrice": 0.875rem,
+  "newPrice": 1rem,
+  "score": 0.875rem,
+  "body1": 1.1875rem,
+  "body2": 1rem,
+  "title1": 0.875rem,
+  "title2": 1rem,
+  "h1": 2.5rem,
+  "h2": 2rem,
+  "h3": 1.5rem
+);
+
+// FONT WEIGHT
+$fWeights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+// SPACING
+$spacing: 10px;

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Digital World</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="left">
+      <header class="header text-center py-4">
+        <h1>Product List</h1>
+      </header>
+      <div class="product">
+        <div class="product__tool d-flex mb-3">
+          <div class="product__select-input mr-3">
+            <label for="productSort">Sort by name: </label>
+            <select id="productSort">
+              <option value="asc">A - Z</option>
+              <option value="desc">Z - A</option>
+            </select>
+          </div>
+          <div class="product__select-input">
+            <label for="productFilter">Filter by type: </label>
+            <select id="productFilter">
+              <option value="all">All</option>
+              <option value="samsung">Samsung</option>
+              <option value="iphone">iPhone</option>
+            </select>
+          </div>
+        </div>
+        <div class="product__list row">
+          <div class="col-md-4">
+            <div class="product__item">
+              <img class="d-block w-100" src="https://stcv4.hnammobile.com//downloads/c/thiet-ke-iphone-xs-max-12.jpg" alt="product" />
+              <div class="product__content">
+                <div class="product__name">iPhone 9</div>
+                <div class="product__desc">Điện thoại cao cấp</div>
+                <div class="product__rating">
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="product__status">Còn hàng</span>
+                  <span class="product__price">7$</span>
+                </div>
+                <button class="btn-block product__addToCart">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product__item">
+              <img class="d-block w-100" src="https://stcv4.hnammobile.com//downloads/c/thiet-ke-iphone-xs-max-12.jpg" alt="product" />
+              <div class="product__content">
+                <div class="product__name">iPhone 9</div>
+                <div class="product__desc">Điện thoại cao cấp</div>
+                <div class="product__rating">
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="product__status">Còn hàng</span>
+                  <span class="product__price">7$</span>
+                </div>
+                <button class="btn-block product__addToCart">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="product__item">
+              <img class="d-block w-100" src="https://stcv4.hnammobile.com//downloads/c/thiet-ke-iphone-xs-max-12.jpg" alt="product" />
+              <div class="product__content">
+                <div class="product__name">iPhone 9</div>
+                <div class="product__desc">Điện thoại cao cấp</div>
+                <div class="product__rating">
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star active"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="product__status">Còn hàng</span>
+                  <span class="product__price">7$</span>
+                </div>
+                <button class="btn-block product__addToCart">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="cart">
+        <h1 class="text-center py-4">Your Cart</h1>
+        <div class="cart__list">
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+          <div class="cart__item">
+            <img src="https://picsum.photos/200" alt="cart" />
+            <div class="cart__item-info">
+              <div class="cart__item-name">iPhone 9</div>
+              <div class="cart__item-desc">Điện thoại cao cấp</div>
+            </div>
+            <div class="cart__item-price">7$</div>
+            <div class="cart__item-quantity">
+              <button><i class="fa fa-minus"></i></button>
+              <span>1</span>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="cart__item-totalPrice">7$</div>
+            <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
+          </div>
+        </div>
+        <div class="cart__bottom">
+          <div class="cart__total">Total: <span class="cart__totalNumber">800$</span></div>
+          <button class="btn-block cart__pay">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
