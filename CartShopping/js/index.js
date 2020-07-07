@@ -3,15 +3,6 @@ import CartStore from "./CartRepository.js";
 import Api from "./api.js";
 import Config from "./config.js";
 
-// add product to cart when user clicks a product
-const addToCart = function (productId) {
-  let foundProduct = ProductStore.getById(productId);
-  if (foundProduct) {
-    CartStore.add(foundProduct);
-    renderCart(CartStore.cart);
-  }
-};
-
 // render product list to UI
 const renderProducts = function (products) {
   let productHtml = products
