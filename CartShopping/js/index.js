@@ -3,6 +3,10 @@ import CartStore from "./CartRepository.js";
 import Api from "./api.js";
 import Config from "./config.js";
 
+CartStore.saveCartFunc = function () {
+  localStorage.setItem(Config.LOCALSTORAGE_CART_KEY, JSON.stringify(CartStore.cart));
+};
+
 // render product list to UI
 const renderProducts = function (products) {
   let productHtml = products
@@ -38,6 +42,8 @@ const renderProducts = function (products) {
     .join("");
 
   document.getElementById("productList").innerHTML = productHtml;
+
+  listenAddToCartAll();
 };
 
 // render cart to UI
@@ -56,7 +62,7 @@ const renderCart = function (cart) {
     cartHtml = cart
       .map((item) => {
         return `
-        <div class="cart__item">
+        <div class="cart__item" data-product-id="${item.product.id}">
           <img src="${item.product.image}" alt="cart" />
           <div class="cart__item-info">
             <div class="cart__item-name text-capitalize">${item.product.name}</div>
@@ -64,9 +70,9 @@ const renderCart = function (cart) {
           </div>
           <div class="cart__item-price">${item.product.price}$</div>
           <div class="cart__item-quantity">
-            <button><i class="fa fa-minus"></i></button>
+            <button class="cart__item-decrease"><i class="fa fa-minus"></i></button>
             <span>${item.quantity}</span>
-            <button><i class="fa fa-plus"></i></button>
+            <button class="cart__item-increase"><i class="fa fa-plus"></i></button>
           </div>
           <div class="cart__item-totalPrice">${item.product.price * item.quantity}$</div>
           <button class="cart__item-remove"><i class="fa fa-trash-alt"></i></button>
@@ -78,6 +84,8 @@ const renderCart = function (cart) {
 
   document.getElementById("cartList").innerHTML = cartHtml;
   document.getElementById("cartTotal").innerHTML = cartTotal;
+
+  listenToCartItemEvents();
 };
 
 // render filter options to UI
@@ -106,13 +114,37 @@ const listenAddToCartAll = function () {
   });
 };
 
+// listen to click increase or decrease quantity of cart item from user
+const listenToCartItemEvents = function () {
+  document.querySelectorAll(".cart__item").forEach((el) => {
+    let productId = el.getAttribute("data-product-id");
+    let btnIncrease = el.querySelector(".cart__item-increase");
+    let btnDecrease = el.querySelector(".cart__item-decrease");
+    let btnRemove = el.querySelector(".cart__item-remove");
+
+    btnIncrease.addEventListener("click", () => {
+      CartStore.updateQuantity(productId, 1);
+      renderCart(CartStore.cart);
+    });
+
+    btnDecrease.addEventListener("click", () => {
+      CartStore.updateQuantity(productId, -1);
+      renderCart(CartStore.cart);
+    });
+
+    btnRemove.addEventListener("click", () => {
+      CartStore.remove(productId);
+      renderCart(CartStore.cart);
+    });
+  });
+};
+
 // fetch all products from server then rendering to UI
 (function () {
   Api.getAllProducts().then((data) => {
     ProductStore.products = data;
     ProductStore.sort(Config.ASCENDING_SORT);
     renderProducts(ProductStore.products);
-    listenAddToCartAll();
     renderProductFilters(ProductStore.getFilterOptions());
   });
 })();
@@ -121,7 +153,7 @@ const listenAddToCartAll = function () {
 (function () {
   let cartData = localStorage.getItem(Config.LOCALSTORAGE_CART_KEY);
   if (cartData) {
-    CartStore.cart = cartData;
+    CartStore.cart = JSON.parse(cartData);
   }
 
   renderCart(CartStore.cart);
@@ -141,4 +173,10 @@ document.getElementById("productSort").addEventListener("change", (event) => {
 // listen to "change" event of select filter then filtering and re-rendering product list
 document.getElementById("productFilter").addEventListener("change", (event) => {
   applySortAndFilter(event.target.value, document.getElementById("productSort").value);
+});
+
+// listen to 'click' event of button cart payment to remove all cart item
+document.getElementById("btnCartPay").addEventListener("click", () => {
+  CartStore.removeAll();
+  renderCart(CartStore.cart);
 });

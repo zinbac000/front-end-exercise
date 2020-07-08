@@ -151,6 +151,7 @@
 
     &-desc {
       @extend .product__desc;
+      @include line-clamp($lineCount: 1, $lineHeight: 22px);
     }
 
     &-price,
@@ -158,11 +159,14 @@
     &-totalPrice,
     &-remove {
       padding: 0 space(1.5);
+      flex-shrink: 0;
     }
 
     &-price,
     &-totalPrice {
-      @include text($color: "primary", $fSize: "body1", $fWeight: "bold");
+      @include text($color: "primary", $fSize: "body2", $fWeight: "bold");
+      text-align: right;
+      min-width: 100px;
     }
 
     &-totalPrice {

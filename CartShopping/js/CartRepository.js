@@ -1,5 +1,6 @@
 class CartRepository {
   cart = [];
+  saveCartFunc = null;
   constructor() {}
 
   add = function (product) {
@@ -9,6 +10,7 @@ class CartRepository {
     } else {
       this.cart.push({ product, quantity: 1 });
     }
+    this.saveCartFunc();
   };
 
   remove = function (id) {
@@ -18,10 +20,27 @@ class CartRepository {
     } else {
       console.error(`product with id ${id} doesn't exist in the cart.`);
     }
+    this.saveCartFunc();
   };
 
   removeAll = function () {
     this.cart = [];
+    this.saveCartFunc();
+  };
+
+  getByProductId = function (id) {
+    return this.cart.find((item) => item.product.id === id);
+  };
+
+  updateQuantity = function (id, increment) {
+    let foundItem = this.getByProductId(id);
+    if (foundItem) {
+      foundItem.quantity += increment;
+      if (foundItem.quantity < 0) {
+        foundItem.quantity = 0;
+      }
+    }
+    this.saveCartFunc();
   };
 }
 
