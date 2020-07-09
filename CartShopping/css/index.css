@@ -75,7 +75,17 @@ select {
 .product__desc, .cart__item-desc {
   color: #888888;
   font-size: 0.875rem;
-  font-weight: 400; }
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  white-space: normal;
+  line-height: 22px;
+  height: 23px;
+  max-height: 23px; }
 .product__rating {
   margin-bottom: 10px; }
   .product__rating i {
@@ -91,7 +101,7 @@ select {
   font-size: 0.75rem;
   font-weight: 500; }
   .product__status--soldout {
-    background-color: #801919; }
+    background-color: #b82828; }
 .product__price {
   color: #ea907a;
   font-size: 1.5rem;

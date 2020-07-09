@@ -74,6 +74,7 @@
 
   &__desc {
     @include text($color: "secondary", $fSize: "title1", $fWeight: "regular");
+    @include line-clamp($lineCount: 1, $lineHeight: 22px);
   }
 
   &__rating {

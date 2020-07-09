@@ -28,7 +28,7 @@ const renderProducts = function (products) {
               ${ratingHtml}
             </div>
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <span class="product__status ${product.inventory <= 0 ? "product_status--soldout" : ""} ">${
+              <span class="product__status ${product.inventory <= 0 ? "product__status--soldout" : ""} ">${
         product.inventory > 0 ? "available" : "sold out"
       }</span>
               <span class="product__price">${product.price}$</span>
