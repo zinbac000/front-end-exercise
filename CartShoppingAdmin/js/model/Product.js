@@ -6,6 +6,7 @@ class Product {
     this.image = image;
     this.description = description;
     this.inventory = inventory;
+    this.price = price;
     this.rating = rating;
     this.type = type;
   }

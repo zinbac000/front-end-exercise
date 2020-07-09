@@ -33,7 +33,14 @@ class ProductRepository {
   }
 
   delete(id) {
-    return ProductApi.deleteProduct(id);
+    return ProductApi.deleteProduct(id)
+      .then((data) => {
+        return ProductApi.getProducts();
+      })
+      .then((data) => {
+        this.products = data;
+        return;
+      });
   }
 
   loadProducts() {
@@ -41,6 +48,10 @@ class ProductRepository {
       this.products = data;
       return;
     });
+  }
+
+  filter(keyword) {
+    return this.products.filter((product) => product.name.toUpperCase().includes(keyword.toUpperCase().trim()));
   }
 }
 
