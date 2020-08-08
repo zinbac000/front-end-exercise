@@ -1,0 +1,24 @@
+.Burger {
+  height: 250px;
+  width: 80%;
+  max-width: 500px;
+  overflow: auto;
+
+  padding: 15px;
+  margin: 0 auto 20px;
+  border: 4px solid #c15711;
+  border-radius: 10px;
+
+  text-align: center;
+  font-weight: bold;
+}
+
+.Burger::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .Burger {
+    height: 400px;
+  }
+}

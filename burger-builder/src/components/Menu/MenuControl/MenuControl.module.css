@@ -1,0 +1,42 @@
+.MenuControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+.MenuControl:last-of-type {
+  margin-bottom: 0;
+}
+
+.MenuButton {
+  width: 30px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  background-color: #ffffff;
+  color: #999898;
+
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  font-size: 1rem;
+}
+
+.MenuButton:active {
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.1), inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  font-size: 0.9rem;
+}
+
+.MenuButton:disabled {
+  box-shadow: none;
+  background-color: lightgray;
+
+  cursor: not-allowed;
+}

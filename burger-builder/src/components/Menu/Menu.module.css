@@ -1,0 +1,49 @@
+.Menu {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.2);
+
+  text-align: center;
+}
+
+.TotalPrice {
+  text-align: center;
+  font-size: 1.2rem;
+
+  margin: 20px 0;
+}
+
+.TotalPrice strong {
+  font-size: 1.5rem;
+
+  color: #c35f23;
+}
+
+.PayButton {
+  display: inline-block;
+  margin: 0 5px;
+  height: 30px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  background-color: #ffffff;
+  color: #999898;
+
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  font-size: 1rem;
+}
+
+.PayButton:active {
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.1), inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  font-size: 0.95rem;
+}
