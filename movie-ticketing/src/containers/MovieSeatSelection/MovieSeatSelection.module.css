@@ -1,0 +1,169 @@
+.MovieSeatSelection {
+  padding: 0 15px;
+}
+
+.MovieSeatSelection header,
+.MovieSeatSelection footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.MovieSeatSelection h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.MovieSeatSelection footer {
+  margin-top: 15px;
+
+  font-size: 0.75rem;
+}
+
+.Container {
+  max-width: 700px;
+  margin: 15px auto 0;
+  padding: 55px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.GuideDescription {
+  color: #ff9800;
+  font-size: 0.75rem;
+}
+
+.FormInline {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 15px;
+}
+
+.FormGroup {
+  margin-bottom: 15px;
+}
+
+.FormGroup:last-child {
+  margin-bottom: 0;
+}
+
+.FormGroup label {
+  display: block;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.Aterisk {
+  color: red;
+  font-size: 10px;
+  vertical-align: top;
+
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.FormControl {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #858585;
+
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.Button {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 10px 20px;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  background-color: #f5f5f5;
+}
+
+.ResultWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.Result {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 350px;
+  margin-top: 30px;
+
+  border-collapse: collapse;
+}
+
+.Result td,
+.Result th {
+  background-color: #f5f5f5;
+  background-clip: padding-box;
+
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.Result th {
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.8rem;
+
+  padding: 7px 15px;
+}
+
+.Result td {
+  color: #545454;
+  font-size: 0.6rem;
+  vertical-align: top;
+
+  padding: 5px 15px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .MovieSeatSelection h1 {
+    font-size: 2.5rem;
+  }
+
+  .MovieSeatSelection footer,
+  .GuideDescription,
+  .FormGroup label,
+  .Result th {
+    font-size: 1rem;
+  }
+
+  .Aterisk {
+    font-size: 15px;
+  }
+
+  .FormInline {
+    flex-direction: row;
+  }
+
+  .FormGroup {
+    margin-bottom: 0;
+  }
+
+  .FormGroup:first-child {
+    flex-basis: 50%;
+    margin-right: 30px;
+  }
+
+  .FormGroup:last-child {
+    flex-basis: 40%;
+  }
+
+  .Result td {
+    font-size: 0.8rem;
+  }
+}
