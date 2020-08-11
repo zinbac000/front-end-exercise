@@ -38,6 +38,18 @@
   background-color: #ffffff;
 }
 
+.SelectWarning {
+  display: inline-block;
+
+  background-color: #ff9800;
+
+  text-align: "center";
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
 .MapWrapper {
   width: 100%;
   overflow-x: scroll;
@@ -91,6 +103,8 @@
 }
 .SeatCell.Reserved {
   background-color: #f82626;
+
+  cursor: auto;
 }
 .SeatCell.Empty {
   background-color: #ffffff;
@@ -136,5 +150,9 @@
 
   .Screen {
     font-size: 1.4rem;
+  }
+
+  .SelectWarning {
+    font-size: 1rem;
   }
 }

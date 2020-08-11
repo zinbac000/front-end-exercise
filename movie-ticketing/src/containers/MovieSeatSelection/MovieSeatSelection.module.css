@@ -74,6 +74,18 @@
   font-size: 1rem;
 }
 
+.FormControl.Invalid {
+  border: 2px solid red;
+}
+
+.InvalidFeedback {
+  margin-top: 5px;
+
+  color: red;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
 .Button {
   border: none;
   border-radius: 10px;
@@ -161,6 +173,10 @@
 
   .FormGroup:last-child {
     flex-basis: 40%;
+  }
+
+  .InvalidFeedback {
+    font-size: 0.8rem;
   }
 
   .Result td {

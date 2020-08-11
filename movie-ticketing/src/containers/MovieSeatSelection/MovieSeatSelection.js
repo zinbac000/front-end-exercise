@@ -4,8 +4,79 @@ import SeatMap from "../../components/SeatMap/SeatMap";
 
 import classes from "./MovieSeatSelection.module.css";
 
-export default class MovieSeatSelection extends Component {
+import { connect } from "react-redux";
+import * as actions from "../../redux/actions/index";
+
+class MovieSeatSelection extends Component {
+  state = {
+    controls: {
+      name: {
+        value: "",
+        validation: {
+          required: true
+        },
+        errors: []
+      },
+      seatNumbers: {
+        value: "",
+        validation: {
+          required: true
+        },
+        errors: []
+      }
+    },
+    submitted: false
+  };
+
+  validateControl = (value, rules) => {
+    let errors = [];
+    if (!rules) return errors;
+
+    if (rules.required && value.trim() === "") {
+      errors.push(`This field is required.`);
+    }
+
+    return errors;
+  };
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ controls: { ...this.state.controls, [name]: { ...this.state.controls[name], value } } });
+  };
+
+  handleStartSelecting = () => {
+    if (this.state.submitted) {
+      return;
+    }
+    const newControls = { ...this.state.controls };
+    let isFormValid = true;
+
+    Object.values(newControls).forEach((controlObj) => {
+      let errors = this.validateControl(controlObj.value, controlObj.validation);
+      controlObj.errors = errors;
+      isFormValid &= errors.length === 0;
+    });
+
+    this.setState({
+      controls: newControls
+    });
+
+    if (isFormValid) {
+      this.props.submitInfo({ name: this.state.controls.name.value, seatNumbers: +this.state.controls.seatNumbers.value });
+      this.setState({ submitted: true });
+    }
+  };
+
+  renderErrors = (errors) => {
+    return errors.map((error, index) => (
+      <span key={index} className={classes.InvalidFeedback}>
+        {error}
+      </span>
+    ));
+  };
+
   render() {
+    const { controls } = this.state;
     return (
       <div className={classes.MovieSeatSelection}>
         <header>
@@ -18,21 +89,43 @@ export default class MovieSeatSelection extends Component {
               <label htmlFor="name">
                 Name<span className={classes.Aterisk}>*</span>
               </label>
-              <input className={classes.FormControl} type="text" name="name" id="#name" />
+              <input
+                className={[classes.FormControl, controls.name.errors.length > 0 ? classes.Invalid : null].join(" ")}
+                type="text"
+                name="name"
+                id="#name"
+                value={controls.name.value}
+                onChange={this.handleInputChange}
+                readOnly={this.state.submitted}
+              />
+              {this.renderErrors(controls.name.errors)}
             </div>
             <div className={classes.FormGroup}>
               <label htmlFor="seatNumbers">
                 Number of Seats<span className={classes.Aterisk}>*</span>
               </label>
-              <input className={classes.FormControl} type="number" name="seatNumbers" id="#seatNumbers" />
+              <input
+                className={[classes.FormControl, controls.seatNumbers.errors.length > 0 ? classes.Invalid : null].join(" ")}
+                type="number"
+                name="seatNumbers"
+                id="#seatNumbers"
+                value={controls.seatNumbers.value}
+                onChange={this.handleInputChange}
+                readOnly={this.state.submitted}
+              />
+              {this.renderErrors(controls.seatNumbers.errors)}
             </div>
           </form>
-          <button className={classes.Button}>Start Selecting</button>
+          <button className={classes.Button} onClick={this.handleStartSelecting}>
+            Start Selecting
+          </button>
 
           <SeatMap />
 
           <div style={{ textAlign: "center" }}>
-            <button className={classes.Button}>Confirm Selection</button>
+            <button className={classes.Button} onClick={this.props.confirmSeat}>
+              Confirm Selection
+            </button>
           </div>
 
           <div className={classes.ResultWrapper}>
@@ -46,9 +139,9 @@ export default class MovieSeatSelection extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <td>zinbac000</td>
-                  <td>2</td>
-                  <td>A3, A4</td>
+                  <td>{this.props.confirmedTicket.name}</td>
+                  <td>{this.props.confirmedTicket.seatNumbers}</td>
+                  <td>{this.props.confirmedTicket.seats}</td>
                 </tr>
               </tbody>
             </table>
@@ -59,3 +152,14 @@ export default class MovieSeatSelection extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  confirmedTicket: state.movieSeatSelection.confirmedTicket
+});
+
+const mapDispatchToProps = {
+  submitInfo: actions.submitInfo,
+  confirmSeat: actions.confirmSeat
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieSeatSelection);

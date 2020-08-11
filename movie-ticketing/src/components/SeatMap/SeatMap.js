@@ -1,44 +1,32 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import classes from "./SeatMap.module.css";
 import * as constants from "../../shared/constants";
+import * as actions from "../../redux/actions/index";
 
-export default class SeatMap extends Component {
-  seatMap = {
-    labels: {
-      colLabels: ["1", "2", "3", "4", "5", "", "6", "7", "8", "9", "10", "11", "12"],
-      rowLabels: ["A", "B", "C", "D", "E", "", "F", "G", "H", "I", "J"]
-    },
-    rowData: [
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0]
-    ]
-  };
-
+class SeatMap extends Component {
   renderColLabels = () => {
-    return this.seatMap.labels.colLabels.map((label) => (
+    return this.props.seatMap.labels.colLabels.map((label) => (
       <div key={label} className={classes.CellWrapper}>
         {label}
       </div>
     ));
   };
 
+  handleSelectSeat = (row, col) => {
+    this.props.selectSeat(row, col);
+  };
+
   renderRowData = () => {
-    return this.seatMap.rowData.map((row, index) => (
-      <div key={index} className={classes.Row}>
-        <div className={classes.Label}>{this.seatMap.labels.rowLabels[index]}</div>
-        {row.map((value, index) => (
-          <div key={index} className={classes.CellWrapper}>
-            {value !== constants.NOT_SEAT ? <div className={[classes.SeatCell, this.getSeatClass(value)].join(" ")}></div> : null}
+    return this.props.seatMap.rowData.map((row, rowIndex) => (
+      <div key={rowIndex} className={classes.Row}>
+        <div className={classes.Label}>{this.props.seatMap.labels.rowLabels[rowIndex]}</div>
+        {row.map((value, colIndex) => (
+          <div key={colIndex} className={classes.CellWrapper}>
+            {value !== constants.NOT_SEAT ? (
+              <div className={[classes.SeatCell, this.getSeatClass(value)].join(" ")} onClick={() => this.handleSelectSeat(rowIndex, colIndex)}></div>
+            ) : null}
           </div>
         ))}
       </div>
@@ -66,6 +54,9 @@ export default class SeatMap extends Component {
           <span className={classes.Reserved}>Reserved Seat</span>
           <span className={classes.Empty}>Empty Seat</span>
         </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          {this.props.seatSelectable ? <p className={classes.SelectWarning}>Please select your seat NOW!</p> : null}
+        </div>
         <div className={classes.MapWrapper}>
           <div className={classes.Map}>
             <div className={classes.Row}>
@@ -80,3 +71,14 @@ export default class SeatMap extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  seatMap: state.movieSeatSelection.seatMap,
+  seatSelectable: state.movieSeatSelection.seatSelectable
+});
+
+const mapDispatchToProps = {
+  selectSeat: actions.selectSeat
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SeatMap);
