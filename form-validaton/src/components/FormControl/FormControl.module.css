@@ -1,0 +1,35 @@
+.FormControl {
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 15px;
+}
+
+.FormControl:last-of-type {
+  margin-bottom: 0;
+}
+
+.Input {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 2px solid #b1b1b1;
+
+  transition: all 0.3s ease;
+}
+
+.Input:focus,
+.InputFocus {
+  border-color: #343a40;
+}
+
+.Invalid {
+  border-color: red;
+}
+
+.InvalidFeedback {
+  margin-top: 5px;
+
+  color: red;
+  font-size: 13px;
+  font-weight: 600;
+}

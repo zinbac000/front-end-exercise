@@ -1,0 +1,74 @@
+.UserInformation {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 40px 30px;
+
+  background-color: #ffffff;
+}
+
+.FormCaption {
+  padding-bottom: 40px;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.Form {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.ButtonSubmit {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 0;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.UserInfo {
+  padding: 15px;
+}
+
+.UserInfo h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.UserInfo table strong {
+  color: green;
+}
+
+.ButtonClose {
+  background-color: #343a40;
+  color: #ffffff;
+
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .UserInformation {
+    margin-top: 60px;
+  }
+
+  div.FormControlInline {
+    width: 48%;
+  }
+
+  .FormCaption {
+    font-size: 1.5rem;
+  }
+}

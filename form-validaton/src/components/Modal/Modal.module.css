@@ -1,0 +1,19 @@
+.Modal {
+  position: fixed;
+  z-index: 100;
+  top: 100px;
+  left: 50%;
+
+  width: 90%;
+  max-width: 450px;
+
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  transform: translate(-50%, -500px);
+  transition: all 0.4s;
+}
+
+.Open {
+  transform: translate(-50%, 0);
+}
